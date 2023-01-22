@@ -1,0 +1,67 @@
+.navbar{
+    background-color: #fff(139, 162, 197);
+    box-shadow: 10px 5px 5px rgb(213, 223, 255);
+    z-index: 4;
+    width: 100%;
+    height: 45px;
+    position: relative;
+    
+}
+.productsbutton{
+    
+    color: black;
+    width: 240px;
+    margin: 0px 0px 0px 60px;
+    padding-bottom: 13px;
+    font-size: 24px;
+    
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a > span{
+    position: relative;
+    padding-right: 6px;
+    top: 3.5px;
+ }
+
+a:hover{
+    
+    border-bottom: 4px solid rgb(70, 120, 255);
+    border-radius: 2px;
+    color: rgb(53, 91, 196);
+    
+    
+}
+.Mainbuttons{
+    margin: 15px 0px 0px 0px ;
+    
+}
+
+
+.rightbutton
+{
+    color: black;
+    padding: 1px 0px 10px 5px;
+    margin: -5px 20px 0px 30px;
+    z-index: 0;   
+    font-size: 24px;
+    float: right;
+   
+    
+    
+    
+}
+.rightbutton > a :hover
+{
+    
+    border-bottom: 4px solid rgb(70, 120, 255);
+    border-radius: 2px;
+    color: rgb(53, 91, 196);
+    
+    
+}
+
+.rightbutton .material-symbols-outlined{font-size: 33px;}

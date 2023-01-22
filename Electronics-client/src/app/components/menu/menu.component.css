@@ -1,0 +1,44 @@
+.Menu{
+    width: 240px;
+    margin: 7px 0px 0px 56px;
+    height: 500px;
+    background-color: #fff;
+    border:1px solid rgb(204, 204, 204) ;
+    box-shadow: 10px 5px 15px rgb(213, 223, 255);
+    border-radius: 10px;
+    
+}
+.Menu > a{
+    display: flex;
+    padding: 10px 6px 14px 34px;
+    
+    width: 200px;
+    
+    font-size: 20px;
+    cursor: pointer;
+    
+    border-bottom: 1px solid rgb(180, 180, 180);
+ 
+    
+
+}
+@keyframes myfirst {
+    0%   { width:0px }
+   
+    100%  { width:200px }
+}
+.Menu > a:hover{
+    
+    animation: myfirst 1s ;
+    animation-direction: alternate;
+    
+    border-bottom: 4px solid rgb(70, 120, 255);
+    border-radius: 2px;
+    color: rgb(53, 91, 196);
+  
+
+
+}
+.Menu > a > span{
+   margin: 4px 0px 0px 0px;
+}
