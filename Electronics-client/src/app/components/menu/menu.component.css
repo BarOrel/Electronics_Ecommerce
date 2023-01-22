@@ -11,34 +11,47 @@
 .Menu > a{
     display: flex;
     padding: 10px 6px 14px 34px;
-    
+    display:inline-block; 
+    margin:0;
     width: 200px;
     
     font-size: 20px;
     cursor: pointer;
     
     border-bottom: 1px solid rgb(180, 180, 180);
- 
+
     
 
 }
-@keyframes myfirst {
-    0%   { width:0px }
-   
-    100%  { width:200px }
-}
-.Menu > a:hover{
-    
-    animation: myfirst 1s ;
-    animation-direction: alternate;
-    
-    border-bottom: 4px solid rgb(70, 120, 255);
-    border-radius: 2px;
-    color: rgb(53, 91, 196);
+
+a, a:hover {
+    color: #000;
+    text-decoration: none;
+  }
   
+ 
+  a:last-child {
+    margin-right: 0;
+  }
+  
+  a:after {
+    content: '';
+    display: block;
+    position: fixed;
+    margin: 12px 0px 0px -35px;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+  }
+  a:hover:after {
+    width: 242px;
+    
+    margin: 12px 0px 0px -35px;
+    background: blue;
+  }
 
 
-}
 .Menu > a > span{
    margin: 4px 0px 0px 0px;
 }
