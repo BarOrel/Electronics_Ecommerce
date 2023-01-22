@@ -46,7 +46,6 @@ a, a:hover {
   }
   a:hover:after {
     width: 242px;
-    
     margin: 12px 0px 0px -35px;
     background: blue;
   }
