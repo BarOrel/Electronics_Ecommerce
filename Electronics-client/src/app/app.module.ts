@@ -13,6 +13,7 @@ import { ProductComponent } from './components/product/product.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { AddProductComponent } from './pages/Admin/Add-Product/Add-Product.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     ProductComponent,
     FilterComponent,
     MenuComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    AddProductComponent
 
   ],
   imports: [

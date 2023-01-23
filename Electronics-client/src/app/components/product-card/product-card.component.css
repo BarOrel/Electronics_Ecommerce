@@ -31,23 +31,22 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #9bdc28;
-    clip-path: circle(150px at 80% 20%);
+    background: #ffffff5d;
+    clip-path: circle(80px at 80% 20%);
     transition: 0.5s ease-in-out;
   }
   
   .container .card:hover:before{
-    clip-path: circle(300px at 80% -20%);
+    clip-path: circle(250px at 80% -20%);
+  
   }
   
   .container .card:after{
-   
     position: absolute;
     top: 30%;
     left: -20%;
     font-size: 12em;
     font-weight: 800;
-    font-style: italic;
     color: rgba(255,255,25,0.05)
   }
   
@@ -55,14 +54,15 @@
     position: absolute;
     top: 33%;
     transform: translateY(-50%);
-    z-index: 10000;
+    z-index: 3000;
     width: 100%;
     height: 220px;
-    transition: 0.5s;
+    transition: 0.6s;
   }
-  
+
+
   .container .card:hover .imgBx{
-    top: 10%;
+    top: 15%;
     transform: translateY(0%);
       
   }
@@ -71,8 +71,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(-25deg);
-    width: 270px;
+    transform: translate(-50%, -50%) rotate(-12deg);
+    width: 240px;
   }
   
   .container .card .contentBx{
@@ -183,11 +183,12 @@
     opacity: 0;
     transform: translateY(50px);
     transition: 0.5s;
-    margin-top: 50px;
+    margin-top: 60px;
   }
   
   .container .card:hover .contentBx a{
     opacity: 1;
+    
     transform: translateY(100px);
     transition-delay: 0.50s;
     

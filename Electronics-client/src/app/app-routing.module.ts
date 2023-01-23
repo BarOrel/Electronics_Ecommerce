@@ -4,6 +4,7 @@ import { CategoryComponent } from './components/category/category.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { MainComponent } from './components/main/main.component';
 import { ProductComponent } from './components/product/product.component';
+import { AddProductComponent } from './pages/Admin/Add-Product/Add-Product.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -12,6 +13,7 @@ import { RegisterComponent } from './pages/register/register.component';
 const routes: Routes = [
   {
     path: "", component: HomeComponent, children: [
+      { path: "Add", component: AddProductComponent },
       { path: "", component: MainComponent },
       { path: "Category", component: CategoryComponent ,children:[
         { path: "", component: ProductComponent },
