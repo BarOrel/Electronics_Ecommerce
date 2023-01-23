@@ -1,0 +1,9 @@
+.Products{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 3rem;
+    padding: 4rem;
+    width: max-content;
+}

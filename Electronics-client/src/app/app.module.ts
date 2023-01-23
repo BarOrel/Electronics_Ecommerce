@@ -12,6 +12,7 @@ import { CategoryComponent } from './components/category/category.component';
 import { ProductComponent } from './components/product/product.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { MenuComponent } from './components/menu/menu.component';
     CategoryComponent,
     ProductComponent,
     FilterComponent,
-    MenuComponent
+    MenuComponent,
+    ProductCardComponent
+
   ],
   imports: [
     BrowserModule,

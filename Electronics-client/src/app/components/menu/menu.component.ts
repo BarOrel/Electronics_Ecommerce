@@ -21,6 +21,7 @@ export class MenuComponent implements OnInit {
 
    NavigateTo(index:number){
     console.log(index)
+    this.showMenu();
     this.router.navigate(['/Category']);
 
    }
