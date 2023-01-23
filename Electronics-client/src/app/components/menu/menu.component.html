@@ -1,8 +1,7 @@
-<div *ngIf="showMen" class="Menu">
-   
-    <a>Phones<span class="material-symbols-outlined">chevron_right</span></a>
-    <a>Computers<span class="material-symbols-outlined">chevron_right</span></a>
-    <a>Gaming Consoles<span class="material-symbols-outlined">chevron_right</span></a>
-    <a>Accessories<span class="material-symbols-outlined">chevron_right</span></a>
+<div *ngIf="showMen" class="Menu">  
+    <a (click)="NavigateTo(1)">Phones<span class="material-symbols-outlined">chevron_right</span></a>
+    <a (click)="NavigateTo(2)">Computers<span class="material-symbols-outlined">chevron_right</span></a>
+    <a (click)="NavigateTo(3)" routerLink="/Category">Gaming Consoles<span class="material-symbols-outlined">chevron_right</span></a>
+    <a (click)="NavigateTo(4)" routerLink="/Category">Accessories<span class="material-symbols-outlined">chevron_right</span></a>
     
 </div>

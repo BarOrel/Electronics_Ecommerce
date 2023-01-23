@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { EventService } from 'src/app/services/eventService/event.service';
 
@@ -9,12 +10,23 @@ import { EventService } from 'src/app/services/eventService/event.service';
 })
 export class MenuComponent implements OnInit {
   clickeventsub:Subscription;
-  constructor(private service:EventService) {
+  constructor(private service:EventService,private router:Router) {
       this.clickeventsub = this.service.getEvent().subscribe(()=>{
 
          this.showMenu();
       });
    }
+
+
+
+   NavigateTo(index:number){
+    console.log(index)
+    this.router.navigate(['/Category']);
+
+   }
+
+
+
 
   showMen:Boolean = false;
   showMenu(){

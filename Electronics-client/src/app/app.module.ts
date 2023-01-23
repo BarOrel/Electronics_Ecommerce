@@ -10,7 +10,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MainComponent } from './components/main/main.component';
 import { CategoryComponent } from './components/category/category.component';
 import { ProductComponent } from './components/product/product.component';
-import { MobilePhoneFilterComponent } from './components/Filters/mobile-phone-filter/mobile-phone-filter.component';
+import { FilterComponent } from './components/filter/filter.component';
 import { MenuComponent } from './components/menu/menu.component';
 
 
@@ -24,7 +24,7 @@ import { MenuComponent } from './components/menu/menu.component';
     MainComponent,
     CategoryComponent,
     ProductComponent,
-    MobilePhoneFilterComponent,
+    FilterComponent,
     MenuComponent
   ],
   imports: [
