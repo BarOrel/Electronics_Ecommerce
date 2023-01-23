@@ -13,6 +13,8 @@ body {
 }
 h4 {
   color: #f0a500;
+  font-size: 17px;
+
 }
 input,
 input[type="radio"] + label,
@@ -211,4 +213,16 @@ select option {
     width: 100%;
     padding-right: 0;
   }
+}
+
+.addBtn{
+  background-color: #f0a500; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
 }
