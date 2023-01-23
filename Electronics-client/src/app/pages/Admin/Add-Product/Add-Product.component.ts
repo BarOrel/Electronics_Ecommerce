@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./Add-Product.component.css']
 })
 export class AddProductComponent implements OnInit {
-
+  index:number = 0;
   constructor() { }
 
   ngOnInit() {

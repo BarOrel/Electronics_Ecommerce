@@ -57,7 +57,7 @@
     </div>
 
     <div class="row">
-      <div class="col-half">
+      <div class="row">
         <h4>Release Date</h4>
         <div class="input-group">
           <div class="col-third">
@@ -76,6 +76,7 @@
       <h4>Category</h4>
       <div class="input-group" style="width: 200%">
         <select>
+          <option value="">None</option>
           <option value="">Mobile Phone</option>
           <option>Tablet</option>
           <option>Smart Watches</option>
@@ -94,37 +95,9 @@
         </select>
       </div>
     </div>
-
-    <div>
-      <div>
-        <h4>Procesor</h4>
-        <input type="text" placeholder="Name CPU" />
-        <h4>Graphic card</h4>
-        <input type="text" placeholder="Name GPU" />
-        <h4>Storage</h4>
-
-        <select>
-          <option value="">4 gb</option>
-          <option value="">8 gb</option>
-          <option value="">16 gb</option>
-          <option value="">32 gb</option>
-          <option value="">64 gb</option>
-          <option value="">128 gb</option>
-          <option value="">256 gb</option>
-          <option value="">512 gb</option>
-          <option value="">1 tb</option>
-          <option value="">2 tb</option>
-          <option value="">4 tb</option>
-        </select>
-      </div>
-
-      <div>
-        
-     
-
-
-      </div>
-    </div>
+    <app-Add-DesktopPC *ngIf="index == 1"  ></app-Add-DesktopPC>
+    <app-Add-Laptop *ngIf="index == 2" style="margin: 350px;"></app-Add-Laptop>
+    <app-Add-GamingConsole *ngIf="index == 3" style="margin: 350px;"></app-Add-GamingConsole>
     <div class="row">
       <button class="addBtn">Add New Product</button>
     </div>
