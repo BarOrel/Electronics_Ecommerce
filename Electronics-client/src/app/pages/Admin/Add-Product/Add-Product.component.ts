@@ -8,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class AddProductComponent implements OnInit {
   index:number = 0;
   constructor() { }
-
+ 
+  
+  SelectedIndex(value:any) {
+    this.index = value
+  }
   ngOnInit() {
   }
 

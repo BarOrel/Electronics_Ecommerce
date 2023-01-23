@@ -75,23 +75,23 @@
     <div class="row">
       <h4>Category</h4>
       <div class="input-group" style="width: 200%">
-        <select>
-          <option value="">None</option>
-          <option value="">Mobile Phone</option>
-          <option>Tablet</option>
-          <option>Smart Watches</option>
-          <option>Televsion</option>
-          <option>Desktop</option>
-          <option>Procesor</option>
-          <option>Graphics Card</option>
-          <option>Laptop</option>
-          <option>Video Game Console</option>
-          <option>Accessories Console</option>
-          <option>Keyboard</option>
-          <option>Mouse</option>
-          <option>Monitor</option>
-          <option>Speakers</option>
-          <option>Headphones</option>
+        <select  #t (change)="SelectedIndex(t.value)" >
+          <option value="0">None</option>
+          <option value="1">Desktop PC</option>
+          <option value="2">Laptop</option>
+          <option value="3">Gaming Console</option>
+          <option value="4">Televsion</option>
+          <option value="5">Desktop</option>
+          <option value="6">Procesor</option>
+          <option value="7">Graphics Card</option>
+          <option value="8">Laptop</option>
+          <option value="1">Video Game Console</option>
+          <option value="1">Accessories Console</option>
+          <option value="1">Keyboard</option>
+          <option value="1">Mouse</option>
+          <option value="1">Monitor</option>
+          <option value="1">Speakers</option>
+          <option value="1">Headphones</option>
         </select>
       </div>
     </div>
