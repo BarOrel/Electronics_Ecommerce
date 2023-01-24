@@ -14,9 +14,10 @@ import { FilterComponent } from './components/filter/filter.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { AddProductComponent } from './pages/Admin/Add-Product/Add-Product.component';
-import { AddGamingConsoleComponent } from './components/Add-GamingConsole/Add-GamingConsole.component';
-import { AddDesktopPCComponent } from './components/Add-DesktopPC/Add-DesktopPC.component';
-import { AddLaptopComponent } from './components/Add-Laptop/Add-Laptop.component';
+import { AddGamingConsoleComponent } from './components/Add-Folder/Add-GamingConsole/Add-GamingConsole.component';
+import { AddDesktopPCComponent } from './components/Add-Folder/Add-DesktopPC/Add-DesktopPC.component';
+import { AddLaptopComponent } from './components/Add-Folder/Add-Laptop/Add-Laptop.component';
+
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { AddLaptopComponent } from './components/Add-Laptop/Add-Laptop.component
     AddGamingConsoleComponent,
     AddDesktopPCComponent,
     AddLaptopComponent
+    
 
   ],
   imports: [
