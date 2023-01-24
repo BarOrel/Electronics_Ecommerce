@@ -2,7 +2,7 @@
 
      display: flex;
      overflow: hidden;
-     width: 100%;
+     width: 100vw;
      min-height:93.2vh;
      position: relative;
      background-color: #ffff;
@@ -13,7 +13,7 @@
     border-right: solid 1.8px rgba(17, 17, 17, 0.644) ;
     max-width: 450px;
     width: 20%;
-    min-width: 250px;
+    min-width: 300px;
   
 
 }
