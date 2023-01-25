@@ -1,6 +1,6 @@
 import { outputAst } from '@angular/compiler';
 import { Component, EventEmitter, Input, OnInit ,Output } from '@angular/core';
-import { EventService } from 'src/app/services/eventService/event.service';
+import { EventService } from 'src/app/services/EventService/event.service';
 
 @Component({
   selector: 'app-navbar',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { EventService } from 'src/app/services/eventService/event.service';
+import { EventService } from 'src/app/services/EventService/event.service';
 
 @Component({
   selector: 'app-menu',

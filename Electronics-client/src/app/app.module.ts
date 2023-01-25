@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -12,12 +11,11 @@ import { CategoryComponent } from './components/category/category.component';
 import { ProductComponent } from './components/product/product.component';
 import { FilterComponent } from './components/filter/filter.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { ProductCardComponent } from './components/product-card/product-card.component';
 import { AddProductComponent } from './pages/Admin/Add-Product/Add-Product.component';
 import { AddGamingConsoleComponent } from './components/Add-Folder/Add-GamingConsole/Add-GamingConsole.component';
 import { AddDesktopPCComponent } from './components/Add-Folder/Add-DesktopPC/Add-DesktopPC.component';
 import { AddLaptopComponent } from './components/Add-Folder/Add-Laptop/Add-Laptop.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -32,7 +30,6 @@ import { AddLaptopComponent } from './components/Add-Folder/Add-Laptop/Add-Lapto
     ProductComponent,
     FilterComponent,
     MenuComponent,
-    ProductCardComponent,
     AddProductComponent,
     AddGamingConsoleComponent,
     AddDesktopPCComponent,
@@ -42,7 +39,8 @@ import { AddLaptopComponent } from './components/Add-Folder/Add-Laptop/Add-Lapto
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
