@@ -13,6 +13,7 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
     this.productService.GetAll().subscribe((data)=>{
       this.List = data
+      console.log(data)
     }
     )
   }
