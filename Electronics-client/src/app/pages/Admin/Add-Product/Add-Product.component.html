@@ -1,38 +1,38 @@
 <div class="container">
-  <form>
+  <div >--
     <div class="row">
       <h4>Add a Product</h4>
       <div class="input-group input-group-icon">
-        <input type="text" placeholder="Name" />
+        <input type="text" placeholder="Name" name="Name" #Name />
         <div class="input-icon"><i class="fa fa-user"></i></div>
       </div>
       <div class="input-group input-group-icon">
-        <input type="text" placeholder="Description" />
+        <input type="text" placeholder="Description" name="Description" #Description   />
         <div class="input-icon"><i class="fa fa-user"></i></div>
       </div>
       <div class="input-group input-group-icon">
-        <input type="text" placeholder="Image Url" />
+        <input type="text" placeholder="Image Url" name="imgUrl" #ImgUrl  />
         <div class="input-icon"><i class="fa fa-user"></i></div>
       </div>
       <div class="input-group input-group-icon">
-        <input type="text" placeholder="Price" />
+        <input type="text" placeholder="Price" name="Price" #Price  />
         <div class="input-icon"><i class="fa fa-user"></i></div>
       </div>
 
       <div class="row">
         <div class="col-half">
           <h4>Color</h4>
-          <select>
-            <option>Black</option>
-            <option>White</option>
-            <option>Gray</option>
-            <option>Red</option>
-            <option>Blue</option>
+          <select name="Color" #Color>
+            <option value="0">Black</option>
+            <option value="1">White</option>
+            <option value="2">Gray</option>
+            <option value="3">Red</option>
+            <option value="4">Blue</option>
           </select>
         </div>
         <div class="col-half">
           <h4>Manufacturer</h4>
-          <select>
+          <select name="Manufacturer" #Manufacturer>
             <option value="">Intel</option>
             <option>Apple</option>
             <option>Samsung</option>
@@ -61,13 +61,13 @@
         <h4>Release Date</h4>
         <div class="input-group">
           <div class="col-third">
-            <input type="text" placeholder="DD" />
+            <input type="text" placeholder="DD" name="DateDD" />
           </div>
           <div class="col-third">
-            <input type="text" placeholder="MM" />
+            <input type="text" placeholder="MM" name="DateMM" />
           </div>
           <div class="col-third">
-            <input type="text" placeholder="YYYY" />
+            <input type="text" placeholder="YYYY" name="DateYYYY" />
           </div>
         </div>
       </div>
@@ -75,7 +75,7 @@
     <div class="row">
       <h4>Category</h4>
       <div class="input-group" style="width: 200%">
-        <select #t (change)="SelectedIndex(t.value)">
+        <select #Category (change)="SelectedIndex(Category.value)" name="Category">
           <option value="0">None</option>
           <option value="1">Desktop PC</option>
           <option value="2">Laptop</option>
@@ -84,7 +84,7 @@
       </div>
     </div>
     <div class="input-group">
-      <app-Add-DesktopPC *ngIf="index == 1"></app-Add-DesktopPC>
+      <app-Add-DesktopPC *ngIf="index == 1" (add)="DesktopProps()"></app-Add-DesktopPC>
       <app-Add-Laptop *ngIf="index == 2" style="margin: 350px"></app-Add-Laptop>
       <app-Add-GamingConsole
         *ngIf="index == 3"
@@ -92,7 +92,7 @@
       ></app-Add-GamingConsole>
     </div>
     <div>
-      <button class="addBtn">Add New Product</button>
-    </div>
-  </form>
+      <button class="addBtn" (click)="AddProduct(Name.value,Description.value,Price.value,Color.value,Manufacturer.value,Category.value)" >Add New Product</button>
+    </div>--
+  </div>
 </div>

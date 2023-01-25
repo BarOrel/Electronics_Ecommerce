@@ -1,21 +1,21 @@
 <h1>Desktop PC</h1>
   <div>
     <h4>Procesor</h4>
-    <input type="text" placeholder="Name CPU" />
+    <input type="text" placeholder="Name CPU" #CPU (change)="SelectedCPU(CPU.value)"/>
     <h4>Graphic card</h4>
-    <input type="text" placeholder="Name GPU" />
+    <input type="text" placeholder="Name GPU" #GPU (change)="SelectedGPU(GPU.value)"/>
     <h4>Storage</h4>
-    <select >
-      <option value="">4 gb</option>
-      <option value="">8 gb</option>
-      <option value="">16 gb</option>
-      <option value="">32 gb</option>
-      <option value="">64 gb</option>
-      <option value="">128 gb</option>
-      <option value="">256 gb</option>
-      <option value="">512 gb</option>
-      <option value="">1 tb</option>
-      <option value="">2 tb</option>
-      <option value="">4 tb</option>
+    <select  #Storage (change)="SelectedStorage(Storage.value)" >
+      <option value="0">4 gb</option>
+      <option value="1">8 gb</option>
+      <option value="2">16 gb</option>
+      <option value="3">32 gb</option>
+      <option value="4">64 gb</option>
+      <option value="5">128 gb</option>
+      <option value="6">256 gb</option>
+      <option value="7">512 gb</option>
+      <option value="8">1 tb</option>
+      <option value="9">2 tb</option>
+      <option value="10">4 tb</option>
     </select>
 </div>

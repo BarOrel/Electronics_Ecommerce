@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./Add-Product.component.css']
 })
 export class AddProductComponent implements OnInit {
+
   index:number = 0;
   constructor() { }
  
@@ -15,5 +16,12 @@ export class AddProductComponent implements OnInit {
   }
   ngOnInit() {
   }
+  AddProduct(Name: string,Description: string,arg2: string,arg3: string,arg4: string,arg5: string) {
+      
+    }
 
+
+    DesktopProps(){
+
+    }
 }
