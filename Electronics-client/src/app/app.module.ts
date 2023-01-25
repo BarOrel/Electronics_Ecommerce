@@ -16,6 +16,7 @@ import { AddGamingConsoleComponent } from './components/Add-Folder/Add-GamingCon
 import { AddDesktopPCComponent } from './components/Add-Folder/Add-DesktopPC/Add-DesktopPC.component';
 import { AddLaptopComponent } from './components/Add-Folder/Add-Laptop/Add-Laptop.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductService } from './services/ProductService/product.service';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

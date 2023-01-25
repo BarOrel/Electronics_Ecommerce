@@ -8,28 +8,28 @@ import { Product } from 'src/app/Models/DTO/Product';
   styleUrls: ['./Add-DesktopPC.component.css']
 })
 export class AddDesktopPCComponent implements OnInit {
-  @Input() product?:Product
-  @Output() add:EventEmitter<any> = new EventEmitter<any>();
+  
+  @Output() Storage:EventEmitter<any> = new EventEmitter<any>();
+  @Output() GPU:EventEmitter<any> = new EventEmitter<any>();
+  @Output() CPU:EventEmitter<any> = new EventEmitter<any>();
   selectedStorage:any;
   selectedCPU:any;
   selectedGPU:any;
   desktopPC:DesktopPC = new DesktopPC;
   
-  
   constructor() { }
   
-  
   SelectedStorage(value:any) {
-    this.selectedStorage = value;
-    console.log(value)
+    this.Storage.emit(value)
+    
   }
-  SelectedGPU(arg0: string) {
-    this.selectedGPU = arg0;
-    console.log(arg0)
+  SelectedGPU(value: any) {
+    this.GPU.emit(value)
+  
   }
-  SelectedCPU(arg0: string) {
-    this.selectedCPU = arg0;
-    console.log(arg0)
+  SelectedCPU(value: any) {
+    this.CPU.emit(value)
+    
   }
 
   ngOnInit() {

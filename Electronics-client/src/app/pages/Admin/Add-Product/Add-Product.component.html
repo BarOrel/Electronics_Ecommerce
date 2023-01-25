@@ -1,5 +1,5 @@
 <div class="container">
-  <div >--
+  <div>
     <div class="row">
       <h4>Add a Product</h4>
       <div class="input-group input-group-icon">
@@ -84,7 +84,7 @@
       </div>
     </div>
     <div class="input-group">
-      <app-Add-DesktopPC *ngIf="index == 1" (add)="DesktopProps()"></app-Add-DesktopPC>
+      <app-Add-DesktopPC (Storage)="StorageFunc($event)" (GPU)="GPUFunc($event)" (CPU)="CPUFunc($event)" *ngIf="index == 1" ></app-Add-DesktopPC>
       <app-Add-Laptop *ngIf="index == 2" style="margin: 350px"></app-Add-Laptop>
       <app-Add-GamingConsole
         *ngIf="index == 3"
@@ -93,6 +93,6 @@
     </div>
     <div>
       <button class="addBtn" (click)="AddProduct(Name.value,Description.value,Price.value,Color.value,Manufacturer.value,Category.value)" >Add New Product</button>
-    </div>--
+    </div>
   </div>
 </div>

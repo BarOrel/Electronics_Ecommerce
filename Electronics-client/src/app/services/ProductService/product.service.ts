@@ -16,7 +16,7 @@ GetAll(){
 }
 
 Add(product:any){
-  return this.http.post(this.BaseUrl,product);
+  return this.http.post(this.BaseUrl , product);
 }
 
 
