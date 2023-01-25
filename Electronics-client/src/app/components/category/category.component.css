@@ -4,7 +4,8 @@
      overflow: hidden;
      width: 100%;
      min-height:93.2vh;
-     position: relative;
+     position: absolute;
+     margin: 60px 0px 0px 0px;
      background-color: #ffff;
 }
 

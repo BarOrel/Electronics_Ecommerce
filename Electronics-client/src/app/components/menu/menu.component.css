@@ -1,11 +1,13 @@
 .Menu{
     width: 240px;
-    margin: 7px 0px 0px 56px;
+    z-index: 200;
+    margin: 77px 0px 0px 56px;
     height: 500px;
     background-color: #fff;
     border:1px solid rgb(204, 204, 204) ;
     box-shadow: 10px 5px 15px rgb(213, 223, 255);
     border-radius: 10px;
+    position: fixed;
     
 }
 .Menu > a{
