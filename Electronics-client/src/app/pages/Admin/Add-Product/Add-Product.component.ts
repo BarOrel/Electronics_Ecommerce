@@ -42,6 +42,9 @@ export class AddProductComponent implements OnInit {
     this.product.ReleaseDate = Date;
     this.product.Manufacturer = Manufacturer;
     this.product.ImgUrl = ImgUrl;
+    this.product.Storage = this.Storage
+    this.product.CpuType = this.CPUType
+    this.product.GpuType = this.GPUType
     this.product.CpuName = this.CPU;
     this.product.GpuName = this.GPU;
     

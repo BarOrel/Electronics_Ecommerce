@@ -33,24 +33,25 @@
         <div class="col-half">
           <h4>Manufacturer</h4>
           <select name="Manufacturer" #Manufacturer>
-            <option value="0">Intel</option>
-            <option>Apple</option>
-            <option>Samsung</option>
-            <option>OnePlus</option>
-            <option>Xiaomi</option>
-            <option>Sony</option>
-            <option>Microsoft</option>
-            <option>Lenovo</option>
-            <option>HP</option>
-            <option>Dell</option>
-            <option>Beats</option>
-            <option>Jbl</option>
-            <option>BnO</option>
-            <option>Logitech</option>
-            <option>Jabra</option>
-            <option>Asus</option>
-            <option>Razer</option>
-            <option>AMD</option>
+            <option value="0">Other</option>
+            <option value="1">Apple</option>
+            <option value="2">Samsung</option>
+            <option value="3">OnePlus</option>
+            <option value="4">Xiaomi</option>
+            <option value="5">Sony</option>
+            <option value="6">Microsoft</option>
+            <option value="7">Lenovo</option>
+            <option value="8">HP</option>
+            <option value="9">Dell</option>
+            <option value="10">Beats</option>
+            <option value="11">Jbl</option>
+            <option value="12">BnO</option>
+            <option value="13">Logitech</option>
+            <option value="14">Jabra</option>
+            <option value="15">Asus</option>
+            <option value="16">Razer</option>
+            <option value="17">Intel</option>
+            <option value="18">AMD</option>
           </select>
         </div>
       </div>
@@ -71,24 +72,25 @@
       <div class="input-group" style="width: 200%">
         <select #Category (change)="SelectedIndex(Category.value)" name="Category">
           <option value="99" disabled selected>Choose Category</option>
-          <option value="0">Mobile Phone</option>
-          <option value="1">Desktop PC</option>
-          <option value="2">Laptop</option>
-          <option value="3">Gaming Console</option>
+          <option value="0">None</option>
+          <option value="2">Mobile Phone</option>
+          <option value="3">Desktop PC</option>
+          <option value="4">Laptop</option>
+          <option value="5">Gaming Console</option>
         </select>
       </div>
     </div>
     <div class="input-group">
       
       
-      <app-add-mobile-phone *ngIf="index == 0"></app-add-mobile-phone>
+      <app-add-mobile-phone *ngIf="index == 1"></app-add-mobile-phone>
       <app-Add-DesktopPC (Storage)="StorageFunc($event)"
        (GPU)="GPUFunc($event)" (CPU)="CPUFunc($event)"
        (CPUType)="CpuTypeFunc($event)" (GPUType)="GpuTypeFunc($event)"
-        *ngIf="index == 1" ></app-Add-DesktopPC>
+        *ngIf="index == 2" ></app-Add-DesktopPC>
         
-      <app-Add-Laptop *ngIf="index == 2" style="margin: 350px"></app-Add-Laptop>
-      <app-Add-GamingConsole *ngIf="index == 3" style="margin: 350px"></app-Add-GamingConsole>
+      <app-Add-Laptop *ngIf="index == 3" style="margin: 350px"></app-Add-Laptop>
+      <app-Add-GamingConsole *ngIf="index == 4" style="margin: 350px"></app-Add-GamingConsole>
 
 
     </div>
