@@ -18,7 +18,7 @@ export class AddProductComponent implements OnInit {
   CPU: any;
   GPU: any;
 
-  index: number = 0;
+  index: number = 99;
 
   constructor(private productService:ProductService) {}
 
