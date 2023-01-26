@@ -70,6 +70,7 @@
       <h4>Category</h4>
       <div class="input-group" style="width: 200%">
         <select #Category (change)="SelectedIndex(Category.value)" name="Category">
+          <option value="99" disabled selected>Choose Category</option>
           <option value="0">Mobile Phone</option>
           <option value="1">Desktop PC</option>
           <option value="2">Laptop</option>
