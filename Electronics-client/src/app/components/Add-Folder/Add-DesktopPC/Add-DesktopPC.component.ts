@@ -12,26 +12,23 @@ export class AddDesktopPCComponent implements OnInit {
   @Output() Storage:EventEmitter<any> = new EventEmitter<any>();
   @Output() GPU:EventEmitter<any> = new EventEmitter<any>();
   @Output() CPU:EventEmitter<any> = new EventEmitter<any>();
-  selectedStorage:any;
-  selectedCPU:any;
-  selectedGPU:any;
-  desktopPC:DesktopPC = new DesktopPC;
-  
+  @Output() CPUType:EventEmitter<any> = new EventEmitter<any>();
+  @Output() GPUType:EventEmitter<any> = new EventEmitter<any>();
+
+
   constructor() { }
   
-  SelectedStorage(value:any) {
-    this.Storage.emit(value)
-    
-  }
-  SelectedGPU(value: any) {
-    this.GPU.emit(value)
   
-  }
-  SelectedCPU(value: any) {
-    this.CPU.emit(value)
-    
-  }
+  SelectedCPUType(value:any){this.CPUType.emit(value)}
 
+  SelectedGPUType(value:any){this.GPUType.emit(value)}
+
+  SelectedStorage(value:any){this.Storage.emit(value) }
+
+  SelectedGPU(value: any){this.GPU.emit(value)}
+
+  SelectedCPU(value: any){this.CPU.emit(value)}
+  
   ngOnInit() {
   }
 
