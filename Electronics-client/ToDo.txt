@@ -1,1 +1,14 @@
-1 change in form the input for name cpu 
+Bar - {
+    
+Graphic Card - Add Component
+Procesor - Add Component
+Tablet - Add Component
+
+}
+
+Oshri - {
+
+Smart Watch - Add Component
+TV - Add Component
+
+}

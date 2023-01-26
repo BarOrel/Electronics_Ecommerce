@@ -10,6 +10,7 @@ import { ProductService } from 'src/app/services/ProductService/product.service'
 export class AddProductComponent implements OnInit {
   product: Product = new Product();
   Storage: any;
+  Color:any;
   CPU: any;
   CPUType: any;
   GPU: any;
@@ -37,20 +38,20 @@ export class AddProductComponent implements OnInit {
     Name: any,
     Description: any,
     Price: any,
-    Color: any,
     Manufacturer: any,
     Category: any,
     ImgUrl: any,
     Date: any
+
   ) {
     this.product.Name = Name;
     this.product.Description = Description;
     this.product.Price = Price;
-    this.product.Color = Color;
     this.product.Category = Category;
     this.product.ReleaseDate = Date;
     this.product.Manufacturer = Manufacturer;
     this.product.ImgUrl = ImgUrl;
+    this.product.Color = this.Color;
     this.product.Storage = this.Storage
     this.product.CpuType = this.CPUType
     this.product.GpuType = this.GPUType
