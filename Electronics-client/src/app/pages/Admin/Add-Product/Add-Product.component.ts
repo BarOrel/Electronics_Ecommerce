@@ -34,13 +34,15 @@ export class AddProductComponent implements OnInit {
     Color: any,
     Manufacturer: any,
     Category: any,
-    ImgUrl:any
+    ImgUrl:any,
+    Date:any
   ) {
     this.product.Name = Name;
     this.product.Description = Description;
     this.product.Price = Price;
     this.product.Color = Color;
     this.product.Category = Category;
+    this.product.ReleaseDate = Date;
     this.product.Manufacturer = Manufacturer;
     this.product.ImgUrl = ImgUrl;
     this.product.CpuName = this.CPU;

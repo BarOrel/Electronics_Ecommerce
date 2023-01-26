@@ -60,15 +60,9 @@
       <div class="row">
         <h4>Release Date</h4>
         <div class="input-group">
-          <div class="col-third">
-            <input type="text" placeholder="DD" name="DateDD" />
-          </div>
-          <div class="col-third">
-            <input type="text" placeholder="MM" name="DateMM" />
-          </div>
-          <div class="col-third">
-            <input type="text" placeholder="YYYY" name="DateYYYY" />
-          </div>
+        
+           <input type="date" #Date>
+          
         </div>
       </div>
     </div>
@@ -76,7 +70,7 @@
       <h4>Category</h4>
       <div class="input-group" style="width: 200%">
         <select #Category (change)="SelectedIndex(Category.value)" name="Category">
-          <option value="0">None</option>
+          <option value="0">Mobile Phone</option>
           <option value="1">Desktop PC</option>
           <option value="2">Laptop</option>
           <option value="3">Gaming Console</option>
@@ -84,15 +78,16 @@
       </div>
     </div>
     <div class="input-group">
+      
+      
       <app-Add-DesktopPC (Storage)="StorageFunc($event)" (GPU)="GPUFunc($event)" (CPU)="CPUFunc($event)" *ngIf="index == 1" ></app-Add-DesktopPC>
       <app-Add-Laptop *ngIf="index == 2" style="margin: 350px"></app-Add-Laptop>
-      <app-Add-GamingConsole
-        *ngIf="index == 3"
-        style="margin: 350px"
-      ></app-Add-GamingConsole>
+      <app-Add-GamingConsole *ngIf="index == 3" style="margin: 350px"></app-Add-GamingConsole>
+
+
     </div>
     <div>
-      <button class="addBtn" (click)="AddProduct(Name.value,Description.value,Price.value,Color.value,Manufacturer.value,Category.value,ImgUrl.value)" >Add New Product</button>
+      <button class="addBtn" (click)="AddProduct(Name.value,Description.value,Price.value,Color.value,Manufacturer.value,Category.value,ImgUrl.value,Date.valueAsDate)" >Add New Product</button>
     </div>
   </div>
 </div>
