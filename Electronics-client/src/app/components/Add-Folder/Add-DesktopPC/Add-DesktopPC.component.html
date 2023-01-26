@@ -2,15 +2,20 @@
   <div >
     <div>
       <h4>Procesor</h4>
-      <select  #CpuType class="row"  >
-        <option value="0">i3</option>
-        <option value="1">i5</option>
-        <option value="2">i7</option>
-        <option value="3">i9</option>
-        <option value="3">r3</option>
-        <option value="3">r5</option>
-        <option value="3">r7</option>
-        <option value="3">r9</option>
+      <select  #CpuType class="row" (change)="SelectedCPUType(CpuType.value)"  >
+        <option value="1">i3</option>
+        <option value="2">i5</option>
+        <option value="3">i7</option>
+        <option value="4">i9</option>
+        <option value="5">M1</option>
+        <option value="6">M1Pro</option>
+        <option value="7">M1Ultra</option>
+        <option value="8">M2</option>
+        <option value="9">r3</option>
+        <option value="10">r5</option>
+        <option value="11">r7</option>
+        <option value="12">r9</option>
+        <option value="13">Threadripper</option>
       </select>
       <br>
       <br>
@@ -18,23 +23,35 @@
       <input type="text" placeholder="Name CPU" #CPU (change)="SelectedCPU(CPU.value)"/>
     </div>
 
-
-
-    <h4>Graphic card</h4>
+    <h4>Graphic Card Name</h4>
     <input type="text" placeholder="Name GPU" #GPU (change)="SelectedGPU(GPU.value)"/>
-    <h4>Graphic card Name</h4>
-    <select class="row"  #GpuType  >
-      <option value="0">4 gb</option>
-      <option value="1">8 gb</option>
-      <option value="2">16 gb</option>
-      <option value="3">32 gb</option>
-      <option value="4">64 gb</option>
-      <option value="5">128 gb</option>
-      <option value="6">256 gb</option>
-      <option value="7">512 gb</option>
-      <option value="8">1 tb</option>
-      <option value="9">2 tb</option>
-      <option value="10">4 tb</option>
+    <h4>Graphic Card</h4>
+    <select class="row"  #GpuType (change)="SelectedGPUType(GpuType.value)"  >
+      <option value="0">None</option>
+      <option value="1">RTX2060</option>
+      <option value="2">RTX2070</option>
+      <option value="3">RTX2080</option>
+      <option value="4">RTX2080Ti</option>
+      <option value="5">RTX3060</option>
+      <option value="6">RTX3070</option>
+      <option value="7">RTX3080</option>
+      <option value="8">RTX3090</option>
+      <option value="9">RTX3090Ti</option>
+      <option value="10">RTX4070</option>
+      <option value="11">RTX4080</option>
+      <option value="12">RTX4090</option>
+      <option value="13">RX5600</option>
+      <option value="14">RX5700</option>
+      <option value="15">RX5800</option>
+      <option value="16">RX6600</option>
+      <option value="17">RX6700</option>
+      <option value="18">RX6800</option>
+      <option value="19">RX7600</option>
+      <option value="20">RX7700</option>
+      <option value="21">RX7800</option>
+      <option value="22">RX7900</option>
+ 
+
     </select>
     <br>
     <br>
@@ -52,6 +69,7 @@
         <option value="8">1 tb</option>
         <option value="9">2 tb</option>
         <option value="10">4 tb</option>
+        <option value="11">8 tb</option>
       </select>
     </div>
 
