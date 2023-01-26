@@ -17,6 +17,8 @@ import { AddDesktopPCComponent } from './components/Add-Folder/Add-DesktopPC/Add
 import { AddLaptopComponent } from './components/Add-Folder/Add-Laptop/Add-Laptop.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductService } from './services/ProductService/product.service';
+import { AddMobilePhoneComponent } from './components/Add-Folder/Add-MobilePhone/Add-MobilePhone.component';
+
 
 
 @NgModule({
@@ -34,7 +36,8 @@ import { ProductService } from './services/ProductService/product.service';
     AddProductComponent,
     AddGamingConsoleComponent,
     AddDesktopPCComponent,
-    AddLaptopComponent
+    AddLaptopComponent,
+    AddMobilePhoneComponent
     
 
   ],

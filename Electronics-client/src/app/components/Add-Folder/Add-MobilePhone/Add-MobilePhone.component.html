@@ -1,0 +1,56 @@
+<h1>Mobile Phone</h1>
+<div>
+
+    <div>
+        <h4>Storage</h4>
+        <select class="row" #Storage (change)="SelectedStorage(Storage.value)">
+            <option value="0">4 gb</option>
+            <option value="1">8 gb</option>
+            <option value="2">16 gb</option>
+            <option value="3">32 gb</option>
+            <option value="4">64 gb</option>
+            <option value="5">128 gb</option>
+            <option value="6">256 gb</option>
+            <option value="7">512 gb</option>
+            <option value="8">1 tb</option>
+            <option value="9">2 tb</option>
+            <option value="10">4 tb</option>
+        </select>
+    </div>
+<br>
+<br>
+    <div>
+        <h4>Inch</h4>
+        <input type="number" placeholder="Inch" #Inch (change)="InchNum(Inch.value)">
+    </div>
+
+    <div>
+        <h4>Milliamper Hours</h4>
+        <input type="number" placeholder="Milliamper Hours" #MilliamperHours
+            (change)="MilliamperHoursNum(MilliamperHours.value)">
+    </div>
+
+    <div>
+        <h4>Resolution</h4>
+        <select name="resolutaionSelect" #resolution class="row" (change)="selectedResolu(resolution.value)">
+            <option value="0" selected disabled >Choose Resolution</option>
+            <option value="7">2340x1080</option>
+            <option value="8">2778x1170</option>
+            <option value="9">3088x1440</option>
+        </select>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    
+    <div>
+        <h4>Operation System</h4>
+        <select name="operationSystem" #operationSystem class="row" (change)="selectedoperationSystem(operationSystem.value)">
+            <option value="0" selected disabled>Choose</option>
+            <option value="5">IOS</option>
+            <option value="7">Android</option>
+        </select>
+    </div>
+
+</div>
