@@ -16,6 +16,8 @@ export class AddLaptopComponent implements OnInit {
   @Output() CPUType: EventEmitter<any> = new EventEmitter<any>();
   @Output() GPUType: EventEmitter<any> = new EventEmitter<any>();
   @Output() InchSize: EventEmitter<any> = new EventEmitter<any>();
+  @Output() Resolution: EventEmitter<any> = new EventEmitter<any>();
+  @Output() Panel: EventEmitter<any> = new EventEmitter<any>();
   //
 
   ngOnInit() {
@@ -33,5 +35,9 @@ export class AddLaptopComponent implements OnInit {
   SelectedCPU(value: any) { this.CPU.emit(value) }
 
   InchNum(value: any) { this.InchSize.emit(value)}
+
+  selectedResolutaion(value: any) { this.Resolution.emit(value) }
+
+  PanelSelected(value: any) { this.Panel.emit(value) }
   //
 }

@@ -31,6 +31,6 @@ export class AddMobilePhoneComponent implements OnInit {
 
   selectedoperationSystem(value: any) { this.OperationSystem.emit(value) }
 
-  selectedResolu(value: any) { this.Resolution.emit(value) }
+  selectedResolutaion(value: any) { this.Resolution.emit(value) }
   //
 }

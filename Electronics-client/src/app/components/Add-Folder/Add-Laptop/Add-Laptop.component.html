@@ -3,7 +3,7 @@
   <h4>MilliampHours</h4>
   <input type="text" placeholder="Name CPU" />
   <h4>Resolution</h4>
-  <select class="row">
+  <select  name="resolutaionSelect" #resolution class="row" (change)="selectedResolutaion(resolution.value)">
     <option value="1">1920x1080</option>
     <option value="2">2560x1080</option>
     <option value="3">2560x1440</option>
@@ -14,7 +14,7 @@
   <br />
   <br />
   <h4>Panel</h4>
-  <select>
+  <select class="row" #Panel (change)="PanelSelected($event)">
     <option value="1">TN</option>
     <option value="2">IPS</option>
     <option value="3">QLED</option>
