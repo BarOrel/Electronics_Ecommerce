@@ -22,12 +22,19 @@
       <div class="row">
         <div class="col-half">
           <h4>Color</h4>
-          <select name="Color" #Color>
-            <option value="0">Black</option>
-            <option value="1">White</option>
-            <option value="2">Gray</option>
-            <option value="3">Red</option>
-            <option value="4">Blue</option>
+          <select name="Color" #Color (change)="SelectedColor(Color.value)">
+            <option value="0">None</option>
+            <option value="1">Red</option>
+            <option value="2">Green</option>
+            <option value="3">Blue</option>
+            <option value="4">Purple</option>
+            <option value="5">Black</option>
+            <option value="6">White</option>
+            <option value="7">Gray</option>
+            <option value="8">Yellow</option>
+            <option value="9">Camel</option>
+            <option value="10">Brown</option>
+            <option value="11">Chrom</option>
           </select>
         </div>
         <div class="col-half">
@@ -71,12 +78,23 @@
       <h4>Category</h4>
       <div class="input-group" style="width: 200%">
         <select #Category (change)="SelectedIndex(Category.value)" name="Category">
-          <option value="99" disabled selected>Choose Category</option>
+          <option disabled selected>Choose Category</option>
           <option value="0">None</option>
-          <option value="2">Mobile Phone</option>
-          <option value="3">Desktop PC</option>
-          <option value="4">Laptop</option>
-          <option value="5">Gaming Console</option>
+          <option value="1">Mobile Phone</option>
+          <option value="2">Tablet</option>
+          <option value="3">Smart Watch</option>
+          <option value="4">Televsion</option>
+          <option value="5">Desktop PC</option>
+          <option value="6">Procesor</option>
+          <option value="7">Graphics Card</option>
+          <option value="8">Laptop</option>
+          <option value="9">Gaming Console</option>
+          <option value="10">Gaming Console Accessories</option>
+          <option value="11">Keyboard</option>
+          <option value="12">Mouse</option>
+          <option value="13">Monitor</option>
+          <option value="14">Speakers</option>
+          <option value="15">Headphones</option>
         </select>
       </div>
     </div>
@@ -89,19 +107,19 @@
       <app-Add-DesktopPC (Storage)="StorageFunc($event)" 
       (GPU)="GPUFunc($event)" (CPU)="CPUFunc($event)"
         (CPUType)="CpuTypeFunc($event)" (GPUType)="GpuTypeFunc($event)" 
-        *ngIf="index == 2"></app-Add-DesktopPC>
+        *ngIf="index == 5"></app-Add-DesktopPC>
 
-      <app-Add-Laptop *ngIf="index == 3" (Storage)="StorageFunc($event)" 
+      <app-Add-Laptop *ngIf="index == 8" (Storage)="StorageFunc($event)" 
       (GPU)="GPUFunc($event)" (CPU)="CPUFunc($event)"
         (CPUType)="CpuTypeFunc($event)" (GPUType)="GpuTypeFunc($event)" (Resolution)="ResolutionFunc($event)"
         (InchSize)="InchFunc($event)" style="margin: 350px"></app-Add-Laptop>
-      <app-Add-GamingConsole *ngIf="index == 4" style="margin: 350px"></app-Add-GamingConsole>
+      <app-Add-GamingConsole *ngIf="index == 9" style="margin: 350px"></app-Add-GamingConsole>
 
 
     </div>
     <div>
       <button class="addBtn"
-        (click)="AddProduct(Name.value,Description.value,Price.value,Color.value,Manufacturer.value,Category.value,ImgUrl.value,Date.valueAsDate)">Add
+        (click)="AddProduct(Name.value,Description.value,Price.value,Manufacturer.value,Category.value,ImgUrl.value,Date.valueAsDate)">Add
         New Product</button>
     </div>
   </div>
