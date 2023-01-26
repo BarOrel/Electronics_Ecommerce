@@ -81,7 +81,11 @@
       
       
       <app-add-mobile-phone *ngIf="index == 0"></app-add-mobile-phone>
-      <app-Add-DesktopPC (Storage)="StorageFunc($event)" (GPU)="GPUFunc($event)" (CPU)="CPUFunc($event)" *ngIf="index == 1" ></app-Add-DesktopPC>
+      <app-Add-DesktopPC (Storage)="StorageFunc($event)"
+       (GPU)="GPUFunc($event)" (CPU)="CPUFunc($event)"
+       (CPUType)="CpuTypeFunc($event)" (GPUType)="GpuTypeFunc($event)"
+        *ngIf="index == 1" ></app-Add-DesktopPC>
+        
       <app-Add-Laptop *ngIf="index == 2" style="margin: 350px"></app-Add-Laptop>
       <app-Add-GamingConsole *ngIf="index == 3" style="margin: 350px"></app-Add-GamingConsole>
 

@@ -9,14 +9,11 @@ import { ProductService } from 'src/app/services/ProductService/product.service'
 })
 export class AddProductComponent implements OnInit {
   product: Product = new Product();
-  name: any;
-  Description: any;
-  ImgUrl: any;
-  Price: any;
-  Color: any;
   Storage: any;
   CPU: any;
+  CPUType: any;
   GPU: any;
+  GPUType: any;
 
   index: number = 0;
 
@@ -63,4 +60,11 @@ export class AddProductComponent implements OnInit {
   GPUFunc(value: any) {
     this.GPU = value;
   }
+  CpuTypeFunc(value: any){
+    this.CPUType = value;
+  }
+  GpuTypeFunc(value: any){
+    this.GPUType = value;
+  }
+
 }
