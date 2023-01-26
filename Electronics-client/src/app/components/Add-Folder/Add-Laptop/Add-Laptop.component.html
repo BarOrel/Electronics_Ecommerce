@@ -1,26 +1,112 @@
-<div >
+<div>
   <h1>Laptop</h1>
-            <h4>MilliampHours</h4>
-            <input type="text" placeholder="Name CPU" />
-            <h4>Resolution</h4>
-            <select class="row" >
-              <option value="">1920x1080</option>
-              <option value="">2560x1080</option>
-              <option value="">2560x1440</option>
-              <option value="">3440x1400</option>
-              <option value="">4K</option>
-              <option value="">8K</option>
-            </select>
-            <br />
-            <br />
-            <h4>Panel</h4>
-            <select >
-              <option value="">TN</option>
-              <option value="">IPS</option>
-              <option value="">QLED</option>
-              <option value="">OLED</option>
-              <option value="">VN</option>
-              <option value="">LCD</option>
-            </select>
+  <h4>MilliampHours</h4>
+  <input type="text" placeholder="Name CPU" />
+  <h4>Resolution</h4>
+  <select class="row">
+    <option value="1">1920x1080</option>
+    <option value="2">2560x1080</option>
+    <option value="3">2560x1440</option>
+    <option value="4">3440x1400</option>
+    <option value="5">4K</option>
+    <option value="6">8K</option>
+  </select>
+  <br />
+  <br />
+  <h4>Panel</h4>
+  <select>
+    <option value="1">TN</option>
+    <option value="2">IPS</option>
+    <option value="3">QLED</option>
+    <option value="4">OLED</option>
+    <option value="5">VN</option>
+    <option value="6">LCD</option>
+  </select>
+
+  <!-- oshri added -->
+  <!-- cpu -->
+  <div>
+    <h4>Procesor</h4>
+    <select #CpuType class="row" (change)="SelectedCPUType(CpuType.value)">
+      <option value="1">i3</option>
+      <option value="2">i5</option>
+      <option value="3">i7</option>
+      <option value="4">i9</option>
+      <option value="5">M1</option>
+      <option value="6">M1Pro</option>
+      <option value="7">M1Ultra</option>
+      <option value="8">M2</option>
+      <option value="9">r3</option>
+      <option value="10">r5</option>
+      <option value="11">r7</option>
+      <option value="12">r9</option>
+      <option value="13">Threadripper</option>
+    </select>
+    <br>
+    <br>
+    <h4>Procesor Name</h4>
+    <input type="text" placeholder="Name CPU" #CPU (change)="SelectedCPU(CPU.value)" />
+  </div>
+
+  <!-- gpu -->
+  <div>
+    <h4>Graphic Card Name</h4>
+    <input type="text" placeholder="Name GPU" #GPU (change)="SelectedGPU(GPU.value)" />
+    <h4>Graphic Card</h4>
+    <select class="row" #GpuType (change)="SelectedGPUType(GpuType.value)">
+      <option value="0">None</option>
+      <option value="1">RTX2060</option>
+      <option value="2">RTX2070</option>
+      <option value="3">RTX2080</option>
+      <option value="4">RTX2080Ti</option>
+      <option value="5">RTX3060</option>
+      <option value="6">RTX3070</option>
+      <option value="7">RTX3080</option>
+      <option value="8">RTX3090</option>
+      <option value="9">RTX3090Ti</option>
+      <option value="10">RTX4070</option>
+      <option value="11">RTX4080</option>
+      <option value="12">RTX4090</option>
+      <option value="13">RX5600</option>
+      <option value="14">RX5700</option>
+      <option value="15">RX5800</option>
+      <option value="16">RX6600</option>
+      <option value="17">RX6700</option>
+      <option value="18">RX6800</option>
+      <option value="19">RX7600</option>
+      <option value="20">RX7700</option>
+      <option value="21">RX7800</option>
+      <option value="22">RX7900</option>
+    </select>
+  </div>
+
+  <div>
+
+  </div>
+  <!-- inch -->
+  <div>
+    <h4>Inch</h4>
+    <input type="number" placeholder="Inch" #Inch (change)="InchNum(Inch.value)">
+  </div>
+
+  <!--storage  -->
+  <div>
+    <h4>Storage</h4>
+    <select class="row"  #Storage (change)="SelectedStorage(Storage.value)" >
+      <option value="1">4 gb</option>
+      <option value="2">8 gb</option>
+      <option value="3">16 gb</option>
+      <option value="4">32 gb</option>
+      <option value="5">64 gb</option>
+      <option value="6">128 gb</option>
+      <option value="7">256 gb</option>
+      <option value="8">512 gb</option>
+      <option value="9">1 tb</option>
+      <option value="10">2 tb</option>
+      <option value="11">4 tb</option>
+      <option value="12">8 tb</option>
+    </select>
+  </div>
+  <!-- update the db for laptop -->
 
 </div>

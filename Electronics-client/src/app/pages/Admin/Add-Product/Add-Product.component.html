@@ -83,7 +83,7 @@
     <div class="input-group">
       
       
-      <app-add-mobile-phone *ngIf="index == 1"></app-add-mobile-phone>
+      <app-add-mobile-phone *ngIf="index == 1" (Storage)="StorageFunc($event)" (InchSize)="InchFunc($event)" (Miliamper)="MiliamperFunc($event)" (OperationSystem)="OperationSystemFunc($event)" (Resolution)="ResolutionFunc($event)"></app-add-mobile-phone>
       <app-Add-DesktopPC (Storage)="StorageFunc($event)"
        (GPU)="GPUFunc($event)" (CPU)="CPUFunc($event)"
        (CPUType)="CpuTypeFunc($event)" (GPUType)="GpuTypeFunc($event)"

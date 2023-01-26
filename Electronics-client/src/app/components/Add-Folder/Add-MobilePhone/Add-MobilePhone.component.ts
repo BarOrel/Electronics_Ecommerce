@@ -8,13 +8,13 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class AddMobilePhoneComponent implements OnInit {
 
 
-
+  //oshri added
   @Output() Storage: EventEmitter<any> = new EventEmitter<any>();
   @Output() InchSize: EventEmitter<any> = new EventEmitter<any>();
   @Output() Miliamper: EventEmitter<any> = new EventEmitter<any>();
-  @Output() operationSystem: EventEmitter<any> = new EventEmitter<any>();
+  @Output() OperationSystem: EventEmitter<any> = new EventEmitter<any>();
   @Output() Resolution: EventEmitter<any> = new EventEmitter<any>();
-  
+  //
 
 
   constructor() { }
@@ -22,22 +22,15 @@ export class AddMobilePhoneComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  SelectedStorage(value: any) {
-    this.Storage.emit(value)
-  }
-  MilliamperHoursNum(value: any) {
-    this.Miliamper.emit(value)
-  }
-  InchNum(value: any) {
-    this.InchSize.emit(value)
-  }
+  //oshri added
+  SelectedStorage(value: any) { this.Storage.emit(value) }
 
-  selectedoperationSystem(value: any) {
-    this.operationSystem.emit(value)
-  }
-  
-  selectedResolu(value: any) {
-    this.Resolution.emit(value)
-  }
+  MilliamperHoursNum(value: any) { this.Miliamper.emit(value) }
 
+  InchNum(value: any) { this.InchSize.emit(value) }
+
+  selectedoperationSystem(value: any) { this.OperationSystem.emit(value) }
+
+  selectedResolu(value: any) { this.Resolution.emit(value) }
+  //
 }

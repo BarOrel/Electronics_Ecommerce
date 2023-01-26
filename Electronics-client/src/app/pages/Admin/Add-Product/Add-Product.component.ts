@@ -15,14 +15,22 @@ export class AddProductComponent implements OnInit {
   GPU: any;
   GPUType: any;
 
+
+  //Oshri added for mobile phone
+  Inch: any;
+  Miliamper: any;
+  Resolution: any;
+  OperationSystem: any;
+  //
+
   index: number = 99;
 
-  constructor(private productService:ProductService) {}
+  constructor(private productService: ProductService) { }
 
   SelectedIndex(value: any) {
     this.index = value;
   }
-  ngOnInit() {}
+  ngOnInit() { }
 
   AddProduct(
     Name: any,
@@ -31,8 +39,8 @@ export class AddProductComponent implements OnInit {
     Color: any,
     Manufacturer: any,
     Category: any,
-    ImgUrl:any,
-    Date:any
+    ImgUrl: any,
+    Date: any
   ) {
     this.product.Name = Name;
     this.product.Description = Description;
@@ -47,8 +55,15 @@ export class AddProductComponent implements OnInit {
     this.product.GpuType = this.GPUType
     this.product.CpuName = this.CPU;
     this.product.GpuName = this.GPU;
-    
-    
+
+    //oshri added for mobile phone
+    this.product.Inch = this.Inch
+    this.product.MilliampHours = this.Miliamper
+    this.product.Resolution = this.Resolution
+    this.product.OperationSystem = this.OperationSystem
+    //
+
+
     this.productService.Add(this.product).subscribe((data) => {
       console.log(data);
     });
@@ -63,11 +78,33 @@ export class AddProductComponent implements OnInit {
   GPUFunc(value: any) {
     this.GPU = value;
   }
-  CpuTypeFunc(value: any){
+  CpuTypeFunc(value: any) {
     this.CPUType = value;
   }
-  GpuTypeFunc(value: any){
+  GpuTypeFunc(value: any) {
     this.GPUType = value;
   }
+
+
+  //oshri added for mobile phone
+  //inch func
+  InchFunc(value: any) {
+    this.GPUType = value;
+  }
+  //Miliamper func
+  MiliamperFunc(value: any) {
+    this.GPUType = value;
+  }
+  //func OperationSystemFunc
+  OperationSystemFunc(value: any) {
+    this.GPUType = value;
+  }
+  //func ResolutionFunc
+  ResolutionFunc(value: any) {
+    this.GPUType = value;
+  }
+  //
+
+
 
 }
