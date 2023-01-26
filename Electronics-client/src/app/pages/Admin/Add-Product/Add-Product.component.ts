@@ -22,7 +22,8 @@ export class AddProductComponent implements OnInit {
   Resolution: any;
   OperationSystem: any;
   //
-
+  Panel:any;
+  //
   index: number = 99;
 
   constructor(private productService: ProductService) { }
@@ -62,49 +63,33 @@ export class AddProductComponent implements OnInit {
     this.product.Resolution = this.Resolution
     this.product.OperationSystem = this.OperationSystem
     //
-
+    //for laptop
+    this.product.Panel = this.Panel
+//
 
     this.productService.Add(this.product).subscribe((data) => {
       console.log(data);
     });
   }
 
-  StorageFunc(value: any) {
-    this.Storage = value;
-  }
-  CPUFunc(value: any) {
-    this.CPU = value;
-  }
-  GPUFunc(value: any) {
-    this.GPU = value;
-  }
-  CpuTypeFunc(value: any) {
-    this.CPUType = value;
-  }
-  GpuTypeFunc(value: any) {
-    this.GPUType = value;
-  }
+  StorageFunc(value: any) {this.Storage = value;  }
+  CPUFunc(value: any) { this.CPU = value; }
+  GPUFunc(value: any) { this.GPU = value; }
+  CpuTypeFunc(value: any) { this.CPUType = value; }
+  GpuTypeFunc(value: any) { this.GPUType = value; }
 
 
   //oshri added for mobile phone
   //inch func
-  InchFunc(value: any) {
-    this.GPUType = value;
-  }
+  InchFunc(value: any) {  this.GPUType = value;}
   //Miliamper func
-  MiliamperFunc(value: any) {
-    this.GPUType = value;
-  }
+  MiliamperFunc(value: any) {  this.GPUType = value;}
   //func OperationSystemFunc
-  OperationSystemFunc(value: any) {
-    this.GPUType = value;
-  }
+  OperationSystemFunc(value: any) {  this.GPUType = value;}
   //func ResolutionFunc
-  ResolutionFunc(value: any) {
-    this.GPUType = value;
-  }
+  ResolutionFunc(value: any) { this.GPUType = value;}
   //
-
-
-
+  //for laptop
+  PanelFunc(value: any) { this.Panel = value; }
+//
 }
