@@ -8,6 +8,7 @@ import { ProductService } from 'src/app/services/ProductService/product.service'
   styleUrls: ['./Add-Product.component.css'],
 })
 export class AddProductComponent implements OnInit {
+
   product: Product = new Product();
   Storage: any;
   Color:any;
@@ -26,6 +27,7 @@ export class AddProductComponent implements OnInit {
   Panel:any;
   //
   index: number = 99;
+  sizemm:any;
 
   constructor(private productService: ProductService) { }
 
@@ -57,7 +59,8 @@ export class AddProductComponent implements OnInit {
     this.product.GpuType = this.GPUType
     this.product.CpuName = this.CPU;
     this.product.GpuName = this.GPU;
-
+    this.product.SizeMM = this.sizemm;
+    
     //oshri added for mobile phone
     this.product.Inch = this.Inch
     this.product.MilliampHours = this.Miliamper
@@ -95,4 +98,6 @@ export class AddProductComponent implements OnInit {
 
   SelectedColor(Color:any){}
 //
+
+SizemmFunc(value: any) {this.sizemm = value }
 }
