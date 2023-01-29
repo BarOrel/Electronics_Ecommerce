@@ -104,7 +104,7 @@
           (Miliamper)="MiliamperFunc($event)" (OperationSystem)="OperationSystemFunc($event)"
           (Resolution)="ResolutionFunc($event)"></app-add-mobile-phone>
         <app-Add-Tablet *ngIf="index == 2"></app-Add-Tablet>
-        <app-Add-SmartWatch *ngIf="index == 3"></app-Add-SmartWatch>
+        <app-Add-SmartWatch *ngIf="index == 3" (Sizemm)="SizemmFunc($event)" (Storage)="StorageFunc($event)" (OperationSystem)="OperationSystemFunc($event)" (Miliamper)="MiliamperFunc($event)"></app-Add-SmartWatch>
         <app-Add-Televsion *ngIf="index == 4"></app-Add-Televsion>
         <app-Add-DesktopPC (Storage)="StorageFunc($event)" 
         (GPU)="GPUFunc($event)" (CPU)="CPUFunc($event)"

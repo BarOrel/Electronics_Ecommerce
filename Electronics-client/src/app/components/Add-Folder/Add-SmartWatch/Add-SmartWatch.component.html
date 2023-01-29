@@ -1,3 +1,32 @@
-<p>
-  Add-SmartWatch works!
-</p>
+<h1>Size mm</h1>
+<div>
+  <h4>Storage</h4>
+  <select class="row"  #Storage (change)="SelectedStorage(Storage.value)" >
+    <option value="1">4 gb</option>
+    <option value="2">8 gb</option>
+    <option value="3">16 gb</option>
+    <option value="4">32 gb</option>
+    <option value="5">64 gb</option>
+ 
+  </select>
+</div>
+
+<div>
+  <h4>Sizw mm</h4>
+  <input type="number" placeholder="Size mm" #sizemm (change)="selectrdSizemm(sizemm.value)">
+</div>
+
+<div>
+  <h4>Operation System</h4>
+  <select name="operationSystem" #operationSystem class="row" (change)="selectedoperationSystem(operationSystem.value)">
+      <option value="0" selected disabled>Choose</option>
+      <option value="8">Tyzen</option>
+      <option value="9">WatchOS</option>
+  </select>
+</div>
+
+<div>
+  <h4>Milliamper Hours</h4>
+  <input type="number" placeholder="Milliamper Hours" #MilliamperHours
+      (change)="MilliamperHoursNum(MilliamperHours.value)">
+</div>
