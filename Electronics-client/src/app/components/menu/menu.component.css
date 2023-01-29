@@ -1,7 +1,7 @@
 .Menu{
     width: 240px;
     z-index: 200;
-    margin: 77px 0px 0px 56px;
+    margin:68px 0px 0px 56px;
     height: 500px;
     background-color: #fff;
     border:1px solid rgb(204, 204, 204) ;
@@ -16,13 +16,10 @@
     display:inline-block; 
     margin:0;
     width: 200px;
-    
     font-size: 20px;
     cursor: pointer;
     
     border-bottom: 1px solid rgb(180, 180, 180);
-
-    
 
 }
 
