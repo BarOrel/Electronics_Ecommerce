@@ -101,19 +101,31 @@
     <div class="input-group">
 
 
-      <app-add-mobile-phone *ngIf="index == 1" (Storage)="StorageFunc($event)" (InchSize)="InchFunc($event)"
-        (Miliamper)="MiliamperFunc($event)" (OperationSystem)="OperationSystemFunc($event)"
-        (Resolution)="ResolutionFunc($event)"></app-add-mobile-phone>
-      <app-Add-DesktopPC (Storage)="StorageFunc($event)" 
-      (GPU)="GPUFunc($event)" (CPU)="CPUFunc($event)"
-        (CPUType)="CpuTypeFunc($event)" (GPUType)="GpuTypeFunc($event)" 
-        *ngIf="index == 5"></app-Add-DesktopPC>
+        <app-add-mobile-phone *ngIf="index == 1" (Storage)="StorageFunc($event)" (InchSize)="InchFunc($event)"
+          (Miliamper)="MiliamperFunc($event)" (OperationSystem)="OperationSystemFunc($event)"
+          (Resolution)="ResolutionFunc($event)"></app-add-mobile-phone>
 
-      <app-Add-Laptop *ngIf="index == 8" (Storage)="StorageFunc($event)" 
-      (GPU)="GPUFunc($event)" (CPU)="CPUFunc($event)"
-        (CPUType)="CpuTypeFunc($event)" (GPUType)="GpuTypeFunc($event)" (Resolution)="ResolutionFunc($event)"
-        (InchSize)="InchFunc($event)" (Panel)="PanelFunc($event)" style="margin: 350px"></app-Add-Laptop>
-      <app-Add-GamingConsole *ngIf="index == 4" style="margin: 350px"></app-Add-GamingConsole>
+        <app-Add-Tablet *ngIf="index == 2"></app-Add-Tablet>
+
+        <app-Add-SmartWatch *ngIf="index == 3"></app-Add-SmartWatch>
+
+        <app-Add-Televsion *ngIf="index == 4"></app-Add-Televsion>
+
+        <app-Add-DesktopPC (Storage)="StorageFunc($event)" 
+        (GPU)="GPUFunc($event)" (CPU)="CPUFunc($event)"
+          (CPUType)="CpuTypeFunc($event)" (GPUType)="GpuTypeFunc($event)" 
+          *ngIf="index == 5"></app-Add-DesktopPC>
+
+          
+        <app-Add-Procesor *ngIf="index == 6"></app-Add-Procesor>
+        <app-Add-GraphicsCard *ngIf="index == 7"></app-Add-GraphicsCard>
+        <app-Add-Laptop *ngIf="index == 8" (Storage)="StorageFunc($event)" 
+        (GPU)="GPUFunc($event)" (CPU)="CPUFunc($event)"
+          (CPUType)="CpuTypeFunc($event)" (GPUType)="GpuTypeFunc($event)" (Resolution)="ResolutionFunc($event)"
+          (InchSize)="InchFunc($event)" (Panel)="PanelFunc($event)" style="margin: 350px"></app-Add-Laptop>
+        <app-Add-GamingConsole *ngIf="index == 9" style="margin: 350px"></app-Add-GamingConsole>
+
+        <app-Add-Monitor *ngIf="index == 13"></app-Add-Monitor>
 
 
     </div>

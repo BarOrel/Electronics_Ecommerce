@@ -18,6 +18,12 @@ import { AddLaptopComponent } from './components/Add-Folder/Add-Laptop/Add-Lapto
 import { HttpClientModule } from '@angular/common/http';
 import { ProductService } from './services/ProductService/product.service';
 import { AddMobilePhoneComponent } from './components/Add-Folder/Add-MobilePhone/Add-MobilePhone.component';
+import { AddTabletComponent } from './components/Add-Folder/Add-Tablet/Add-Tablet.component';
+import { AddSmartWatchComponent } from './components/Add-Folder/Add-SmartWatch/Add-SmartWatch.component';
+import { AddTelevsionComponent } from './components/Add-Folder/Add-Televsion/Add-Televsion.component';
+import { AddProcesorComponent } from './components/Add-Folder/Add-Procesor/Add-Procesor.component';
+import { AddGraphicsCardComponent } from './components/Add-Folder/Add-GraphicsCard/Add-GraphicsCard.component';
+import { AddMonitorComponent } from './components/Add-Folder/Add-Monitor/Add-Monitor.component';
 
 
 
@@ -37,7 +43,15 @@ import { AddMobilePhoneComponent } from './components/Add-Folder/Add-MobilePhone
     AddGamingConsoleComponent,
     AddDesktopPCComponent,
     AddLaptopComponent,
-    AddMobilePhoneComponent
+    AddMobilePhoneComponent,
+    AddTabletComponent,
+    AddSmartWatchComponent,
+    AddTelevsionComponent,
+    AddProcesorComponent,
+    AddGraphicsCardComponent,
+    AddMonitorComponent
+
+
     
 
   ],
