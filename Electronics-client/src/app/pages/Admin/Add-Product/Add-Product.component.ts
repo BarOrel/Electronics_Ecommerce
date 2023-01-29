@@ -85,13 +85,13 @@ export class AddProductComponent implements OnInit {
 
   //oshri added for mobile phone
   //inch func
-  InchFunc(value: any) {  this.GPUType = value;}
+  InchFunc(value: any) {  this.Inch = value;}
   //Miliamper func
-  MiliamperFunc(value: any) {  this.GPUType = value;}
+  MiliamperFunc(value: any) {  this.Miliamper = value;}
   //func OperationSystemFunc
-  OperationSystemFunc(value: any) {  this.GPUType = value;}
+  OperationSystemFunc(value: any) {  this.OperationSystem = value;}
   //func ResolutionFunc
-  ResolutionFunc(value: any) { this.GPUType = value;}
+  ResolutionFunc(value: any) { this.Resolution = value;}
   //
   //for laptop
   PanelFunc(value: any) { this.Panel = value; }

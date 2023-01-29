@@ -11,8 +11,8 @@ constructor(private http:HttpClient) { }
 
 
 
-GetAll(){
-  return this.http.get(this.BaseUrl);
+GetAll(index:any){
+  return this.http.get(this.BaseUrl + index);
 }
 
 Add(product:any){

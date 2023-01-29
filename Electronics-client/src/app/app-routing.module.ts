@@ -15,7 +15,7 @@ const routes: Routes = [
     path: "", component: HomeComponent, children: [
       { path: "Add", component: AddProductComponent },
       { path: "", component: MainComponent },
-      { path: "Category", component: CategoryComponent ,children:[
+      { path: "Category/:id", component: CategoryComponent ,children:[
         { path: "", component: ProductComponent },
         { path: "", component: FilterComponent, outlet:"Filter" },
        

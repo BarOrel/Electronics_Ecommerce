@@ -2,6 +2,7 @@
 <div>
   <h4>Storage</h4>
   <select class="row"  #Storage (change)="SelectedStorage(Storage.value)" >
+    <option selected disabled>Choose GB</option>
     <option value="1">4 gb</option>
     <option value="2">8 gb</option>
     <option value="3">16 gb</option>
@@ -10,7 +11,8 @@
  
   </select>
 </div>
-
+<br>
+<br>
 <div>
   <h4>Sizw mm</h4>
   <input type="number" placeholder="Size mm" #sizemm (change)="selectrdSizemm(sizemm.value)">
@@ -24,7 +26,7 @@
       <option value="9">WatchOS</option>
   </select>
 </div>
-
+<br><br>
 <div>
   <h4>Milliamper Hours</h4>
   <input type="number" placeholder="Milliamper Hours" #MilliamperHours

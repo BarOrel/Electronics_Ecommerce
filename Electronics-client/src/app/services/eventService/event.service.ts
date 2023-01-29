@@ -4,8 +4,7 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class EventService {
- 
-
+  pageIndex:any;  
   private subject = new Subject<any>();
 
   sendClickEvent() {
@@ -15,4 +14,5 @@ export class EventService {
   getEvent():Observable<any>{
     return this.subject.asObservable();
   }
+
 }

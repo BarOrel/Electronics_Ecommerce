@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { interval } from 'rxjs';
+import { EventService } from 'src/app/services/EventService/event.service';
 import { ProductService } from 'src/app/services/ProductService/product.service';
 
 @Component({
@@ -7,15 +9,12 @@ import { ProductService } from 'src/app/services/ProductService/product.service'
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  List:any;
-  constructor(private productService:ProductService) { }
+  @Input() item: any ;
+  
+  constructor(private productService:ProductService,private eventService:EventService) { }
 
   ngOnInit(): void {
-    this.productService.GetAll().subscribe((data)=>{
-      this.List = data
-      console.log(data)
-    }
-    )
+     
   }
 
 }
