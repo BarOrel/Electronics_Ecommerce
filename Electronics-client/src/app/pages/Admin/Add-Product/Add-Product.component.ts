@@ -92,5 +92,7 @@ export class AddProductComponent implements OnInit {
   //
   //for laptop
   PanelFunc(value: any) { this.Panel = value; }
+
+  SelectedColor(Color:any){}
 //
 }
