@@ -15,7 +15,7 @@ import { AddProductComponent } from './pages/Admin/Add-Product/Add-Product.compo
 import { AddGamingConsoleComponent } from './components/Add-Folder/Add-GamingConsole/Add-GamingConsole.component';
 import { AddDesktopPCComponent } from './components/Add-Folder/Add-DesktopPC/Add-DesktopPC.component';
 import { AddLaptopComponent } from './components/Add-Folder/Add-Laptop/Add-Laptop.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ProductService } from './services/ProductService/product.service';
 import { AddMobilePhoneComponent } from './components/Add-Folder/Add-MobilePhone/Add-MobilePhone.component';
 import { AddTabletComponent } from './components/Add-Folder/Add-Tablet/Add-Tablet.component';
@@ -24,6 +24,7 @@ import { AddTelevsionComponent } from './components/Add-Folder/Add-Televsion/Add
 import { AddProcesorComponent } from './components/Add-Folder/Add-Procesor/Add-Procesor.component';
 import { AddGraphicsCardComponent } from './components/Add-Folder/Add-GraphicsCard/Add-GraphicsCard.component';
 import { AddMonitorComponent } from './components/Add-Folder/Add-Monitor/Add-Monitor.component';
+import { TokenInterseptorService } from './services/User/Auth/TokenInterseptor/TokenInterseptor.service';
 
 
 
@@ -61,7 +62,7 @@ import { AddMonitorComponent } from './components/Add-Folder/Add-Monitor/Add-Mon
     HttpClientModule,
     
   ],
-  providers: [],
+  providers: [{provide:HTTP_INTERCEPTORS,useClass:TokenInterseptorService,multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

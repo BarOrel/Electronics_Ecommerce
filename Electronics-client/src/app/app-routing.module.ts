@@ -8,6 +8,7 @@ import { AddProductComponent } from './pages/Admin/Add-Product/Add-Product.compo
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { AuthGuardService } from './services/User/Auth/AuthGuard.service';
 
 
 const routes: Routes = [

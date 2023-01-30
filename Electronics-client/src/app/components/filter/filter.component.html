@@ -1,8 +1,24 @@
 <div class="container">
   <h1>Filter</h1>
+
   <div class="Filter">
-    <div class="title">
-      Filter By Manufacturer
+    <div>
+      Manufacturer
+      <button (click)="ManufacturerIndex()" class="Btn">
+        <ng-container *ngIf="!Manufacturer"
+          ><span class="material-symbols-outlined"
+            >expand_more</span
+          ></ng-container
+        >
+        <ng-container *ngIf="Manufacturer"
+          ><span class="material-symbols-outlined"
+            >expand_less</span
+          ></ng-container
+        >
+      </button>
+    </div>
+
+    <div *ngIf="Manufacturer">
       <p><input type="checkbox" /> Intel</p>
       <p><input type="checkbox" /> Apple</p>
       <p><input type="checkbox" /> Microsoft</p>
@@ -10,19 +26,109 @@
     </div>
   </div>
 
-  <div class="Filter">
-    <div>Filter By Procesor</div>
-    <p><input type="checkbox" /> i3</p>
-    <p><input type="checkbox" /> i5</p>
-    <p><input type="checkbox" /> i7</p>
-    <p><input type="checkbox" /> i9</p>
+  <div class="Filter" *ngIf="Index == 2 || Index == 1">
+    <div>
+      Storage
+      <button (click)="StorageIndex()" class="Btn">
+        <ng-container *ngIf="!Storage"
+          ><span class="material-symbols-outlined"
+            >expand_more</span
+          ></ng-container
+        >
+        <ng-container *ngIf="Storage"
+          ><span class="material-symbols-outlined"
+            >expand_less</span
+          ></ng-container
+        >
+      </button>
+    </div>
+
+    <div *ngIf="Storage">
+      <p><input type="checkbox" /> 4 GB</p>
+      <p><input type="checkbox" /> 8 GB</p>
+      <p><input type="checkbox" /> 16 GB</p>
+      <p><input type="checkbox" /> 32 GB</p>
+      <p><input type="checkbox" /> 64 GB</p>
+      <p><input type="checkbox" /> 128 GB</p>
+      <p><input type="checkbox" /> 256 GB</p>
+      <p><input type="checkbox" /> 512 GB</p>
+      <p><input type="checkbox" /> 1 TB</p>
+      <p><input type="checkbox" /> 2 TB</p>
+      <p><input type="checkbox" /> 4 TB</p>
+      <p><input type="checkbox" /> 8 TB</p>
+    </div>
   </div>
 
-  <div class="Filter">
-    <div>Filter By Graphic Card</div>
-    <p><input type="checkbox" /> GTX 1080</p>
-    <p><input type="checkbox" /> RTX 2080</p>
-    <p><input type="checkbox" /> RTX 3080</p>
-    <p><input type="checkbox" /> RTX 4080</p>
+  <div class="Filter" *ngIf="Index == 2 || Index == 1">
+    <div>
+      operation system<button (click)="OpertionSystemIndex()" class="Btn">
+        <ng-container *ngIf="!OpertionSystem"
+          ><span class="material-symbols-outlined"
+            >expand_more</span
+          ></ng-container
+        >
+        <ng-container *ngIf="OpertionSystem"
+          ><span class="material-symbols-outlined"
+            >expand_less</span
+          ></ng-container
+        >
+      </button>
+    </div>
+
+    <div *ngIf="OpertionSystem">
+      <p><input type="checkbox" /> IOS</p>
+      <p><input type="checkbox" /> Android</p>
+      <p *ngIf="Index == 1"><input type="checkbox" /> Windows</p>
+    </div>
+  </div>
+
+  <div class="Filter" *ngIf="Index ==2">
+    <div>
+      Procesor
+      <button (click)="ProcesorIndex()" class="Btn">
+        <ng-container *ngIf="!Procesor"
+          ><span class="material-symbols-outlined"
+            >expand_more</span
+          ></ng-container
+        >
+        <ng-container *ngIf="Procesor"
+          ><span class="material-symbols-outlined"
+            >expand_less</span
+          ></ng-container
+        >
+      </button>
+    </div>
+
+    <div *ngIf="Procesor">
+      <p><input type="checkbox" /> i3</p>
+      <p><input type="checkbox" /> i5</p>
+      <p><input type="checkbox" /> i7</p>
+      <p><input type="checkbox" /> i9</p>
+    </div>
+  </div>
+
+  <div class="Filter" *ngIf="Index ==2">
+    <div>
+      Graphic Card
+      <button (click)="GraphicCardIndex()" class="Btn">
+        <ng-container *ngIf="!GraphicCard"
+          ><span class="material-symbols-outlined"
+            >expand_more</span
+          ></ng-container
+        >
+        <ng-container *ngIf="GraphicCard"
+          ><span class="material-symbols-outlined"
+            >expand_less</span
+          ></ng-container
+        >
+      </button>
+    </div>
+
+    <div *ngIf="GraphicCard">
+      <p><input type="checkbox" /> GTX 1080</p>
+      <p><input type="checkbox" /> RTX 2080</p>
+      <p><input type="checkbox" /> RTX 3080</p>
+      <p><input type="checkbox" /> RTX 4080</p>
+    </div>
   </div>
 </div>

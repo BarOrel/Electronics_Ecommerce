@@ -5,7 +5,7 @@
     
      <input #username placeholder="Username"/>
       <input #password placeholder="Password"/> 
-      <button >Login</button>
+      <button (click)="LoginFun(username.value,password.value)" >Login</button>
       <br>
       <button class="signupbtn" routerLink="/Register">Sign Up</button>
     

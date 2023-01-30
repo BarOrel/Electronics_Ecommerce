@@ -1,3 +1,7 @@
+.HeadLines h1{
+  text-align: center;
+
+}
 .Products{
     display: grid;
     justify-content: center;
@@ -90,7 +94,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(-12deg);
+    transform: translate(-50%, -50%) rotate(-02deg);
     width: 240px;
   }
   
@@ -198,6 +202,7 @@
     border-radius: 4px;
     margin-top: 10px;
     text-decoration: none;
+    cursor: pointer;
     font-weight: 600;
     color: #111;
     opacity: 0;

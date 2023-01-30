@@ -1,3 +1,11 @@
+<div class="HeadLines">
+  <h1 *ngIf="Index == 1">Mobile Devices</h1>
+  <h1 *ngIf="Index == 2">Computers</h1>
+  <h1 *ngIf="Index == 3">Gaming Consoles</h1>
+  <h1 *ngIf="Index == 4">Electronics</h1>
+  <h1 *ngIf="Index == 5">Accecories</h1>
+
+</div>
 <div class="MainFilter"></div>
 <div class="Products">
     <div class="container" *ngFor="let item of item">
@@ -10,7 +18,8 @@
               <h2>{{item.name}}</h2>
               <h2>${{item.price}}</h2>
             </div>
-            <a>Buy Now</a>
+            <a (click)="AddToCart(item)">Add To Cart</a>
+            
           </div>
         </div>
       </div>
