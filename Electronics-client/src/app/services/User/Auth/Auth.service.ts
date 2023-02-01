@@ -32,7 +32,7 @@ export class AuthService {
           if (data.username!= ''){
             this.IsLoggedIn = true;
             this.router.navigate([''])
-            
+            console.log(data)
           }
         });
     }
