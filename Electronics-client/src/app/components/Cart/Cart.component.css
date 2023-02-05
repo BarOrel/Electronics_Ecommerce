@@ -1,0 +1,48 @@
+.main{
+     
+     overflow: hidden;
+     width: 100vw;
+     min-height:93.2vh;
+     position: absolute;
+     margin: 60px 0px 0px 0px;
+     background-color: #ffff;
+}
+h1{
+     text-align: center;}
+
+.Cart
+{
+     overflow-y: scroll;
+     scroll-behavior: smooth;
+     position: relative;
+     background-color: #dbdbdb;
+     width: 50rem;
+     margin: auto;
+     margin-top: 10vh;
+     padding: 10px;
+}
+img{height: 100px;}
+
+h2{ 
+     
+   text-align: right;
+     
+     
+}
+h3{width: 200px;
+padding-right: 200px;
+}
+
+.card{
+     
+     border: 1px solid black;
+     display: flex;
+     background-color: rgb(255, 255, 255);
+     height: 7rem;
+     width: 70%;
+     margin: auto;
+   
+
+}
+p{}
+

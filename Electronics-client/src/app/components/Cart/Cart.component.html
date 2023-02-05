@@ -1,0 +1,18 @@
+<div class="main">
+  <div class="Cart">
+    <h1>Shopping Cart</h1>
+    <div class="list">
+      <div class="card" *ngFor="let item of list">
+        <img src="{{ item.imgUrl }}" />
+        <div>
+          <h3>{{ item.name }}</h3>
+          <button (click)="RemoveProduct(item.id)">Remove</button>
+        </div>
+        <p>${{ item.price }}</p>
+      </div>
+    </div>
+
+    <h2>Subtotal ({{Counter}} item) : 144$</h2>
+    <button>Buy</button>
+  </div>
+</div>

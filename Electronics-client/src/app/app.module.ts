@@ -25,6 +25,7 @@ import { AddProcesorComponent } from './components/Add-Folder/Add-Procesor/Add-P
 import { AddGraphicsCardComponent } from './components/Add-Folder/Add-GraphicsCard/Add-GraphicsCard.component';
 import { AddMonitorComponent } from './components/Add-Folder/Add-Monitor/Add-Monitor.component';
 import { TokenInterseptorService } from './services/User/Auth/TokenInterseptor/TokenInterseptor.service';
+import { CartComponent } from './components/Cart/Cart.component';
 
 
 
@@ -50,7 +51,8 @@ import { TokenInterseptorService } from './services/User/Auth/TokenInterseptor/T
     AddTelevsionComponent,
     AddProcesorComponent,
     AddGraphicsCardComponent,
-    AddMonitorComponent
+    AddMonitorComponent,
+    CartComponent
 
 
     

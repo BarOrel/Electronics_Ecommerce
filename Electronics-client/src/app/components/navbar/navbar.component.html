@@ -4,7 +4,8 @@
             </span>Product</a>
         <a class="productsbutton" routerLink="/Add">Add</a>
         <a class="productsbutton" routerLink="">Home</a>
-        <a class="rightbutton" routerLink="/login"><span class="material-symbols-outlined">shopping_cart</span></a>
+        
+        <a class="rightbutton" routerLink="/Cart"><span class="material-symbols-outlined">shopping_cart</span>{{counter}}</a>
         <a class="rightbutton" routerLink="/login"><span class="material-symbols-outlined">person</span></a>
         <button (click)="Logout()">Logout</button>
     </div>
