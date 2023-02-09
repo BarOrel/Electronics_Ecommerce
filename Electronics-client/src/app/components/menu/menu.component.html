@@ -1,13 +1,31 @@
 <div *ngIf="showMen" class="Menu">  
-    <a (click)="NavigateTo(1)">Mobile Devices<span class="material-symbols-outlined">chevron_right</span></a>
-    <a (click)="NavigateTo(2)">Computers<span class="material-symbols-outlined">chevron_right</span></a>
-    <a (click)="NavigateTo(3)">Gaming Consoles<span class="material-symbols-outlined">chevron_right</span></a>
-    <a (click)="NavigateTo(4)">Electronics<span class="material-symbols-outlined">chevron_right</span></a>
-    <a (click)="NavigateTo(5)">Accessories<span class="material-symbols-outlined">chevron_right</span></a>
-    
-    
+    <a (click)="OpenMobiels()">Mobile Devices<span class="material-symbols-outlined">chevron_right</span></a>
+    <a (click)="OpenComputers()">Computers<span class="material-symbols-outlined">chevron_right</span></a>
+    <a (click)="OpenGamingConsoles()">Gaming Consoles<span class="material-symbols-outlined">chevron_right</span></a>
+    <a (click)="OpenElectronics()">Electronics<span class="material-symbols-outlined">chevron_right</span></a>
+    <a (click)="OpenAccessories()">Accessories<span class="material-symbols-outlined">chevron_right</span></a>
 </div>
 
 
+<div class="MobilesMenu" *ngIf="Mobiles" >
+
+
+</div>
+<div class="ComputersMenu" *ngIf="Computers" >
+
+
+</div>
+<div class="GamingConsolesMenu" *ngIf="GamingConsoles" >
+
+
+</div>
+<div class="ElectronicsMenu" *ngIf="Electronics" >
+
+
+</div>
+<div class="Accecsories" *ngIf="Accecsories" >
+
+
+</div>
 
 

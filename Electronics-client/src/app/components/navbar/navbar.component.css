@@ -1,26 +1,28 @@
 .navbar{
-    background-color: rgb(255, 255, 255)(139, 162, 197) ;
+    background-color: #282632;
     box-shadow: 10px 5px 5px rgb(213, 223, 255);
-    
     z-index: 11141;
     width: 100%;
-    height: 60px;
+    height: 80px;
     position: fixed;
     
 }
 
 .productsbutton{
     
-    color: black;
+    color:#fff;
     width: 240px;
-    margin: 0px 0px 0px 60px;
-    padding-bottom: 13px;
-    font-size: 24px;
     
+    margin: 0px 0px 0px 60px;
+    padding-bottom: 19px;
+   
+    font-size: 30px;
 }
 a{
+   
     text-decoration: none;
     cursor: pointer;
+    -webkit-transition: color 0.4s;
 }
 
 a > span{
@@ -33,6 +35,7 @@ a:hover{
     
     border-bottom: 4px solid rgb(70, 120, 255);
     border-radius: 2px;
+    
     color: rgb(53, 91, 196);
     
     
@@ -45,9 +48,9 @@ a:hover{
 
 .rightbutton
 {
-    color: black;
+    color: #fff;
     padding: 1px 0px 10px 5px;
-    margin: -5px 20px 0px 30px;
+    margin: 3px 20px 0px 30px;
     z-index: 0;   
     font-size: 24px;
     float: right;
@@ -67,3 +70,68 @@ a:hover{
 }
 
 .rightbutton .material-symbols-outlined{font-size: 33px;}
+
+
+.accountmenu{
+    position: fixed;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 1px solid #b7bcc3;
+    z-index: 99;
+    top: 90px;
+    width: 150px;
+    right: 69px;
+}
+
+.accountmenu img 
+{
+    display: block;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+
+
+
+
+/* CSS */
+.button-81 {
+    margin-top: 16px;
+   height: 30px;
+  width: 140px;
+  background-color: #fff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 1.5rem;
+margin-left: 4px;
+  color: #0d172a;
+  cursor: pointer;
+  
+  
+  
+  font-weight: 600;
+  line-height: 1;
+  
+  
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  
+ 
+  
+}
+
+.button-81:hover {
+  background-color: #1e293b;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .button-81 {
+    font-size: 0.9rem;
+    
+  }
+}
+
+

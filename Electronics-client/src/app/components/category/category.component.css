@@ -3,9 +3,9 @@
      display: flex;
      overflow: hidden;
      width: 100vw;
-     min-height:93.2vh;
+     min-height:calc(100vh - 80px);
      position: absolute;
-     margin: 60px 0px 0px 0px;
+     margin: 80px 0px 0px 0px;
      background-color: #ffff;
 }
 

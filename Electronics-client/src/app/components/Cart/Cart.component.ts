@@ -10,21 +10,27 @@ import { AuthService } from 'src/app/services/User/Auth/Auth.service';
 export class CartComponent implements OnInit {
   list:any = [];
   Counter:any;
+  Price:number =0;
   constructor(private authService:AuthService,private cartService:CartService) { }
 
   ngOnInit() {
-    this.LoadCounter();
-     this.cartService.getCart(this.authService.userId()).subscribe((data) =>
+    this.Load()
+  
+  }
+
+  Load(){
+    this.cartService.getCounter(this.authService.userId()).subscribe((data)=>{this.Counter = data})
+    this.cartService.getCart(this.authService.userId()).subscribe((data) =>
     {
       console.log(data)
       this.list = data
-
+     
+      this.list.forEach((item: { price: number; }) => {
+        this.Price = item.price + this.Price 
+        
+      });
+     
     });
-  }
-
-  LoadCounter(){
-    this.cartService.getCounter(this.authService.userId()).subscribe((data)=>{this.Counter = data})
-
   }
 
 
@@ -33,15 +39,7 @@ export class CartComponent implements OnInit {
     
       console.log(item);
       this.cartService.RemoveProduct(item).subscribe(()=>{
-        this.cartService.getCart(this.authService.userId()).subscribe((data) =>
-          {
-              console.log(data)
-              this.list = data
-              this.LoadCounter();
-
-
-           });
-
+        this.Load()
       });
 
   

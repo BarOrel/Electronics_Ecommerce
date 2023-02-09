@@ -2,10 +2,10 @@
     width: 240px;
     z-index: 200;
     margin:68px 0px 0px 56px;
-    height: 500px;
+    height: 289px;
     background-color: #fff;
     border:1px solid rgb(204, 204, 204) ;
-    box-shadow: 10px 5px 15px rgb(213, 223, 255);
+    box-shadow: 2px 5px 15px rgb(213, 223, 255);
     border-radius: 10px;
     position: fixed;
     
@@ -54,3 +54,63 @@ a, a:hover {
    margin: 4px 0px 0px 0px;
 }
 
+.MobilesMenu{
+  box-shadow: 2px 5px 15px rgb(213, 223, 255);
+  position: fixed;
+  left: 318px;
+  top: 70px;
+  background-color: #fff;
+  border:1px solid rgb(204, 204, 204) ;
+  border-radius: 10px;
+  width: 240px;
+  height: 200px;
+  z-index: 7;
+}
+.ComputersMenu{
+  box-shadow: 2px 5px 15px rgb(213, 223, 255);
+  position: fixed;
+  left: 318px;
+  top: 125px;
+  background-color: #fff;
+  border:1px solid rgb(204, 204, 204) ;
+  border-radius: 10px;
+  width: 240px;
+  height: 200px;
+  z-index: 7;
+}
+.GamingConsolesMenu{
+  box-shadow: 2px 5px 15px rgb(213, 223, 255);
+  position: fixed;
+  left: 318px;
+  top: 183px;
+  background-color: #fff;
+  border:1px solid rgb(204, 204, 204) ;
+  border-radius: 10px;
+  width: 240px;
+  height: 200px;
+  z-index: 7;
+}
+.ElectronicsMenu{
+  box-shadow: 2px 5px 15px rgb(213, 223, 255);
+  position: fixed;
+  left: 318px;
+  top: 240px;
+  background-color: #fff;
+  border:1px solid rgb(204, 204, 204) ;
+  border-radius: 10px;
+  width: 240px;
+  height: 200px;
+  z-index: 7;
+}
+.Accecsories{
+  box-shadow: 2px 5px 15px rgb(213, 223, 255);
+  position: fixed;
+  left: 318px;
+  top: 298px;
+  background-color: #fff;
+  border:1px solid rgb(204, 204, 204) ;
+  border-radius: 10px;
+  width: 240px;
+  height: 200px;
+  z-index: 7;
+}

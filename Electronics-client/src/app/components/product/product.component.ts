@@ -26,7 +26,7 @@ export class ProductComponent implements OnInit {
       this.cart.Product = item
       this.cart.UserId = this.authService.userId();
       this.CartService.postProductCart(this.cart).subscribe((data)=>{
-        console.log(data)
+        alert("Item Added Succesfully")
       })
 
     }
