@@ -1,10 +1,17 @@
 <div class="navbar">
     <div class="Mainbuttons">     
+        <a class="productsbutton" routerLink=""><span class="material-symbols-outlined">
+            home
+            </span>Home</a>
         <a (click)="ClickShowMenu()"  class="productsbutton"><span class="material-symbols-outlined"> menu
             </span>Shop By Category</a>
         <a class="productsbutton" routerLink="/Add">Add</a>
-        <a class="productsbutton" routerLink="">Home</a>
         
+            <input class="Search" type="text" placeholder="Search on Electronics"/>
+            <button class="srcbtn">!</button>
+
+        
+   
         <a class="rightbutton" routerLink="/Cart"><span class="material-symbols-outlined">shopping_cart</span>{{counter}}</a>
         <a class="rightbutton" (click)="OCAccountMenu()"><span class="material-symbols-outlined">person</span></a>
     </div>

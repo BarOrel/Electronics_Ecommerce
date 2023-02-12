@@ -7,7 +7,6 @@
     position: fixed;
     
 }
-
 .productsbutton{
     
     color:#fff;
@@ -25,6 +24,22 @@ a{
     cursor: pointer;
     -webkit-transition: color 0.4s;
 }
+.Search{
+       margin-left: 60px;
+        height: 30px;
+       padding-right: 20vw;
+       border-radius: 10px;
+        font-size: 20px;
+
+}
+.srcbtn{
+    height: 36px;
+    width: 35px;
+
+}
+
+
+
 
 a > span{
     position: relative;
