@@ -1,31 +1,46 @@
 <div *ngIf="showMen" class="Menu">  
     <a (click)="OpenMobiels()">Mobile Devices<span class="material-symbols-outlined">chevron_right</span></a>
+    <a (click)="OpenElectronics()">Electronics<span class="material-symbols-outlined">chevron_right</span></a>
     <a (click)="OpenComputers()">Computers<span class="material-symbols-outlined">chevron_right</span></a>
     <a (click)="OpenGamingConsoles()">Gaming Consoles<span class="material-symbols-outlined">chevron_right</span></a>
-    <a (click)="OpenElectronics()">Electronics<span class="material-symbols-outlined">chevron_right</span></a>
     <a (click)="OpenAccessories()">Accessories<span class="material-symbols-outlined">chevron_right</span></a>
 </div>
 
 
 <div class="MobilesMenu" *ngIf="Mobiles" >
+    <a (click)="NavigateTo(1)">Mobile Phones<span class="material-symbols-outlined">chevron_right</span></a>
+    <a (click)="NavigateTo(2)">Tablets<span class="material-symbols-outlined">chevron_right</span></a>
+    <a (click)="NavigateTo(3)">Smart Watches<span class="material-symbols-outlined">chevron_right</span></a>
+
+</div>
+
+<div class="ElectronicsMenu" *ngIf="Electronics" >
+    <a (click)="NavigateTo(4)">Television<span class="material-symbols-outlined">chevron_right</span></a>
 
 
 </div>
+
 <div class="ComputersMenu" *ngIf="Computers" >
-
-
+    <a (click)="NavigateTo(5)">Desktops<span class="material-symbols-outlined">chevron_right</span></a>
+    <a (click)="NavigateTo(6)">Procesors<span class="material-symbols-outlined">chevron_right</span></a>
+    <a (click)="NavigateTo(7)">GraphicsCards<span class="material-symbols-outlined">chevron_right</span></a>
+    <a (click)="NavigateTo(8)">Laptops<span class="material-symbols-outlined">chevron_right</span></a>
 </div>
 <div class="GamingConsolesMenu" *ngIf="GamingConsoles" >
-
-
+    <a (click)="NavigateTo(9)">VideoGames<span class="material-symbols-outlined">chevron_right</span></a>
+    <a (click)="NavigateTo(10)">Accessories<span class="material-symbols-outlined">chevron_right</span></a>
 </div>
-<div class="ElectronicsMenu" *ngIf="Electronics" >
 
 
-</div>
 <div class="Accecsories" *ngIf="Accecsories" >
+    <a (click)="NavigateTo(11)">Keyboards<span class="material-symbols-outlined">chevron_right</span></a>
+    <a (click)="NavigateTo(12)">Mouses<span class="material-symbols-outlined">chevron_right</span></a>
+    <a (click)="NavigateTo(13)">Monitors<span class="material-symbols-outlined">chevron_right</span></a>
+    <a (click)="NavigateTo(14)">Speakers<span class="material-symbols-outlined">chevron_right</span></a>
+    <a (click)="NavigateTo(15)">Headphones<span class="material-symbols-outlined">chevron_right</span></a>
 
 
 </div>
+
 
 

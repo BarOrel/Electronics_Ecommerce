@@ -25,11 +25,15 @@ export class ProductComponent implements OnInit {
 
       this.cart.Product = item
       this.cart.UserId = this.authService.userId();
-      this.CartService.postProductCart(this.cart).subscribe((data)=>{
+      this.CartService.postProductCart(this.cart).subscribe((data) => {
         alert("Item Added Succesfully")
       })
 
     }
     else { alert("Pls Login First") }
+  }
+
+  NavigateToDetailes(id: any) {
+    console.log(id);
   }
 }

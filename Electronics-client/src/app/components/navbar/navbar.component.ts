@@ -22,9 +22,9 @@ export class NavbarComponent implements OnInit {
   }
   ngOnInit(): void {
     this.IsLoggedIn = this.authSerice.isLoggedIn()
-    interval(1000).subscribe(x => {
-      this.LoadCounter()
-      });
+    // interval(1000).subscribe(x => {
+    //   this.LoadCounter()
+    //   });
 
   
   }
