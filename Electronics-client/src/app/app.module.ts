@@ -26,6 +26,7 @@ import { AddGraphicsCardComponent } from './components/Add-Folder/Add-GraphicsCa
 import { AddMonitorComponent } from './components/Add-Folder/Add-Monitor/Add-Monitor.component';
 import { TokenInterseptorService } from './services/User/Auth/TokenInterseptor/TokenInterseptor.service';
 import { CartComponent } from './components/Cart/Cart.component';
+import { DetailsComponent } from './pages/details/details.component';
 
 
 
@@ -52,7 +53,8 @@ import { CartComponent } from './components/Cart/Cart.component';
     AddProcesorComponent,
     AddGraphicsCardComponent,
     AddMonitorComponent,
-    CartComponent
+    CartComponent,
+    DetailsComponent
 
 
     

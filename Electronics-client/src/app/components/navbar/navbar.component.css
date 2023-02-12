@@ -14,9 +14,10 @@
     width: 240px;
     
     margin: 0px 0px 0px 60px;
-    padding-bottom: 19px;
    
-    font-size: 30px;
+    padding-bottom: 25px;
+   
+    font-size: 25px;
 }
 a{
    
@@ -41,7 +42,8 @@ a:hover{
     
 }
 .Mainbuttons{
-    margin: 15px 0px 0px 0px ;
+    
+    margin: 22px 0px 0px 0px ;
     
 }
 

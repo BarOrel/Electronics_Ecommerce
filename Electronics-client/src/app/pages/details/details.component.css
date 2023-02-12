@@ -1,0 +1,45 @@
+.Main{
+
+    
+    overflow: hidden;
+    width: 100vw;
+    min-height:calc(100vh - 80px);
+    position: absolute;
+    margin: 80px 0px 0px 0px;
+    background-color: #fff;
+}
+
+img{
+    height: 500px;
+    border: 1px solid #cdcdcd;
+}
+.product{   
+    padding-top: 10vh;
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container{
+    padding-left: 20px;
+max-width: 500px;
+}
+h3{
+    padding-left: 20px;
+}
+button{
+    height: 50px;
+    width: 180px;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.specs{
+    padding-top: 5vh;
+    padding-bottom: 8vh;
+}
+.specrow{display: flex;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 21%;
+}
