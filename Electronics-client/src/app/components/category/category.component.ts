@@ -3,6 +3,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, NavigationStart, Router,Event } from '@angular/router';
 import { Product } from 'src/app/Models/DTO/Product';
 import { EventService } from 'src/app/services/EventService/event.service';
+
+
 import { ProductService } from 'src/app/services/ProductService/product.service';
 
 @Component({
