@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/services/CartService/Cart.service';
+import { EventService } from 'src/app/services/EventService/event.service';
 import { AuthService } from 'src/app/services/User/Auth/Auth.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class CartComponent implements OnInit {
   list:any = [];
   Counter:any;
   Price:number =0;
-  constructor(private authService:AuthService,private cartService:CartService) { }
+  constructor(private authService:AuthService,private cartService:CartService, private event:EventService) { }
 
   ngOnInit() {
     this.Load()
@@ -20,16 +21,11 @@ export class CartComponent implements OnInit {
 
   Load(){
     this.cartService.getCounter(this.authService.userId()).subscribe((data)=>{this.Counter = data})
+    // this.cartService.getPrice(this.authService.userId()).subscribe((data)=>{this.Counter = data})
     this.cartService.getCart(this.authService.userId()).subscribe((data) =>
     {
       console.log(data)
-      this.list = data
-     
-      this.list.forEach((item: { price: number; }) => {
-        this.Price = item.price + this.Price 
-        
-      });
-     
+      this.list = data    
     });
   }
 
@@ -39,6 +35,8 @@ export class CartComponent implements OnInit {
     
       console.log(item);
       this.cartService.RemoveProduct(item).subscribe(()=>{
+        
+        this.event.sendClickEventCounter()
         this.Load()
       });
 
