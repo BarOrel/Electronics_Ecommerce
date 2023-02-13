@@ -13,10 +13,10 @@ export class DetailsComponent implements OnInit {
   
   ngOnInit():void {
 
-    this.route.params.subscribe((params)=>{
+      this.route.params.subscribe((params)=>{
       this.id = Number(params["id"]);
   
-      console.log(this.id)
+      console.log(this.id);
   
     })
   }
