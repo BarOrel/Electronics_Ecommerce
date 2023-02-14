@@ -14,6 +14,7 @@ export class AuthService {
 
   IsLoggedIn: boolean = false;
   
+  
   currentUser: IUser = {
     username:'' ,
     email: ''
@@ -49,7 +50,7 @@ export class AuthService {
       this.IsLoggedIn = false;
       
     }
-    
+   
     isLoggedIn(){
        return localStorage.getItem('Authorization') != null;
     }

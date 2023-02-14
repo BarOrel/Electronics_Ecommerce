@@ -7,6 +7,7 @@ import { MainComponent } from './components/main/main.component';
 import { ProductComponent } from './components/product/product.component';
 import { AddProductComponent } from './pages/Admin/Add-Product/Add-Product.component';
 import { DetailsComponent } from './pages/details/details.component';
+import { EditAccountComponent } from './pages/EditAccount/EditAccount.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
       
       { path: "Details/:id", component: DetailsComponent },
       { path: "Add", component: AddProductComponent },
+      { path: "EditAccount/:id", component: EditAccountComponent },
       { path: "Cart", component: CartComponent },
       { path: "", component: MainComponent },
       { path: "Category/:id", component: CategoryComponent ,children:[

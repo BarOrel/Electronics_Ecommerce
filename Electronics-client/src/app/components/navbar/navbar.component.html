@@ -22,7 +22,7 @@
 
 <div class="accountmenu" *ngIf="AccountMenu">
     <img src="https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/account-icon.png" >
-    <button class="button-81" *ngIf="IsLoggedIn">Account</button>
+    <button class="button-81"  routerLink="/EditAccount/0" *ngIf="IsLoggedIn">Account</button>
     <button class="button-81" routerLink="/login" *ngIf="!IsLoggedIn" >Login</button>
     <button class="button-81" routerLink="/register" *ngIf="!IsLoggedIn" >Register</button>
     <button class="button-81" *ngIf="IsLoggedIn" (click)="Logout()">Logout</button>

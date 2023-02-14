@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { EditAccountComponent } from 'src/app/pages/EditAccount/EditAccount.component';
 import { CartService } from 'src/app/services/CartService/Cart.service';
 import { EventService } from 'src/app/services/EventService/event.service';
+import { OrderService } from 'src/app/services/OrderService/Order.service';
 import { AuthService } from 'src/app/services/User/Auth/Auth.service';
 
 @Component({
@@ -9,10 +12,28 @@ import { AuthService } from 'src/app/services/User/Auth/Auth.service';
   styleUrls: ['./Cart.component.css']
 })
 export class CartComponent implements OnInit {
+Order() {
+  
+  this.orderService.postOrder(this.authService.userId()).subscribe((data:any)=>{
+    console.log(data.error)
+    this.Load();
+    this.GetCounter();
+
+  },(err) => 
+  {
+    if(err.error == "NoCreditCard"){
+      alert("You Need To Add Credit Cart First !")
+ 
+      this.router.navigate(["EditAccount/2"])
+    }
+  });
+
+  
+}
   list:any = [];
   Counter:any;
   Price:number =0;
-  constructor(private authService:AuthService,private cartService:CartService, private event:EventService) { }
+  constructor(private authService:AuthService,private orderService:OrderService,private cartService:CartService, private event:EventService,private router:Router) { }
 
   ngOnInit() {
     this.GetCounter()
