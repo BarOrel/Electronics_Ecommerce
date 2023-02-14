@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { interval } from 'rxjs';
 import { CartDTO } from 'src/app/Models/DTO/CartDTO';
 import { CartService } from 'src/app/services/CartService/Cart.service';
@@ -16,6 +17,7 @@ export class ProductComponent implements OnInit {
   @Input() Index: any;
   cart: CartDTO = new CartDTO;
   constructor(private productService: ProductService, private CartService: CartService, private authService: AuthService,
+    private route:Router,
     private eventService: EventService) { }
 
   ngOnInit(): void {
@@ -37,6 +39,6 @@ export class ProductComponent implements OnInit {
   }
 
   NavigateToDetailes(id: any) {
-    console.log(id);
+    this.route.navigate(["Details/"+id])
   }
 }

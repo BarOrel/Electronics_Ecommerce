@@ -19,7 +19,9 @@ Add(product:any){
   return this.http.post(this.BaseUrl , product);
 }
 
-
+GetProduct(index:any){
+  return this.http.get(this.BaseUrl+"Details/" + index);
+}
 
 
 }

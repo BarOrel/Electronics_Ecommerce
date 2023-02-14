@@ -1,7 +1,7 @@
 .Menu{
     width: 240px;
     z-index: 200;
-    margin: 90px 0px 0px 56px;
+    margin: 90px 0px 0px 213px;
     background-color: #fff;
     border:1px solid rgb(204, 204, 204) ;
     box-shadow: 2px 5px 15px rgb(213, 223, 255);
@@ -56,7 +56,7 @@ a, a:hover {
 .MobilesMenu{
   box-shadow: 2px 5px 15px rgb(213, 223, 255);
   position: fixed;
-  left: 318px;
+  left: 468px;
   top: 92px;
   background-color: #fff;
   border:1px solid rgb(204, 204, 204) ;
@@ -69,8 +69,8 @@ a, a:hover {
 .ComputersMenu{
   box-shadow: 2px 5px 15px rgb(213, 223, 255);
   position: fixed;
-  left: 318px;
-  top: 147px;
+  left: 468px;
+  top: 207px;
   background-color: #fff;
   border:1px solid rgb(204, 204, 204) ;
   border-radius: 10px;
@@ -81,8 +81,8 @@ a, a:hover {
 .GamingConsolesMenu{
   box-shadow: 2px 5px 15px rgb(213, 223, 255);
   position: fixed;
-  left: 318px;
-  top: 205px;
+  left: 468px;
+  top: 264px;
   background-color: #fff;
   border:1px solid rgb(204, 204, 204) ;
   border-radius: 10px;
@@ -93,8 +93,8 @@ a, a:hover {
 .ElectronicsMenu{
   box-shadow: 2px 5px 15px rgb(213, 223, 255);
   position: fixed;
-  left: 318px;
-  top: 262px;
+  left: 468px;
+  top: 150px;
   background-color: #fff;
   border:1px solid rgb(204, 204, 204) ;
   border-radius: 10px;
@@ -105,7 +105,7 @@ a, a:hover {
 .Accecsories{
   box-shadow: 2px 5px 15px rgb(213, 223, 255);
   position: fixed;
-  left: 318px;
+  left: 468px;
   top: 320px;
   background-color: #fff;
   border:1px solid rgb(204, 204, 204) ;

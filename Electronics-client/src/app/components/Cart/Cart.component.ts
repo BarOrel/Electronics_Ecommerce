@@ -23,9 +23,14 @@ Order() {
   {
     if(err.error == "NoCreditCard"){
       alert("You Need To Add Credit Cart First !")
- 
       this.router.navigate(["EditAccount/2"])
     }
+
+    if(err.error == "NoAddress"){
+      alert("You Need To Add Address First !")
+      this.router.navigate(["EditAccount/1"])
+    }
+
   });
 
   

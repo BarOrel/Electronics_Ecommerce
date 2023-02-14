@@ -20,13 +20,13 @@
   <div class="MainFilter"></div>
   <div class="Products">
     <div class="container" *ngFor="let item of item">
-      <div class="card" (click)="NavigateToDetailes(item.id)">
-        <div class="imgBx">
+      <div class="card" >
+        <div class="imgBx" (click)="NavigateToDetailes(item.id)">
           <img src="{{item.imgUrl}}">
         </div>
-        <div class="contentBx">
+        <div class="contentBx" >
           <div class="details">
-            <h2>{{item.name}}</h2>
+            <h2 (click)="NavigateToDetailes(item.id)">{{item.name}}</h2>
             <h2>${{item.price}}</h2>
           </div>
   
