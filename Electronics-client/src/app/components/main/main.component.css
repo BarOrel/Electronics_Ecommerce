@@ -1,9 +1,56 @@
+
 .main{
      display: flex;
      overflow: hidden;
-     width: 100vw;
+     width:100%;
+     display: flex;
+     justify-content: center;
      min-height:calc(100vh - 80px);
      position: absolute;
      margin: 80px 0px 0px 0px;
      background-color: #ffff;
+}
+
+.container{
+     
+     
+     width: 80vw;
+   
+   
+}
+
+.line{
+     width:100%;
+  display: flex;
+  justify-content: center;
+}
+.slider-discounts{
+     padding-top: 6vh;
+     width:100%;
+     display: flex;
+     justify-content: center;
+     padding-bottom: 6vh;
+     
+     
+}
+.card{margin-left: 15px;}
+
+.pal { display: flex;}
+.Products{}
+
+ img { 
+     object-fit: cover;
+     padding-right: 30px;
+}
+
+.space{padding-top: 10px;}
+
+h2{font-size: 30px;
+text-align: center;}
+
+
+.Lineofproducts{display: flex;}
+
+.footer{
+     position: relative;
 }

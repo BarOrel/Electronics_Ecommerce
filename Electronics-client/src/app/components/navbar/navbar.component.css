@@ -26,17 +26,22 @@ a{
 }
 .Search{
        margin-left: 60px;
-        height: 30px;
+        height: 38px;
        padding-right: 20vw;
        border-radius: 10px;
         font-size: 20px;
 
 }
 .srcbtn{
-    height: 36px;
-    width: 35px;
+    height: 44px;
+    width: 65px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 21px;
 
 }
+
+
 
 
 
@@ -58,7 +63,7 @@ a:hover{
 }
 .Mainbuttons{
     
-    margin: 22px 0px 0px 0px ;
+    margin: 18px 0px 0px 0px ;
     
 }
 

@@ -28,6 +28,7 @@ import { TokenInterseptorService } from './services/User/Auth/TokenInterseptor/T
 import { CartComponent } from './components/Cart/Cart.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { EditAccountComponent } from './pages/EditAccount/EditAccount.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -56,7 +57,8 @@ import { EditAccountComponent } from './pages/EditAccount/EditAccount.component'
     AddMonitorComponent,
     CartComponent,
     DetailsComponent,
-    EditAccountComponent
+    EditAccountComponent,
+    FooterComponent
 
 
     
