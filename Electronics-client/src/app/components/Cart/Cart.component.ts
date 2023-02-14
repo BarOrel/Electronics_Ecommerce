@@ -15,12 +15,17 @@ export class CartComponent implements OnInit {
   constructor(private authService:AuthService,private cartService:CartService, private event:EventService) { }
 
   ngOnInit() {
-    this.Load()
+    this.GetCounter()
   
   }
 
+  GetCounter(){
+    this.cartService.getCart(this.authService.userId()).subscribe((data) =>
+    {
+      this.list = data    
+    });
+  }
   Load(){
-    this.cartService.getCounter(this.authService.userId()).subscribe((data)=>{this.Counter = data})
     // this.cartService.getPrice(this.authService.userId()).subscribe((data)=>{this.Counter = data})
     this.cartService.getCart(this.authService.userId()).subscribe((data) =>
     {
@@ -35,9 +40,8 @@ export class CartComponent implements OnInit {
     
       console.log(item);
       this.cartService.RemoveProduct(item).subscribe(()=>{
-        
         this.event.sendClickEventCounter()
-        this.Load()
+        this.GetCounter()
       });
 
   

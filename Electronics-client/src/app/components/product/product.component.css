@@ -1,17 +1,37 @@
+
+.main{width: 80vw;}
+
 .HeadLines h1{
   text-align: center;
 
 }
 
 .Products{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 3rem;
-    padding: 2rem 4rem 4rem 4rem;
-    width: max-content;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+
+
 }
+
+@media (min-width: 1090px) {
+  .Products { grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (min-width: 1400px) {
+  .Products { grid-template-columns: repeat(3, 1fr); 
+  }
+  
+}
+@media (min-width: 1750px) {
+  .Products { grid-template-columns: repeat(4, 1fr); 
+    
+  }
+  
+}
+
 .MainFilter{
     margin: 15px auto auto auto;
     width: 50%;

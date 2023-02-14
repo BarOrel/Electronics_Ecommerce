@@ -1,39 +1,42 @@
-<div class="HeadLines">
-  <h1 *ngIf="Index == 1">Mobile Devices</h1>
-  <h1 *ngIf="Index == 2">Tablet</h1>
-  <h1 *ngIf="Index == 3">Smart Watches</h1>
-  <h1 *ngIf="Index == 4">Televsion</h1>
-  <h1 *ngIf="Index == 5">Desktops</h1>
-  <h1 *ngIf="Index == 6">Procesors</h1>
-  <h1 *ngIf="Index == 7">Laptops</h1>
-  <h1 *ngIf="Index == 8">Graphics Cards</h1>
-  <h1 *ngIf="Index == 9">Gaming Console</h1>
-  <h1 *ngIf="Index == 10">Console Accessories</h1>
-  <h1 *ngIf="Index == 11">Keyboards</h1>
-  <h1 *ngIf="Index == 12">Mouses</h1>
-  <h1 *ngIf="Index == 13">Monitors</h1>
-  <h1 *ngIf="Index == 14">Speakers</h1>
-  <h1 *ngIf="Index == 15">Headphones</h1>
-
-</div>
-<div class="MainFilter"></div>
-<div class="Products">
-  <div class="container" *ngFor="let item of item">
-    <div class="card" (click)="NavigateToDetailes(item.id)">
-      <div class="imgBx">
-        <img src="{{item.imgUrl}}">
-      </div>
-      <div class="contentBx">
-        <div class="details">
-          <h2>{{item.name}}</h2>
-          <h2>${{item.price}}</h2>
+<div class="main">
+  <div class="HeadLines">
+    <h1 *ngIf="Index == 1">Mobile Devices</h1>
+    <h1 *ngIf="Index == 2">Tablet</h1>
+    <h1 *ngIf="Index == 3">Smart Watches</h1>
+    <h1 *ngIf="Index == 4">Televsion</h1>
+    <h1 *ngIf="Index == 5">Desktops</h1>
+    <h1 *ngIf="Index == 6">Procesors</h1>
+    <h1 *ngIf="Index == 7">Laptops</h1>
+    <h1 *ngIf="Index == 8">Graphics Cards</h1>
+    <h1 *ngIf="Index == 9">Gaming Console</h1>
+    <h1 *ngIf="Index == 10">Console Accessories</h1>
+    <h1 *ngIf="Index == 11">Keyboards</h1>
+    <h1 *ngIf="Index == 12">Mouses</h1>
+    <h1 *ngIf="Index == 13">Monitors</h1>
+    <h1 *ngIf="Index == 14">Speakers</h1>
+    <h1 *ngIf="Index == 15">Headphones</h1>
+  
+  </div>
+  <div class="MainFilter"></div>
+  <div class="Products">
+    <div class="container" *ngFor="let item of item">
+      <div class="card" (click)="NavigateToDetailes(item.id)">
+        <div class="imgBx">
+          <img src="{{item.imgUrl}}">
         </div>
-
-        <a (click)="AddToCart(item)">Add To Cart</a>
-
+        <div class="contentBx">
+          <div class="details">
+            <h2>{{item.name}}</h2>
+            <h2>${{item.price}}</h2>
+          </div>
+  
+          <a (click)="AddToCart(item)">Add To Cart</a>
+  
+        </div>
       </div>
     </div>
+  
+  
   </div>
-
 
 </div>
