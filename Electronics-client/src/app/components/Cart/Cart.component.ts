@@ -66,8 +66,9 @@ Order() {
     
       console.log(item);
       this.cartService.RemoveProduct(item).subscribe(()=>{
+        this.Load()
         this.event.sendClickEventCounter()
-        this.GetCounter()
+       
       });
 
   

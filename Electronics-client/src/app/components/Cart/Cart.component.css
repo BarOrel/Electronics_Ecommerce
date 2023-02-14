@@ -8,23 +8,33 @@
      background-color: #ffff;
 }
 h1{
-     text-align: center;}
+     padding-left: 20px;
+     font-size: 31px;
+     font-weight: 600;
+}
 
 .Cart
 {
-     overflow-y: scroll;
+     border: 1px solid rgb(218, 218, 218);
+     border-radius: 20px;
+     overflow-y: hidden;
      scroll-behavior: smooth;
      position: relative;
-     background-color: #dbdbdb;
+     background-color: #ebebeb;
      width: 50rem;
      margin: auto;
      margin-top: 10vh;
-     padding: 10px;
+     
 }
 img{height: 100px;}
 
-h2{ 
+h5{
+     color: rgb(129, 129, 129);
      
+}
+
+h2{ 
+     margin-right: 30px;
    text-align: right;
      
      
@@ -32,17 +42,47 @@ h2{
 h3{width: 200px;
 padding-right: 200px;
 }
-
+.price{
+     width: 100%;
+     text-align: right;
+margin-right: 20px;}
 .card{
      
-     border: 1px solid black;
+     border-top: 1px solid rgb(121, 121, 121);
+     border-bottom: 1px solid rgb(121, 121, 121);
      display: flex;
      background-color: rgb(255, 255, 255);
      height: 7rem;
-     width: 70%;
+     width: 100%;
      margin: auto;
    
 
 }
-p{}
+p{
+     font-size: 23px;
+}
 
+.buybtn{
+     float: right;
+     margin-right: 30px;
+     margin-bottom: 30px;
+     width: 170px;
+     height: 50px;
+}
+
+.sumdiv{
+     margin-right: 30px;
+      text-align: right;
+     }
+
+
+     .remove{
+          cursor: pointer;
+          background-color: transparent;
+          font-size: 20px;
+          border-radius: 30px;
+          border: 0px; 
+     }
+
+     
+  

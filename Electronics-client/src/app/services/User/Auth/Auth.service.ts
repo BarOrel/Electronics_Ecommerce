@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { IUser } from 'src/app/Models/DTO/User.Model/IUser';
 import { LoginModel } from 'src/app/Models/DTO/User.Model/LoginModel';
 import { RegisterModel } from 'src/app/Models/DTO/User.Model/RegisterModel';
+import Swal from 'sweetalert2';
+import { EventService } from '../../EventService/event.service';
 
 
 @Injectable({
@@ -21,7 +23,7 @@ export class AuthService {
   };
 
   constructor(private http:HttpClient
-    ,private router:Router) { }
+    ,private router:Router,private event:EventService) { }
 
 
     Login(model:LoginModel){
@@ -30,10 +32,24 @@ export class AuthService {
           localStorage.setItem('Authorization', data.token)
           localStorage.setItem('UserId', data.userid)
           localStorage.setItem('Username', data.username)
-          if (data.username!= ''){
+          Swal.fire(
+            '',
+            'Logged in Successfully',
+            'success'
+          )
             this.IsLoggedIn = true;
             this.router.navigate([''])
-            console.log(data)
+            
+          
+        },(err) => 
+        {   
+          if(err.status == 400){
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Username or Password is incorrect',
+          
+            })
           }
         });
     }
@@ -47,7 +63,9 @@ export class AuthService {
       localStorage.removeItem('Authorization')
       localStorage.removeItem('UserId')
       localStorage.removeItem('Username')
+     
       this.IsLoggedIn = false;
+      this.router.navigate([''])
       
     }
    

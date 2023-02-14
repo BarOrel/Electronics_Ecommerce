@@ -37,10 +37,11 @@
 
 .pal { display: flex;}
 .Products{}
-
+ 
  img { 
      object-fit: cover;
      padding-right: 30px;
+     max-width: 60vw;
 }
 
 .space{padding-top: 10px;}

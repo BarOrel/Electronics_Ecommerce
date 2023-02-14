@@ -19,25 +19,30 @@
 @media (min-width: 1090px) {
   .Products { 
     grid-template-columns: repeat(2, 1fr); 
-
+    
     }
+  
 }
 
 @media (min-width: 1400px) {
   .Products { grid-template-columns: repeat(3, 1fr); 
-
+    
   }
+
   
 }
 @media (min-width: 1750px) {
   .Products { grid-template-columns: repeat(4, 1fr); 
   
   }
+
+  
 }
 
 @media (max-width: 450px) {
   .Products { grid-template-columns: repeat(1, 1fr); 
   }
+
 
 }
 
