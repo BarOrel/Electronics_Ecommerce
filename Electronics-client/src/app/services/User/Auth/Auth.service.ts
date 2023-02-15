@@ -63,7 +63,7 @@ export class AuthService {
       localStorage.removeItem('Authorization')
       localStorage.removeItem('UserId')
       localStorage.removeItem('Username')
-     
+      this.event.sendClickEventCounter();
       this.IsLoggedIn = false;
       this.router.navigate([''])
       

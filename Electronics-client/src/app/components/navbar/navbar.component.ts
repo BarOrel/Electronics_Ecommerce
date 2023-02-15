@@ -70,6 +70,7 @@ Logout(){
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
       this.OCAccountMenu();
+      
       this.authSerice.Logout()
       this.IsLoggedIn = this.authSerice.isLoggedIn()
     } else if (result.isDenied) {

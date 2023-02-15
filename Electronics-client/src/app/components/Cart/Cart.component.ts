@@ -5,6 +5,7 @@ import { CartService } from 'src/app/services/CartService/Cart.service';
 import { EventService } from 'src/app/services/EventService/event.service';
 import { OrderService } from 'src/app/services/OrderService/Order.service';
 import { AuthService } from 'src/app/services/User/Auth/Auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-Cart',
@@ -13,25 +14,58 @@ import { AuthService } from 'src/app/services/User/Auth/Auth.service';
 })
 export class CartComponent implements OnInit {
 Order() {
+  Swal.fire({
+    title: 'Confirm The Order',
+    icon:'question',
+    showDenyButton: true,
+    confirmButtonText: 'Confirm',
+    denyButtonText: `Decline`,
+  }).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    if (result.isConfirmed) {
+      
+      this.orderService.postOrder(this.authService.userId()).subscribe((data:any)=>{
+        console.log(data.error)
+        this.Load();
+        this.GetCounter();
+    
+      },(err) => 
+      {
+        if(err.error == "NoItems"){
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Cart is empty , Please Add items!',
+          })
+
+        }
+        if(err.error == "NoCreditCard"){
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Credit Card is empty , Enter your Credit Card!',
+          })
+
+          this.router.navigate(["EditAccount/2"])
+        }
+    
+        if(err.error == "NoAddress"){
+            Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Address is empty , Enter your Address!',
+          })
+          this.router.navigate(["EditAccount/1"])
+        }
+    
+      });
+      Swal.fire('Order Confirmed!', '', 'success')
+    } else if (result.isDenied) {
+      Swal.fire('Order has been Decline', '', 'error')
+    }
+  })
   
-  this.orderService.postOrder(this.authService.userId()).subscribe((data:any)=>{
-    console.log(data.error)
-    this.Load();
-    this.GetCounter();
-
-  },(err) => 
-  {
-    if(err.error == "NoCreditCard"){
-      alert("You Need To Add Credit Cart First !")
-      this.router.navigate(["EditAccount/2"])
-    }
-
-    if(err.error == "NoAddress"){
-      alert("You Need To Add Address First !")
-      this.router.navigate(["EditAccount/1"])
-    }
-
-  });
+  
 
   
 }
