@@ -17,7 +17,32 @@
     <h1 *ngIf="Index == 15">Headphones</h1>
   
   </div>
-  <div class="MainFilter"></div>
+  <div class="MainFilter">
+  <div class="filter">
+    <div>
+     <label for="">Order By</label>
+     <select>
+       <option value="volvo"></option>
+       <option value="volvo">Price (Low > High)</option>
+       <option value="volvo">Price (High > Low)</option>
+     </select>
+    </div>
+
+    <div>
+     <label for="">Show</label>
+      <select>
+        <option value="volvo"></option>
+        <option value="volvo">10</option>
+        <option value="volvo">20</option>
+        <option value="volvo">30</option>
+        <option value="volvo">40</option>
+      </select>
+    </div>
+
+  </div>
+
+
+  </div>
   <div class="Products">
     <div class="page-inner" *ngFor="let item of item" >
       <div class="row">

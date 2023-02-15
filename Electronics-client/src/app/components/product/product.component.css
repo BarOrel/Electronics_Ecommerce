@@ -1,10 +1,21 @@
 
 .main{width: 80vw;}
 
+.filter{
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
 .HeadLines h1{
   text-align: center;
 
 }
+label{font-size: 20px;
+   margin-left: 10px;
+   margin-right: 10px;
+  }
+  
+select{font-size: 20px;}
 
 .Products{
   max-width: 1200px;
@@ -49,12 +60,12 @@
 
 
 .MainFilter{
+  
     margin: 15px auto auto auto;
-    width: 50%;
     border: 1px solid rgb(165, 165, 165);
     padding: 10px;
-    border-radius: 20px;
-    width: 90%;
+    border-radius: 10px;
+    width: 50%;
     height: 30px;
 }
 

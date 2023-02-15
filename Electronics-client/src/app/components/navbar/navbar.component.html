@@ -5,7 +5,7 @@
             </span>Home</a>
         <a (click)="ClickShowMenu()"  class="productsbutton"><span class="material-symbols-outlined"> menu
             </span>Shop By Category</a>
-        <a class="productsbutton" routerLink="/Add">Add</a>
+        <a class="productsbutton" routerLink="/Add" *ngIf="IsAdmin">Add</a>
         
             <input class="Search" type="text" placeholder="Search on Electronics"/>
             <button class="srcbtn">Find</button>

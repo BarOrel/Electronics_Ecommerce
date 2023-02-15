@@ -19,6 +19,7 @@ export class NavbarComponent implements OnInit {
   IsLoggedIn: any;
   AccountMenu: boolean = false;
   clickeventsub: Subscription;
+IsAdmin: any;
   constructor(private service: EventService, private authSerice: AuthService, private cartService: CartService,private route:Router) {
       this.clickeventsub = this.service.getEventCounter().subscribe(() => {
         this.LoadCounter();
