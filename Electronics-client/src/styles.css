@@ -119,6 +119,8 @@ html, body { height: 100vh; width: 100%; margin: 0;
       opacity: 1;
     }
     .el-wrapper .box-down :hover {cursor: pointer;}
+    .el-wrapper .box-up :hover {cursor: pointer;}
+
 
     .el-wrapper .box-down {
       width: 100%;

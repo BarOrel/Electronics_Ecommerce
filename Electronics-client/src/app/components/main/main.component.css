@@ -33,7 +33,9 @@
      
      
 }
-.card{margin-left: 15px;}
+.card{margin-left: 15px;
+     
+}
 
 .pal { display: flex;}
 .Products{}
@@ -50,7 +52,11 @@ h2{font-size: 30px;
 text-align: center;}
 
 
-.Lineofproducts{display: flex;}
+.Lineofproducts{
+     overflow-x: auto;
+     display: flex;
+     
+}
 
 .footer{
      position: relative;

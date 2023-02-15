@@ -5,6 +5,7 @@ import { CartService } from 'src/app/services/CartService/Cart.service';
 import { EventService } from 'src/app/services/EventService/event.service';
 import { ProductService } from 'src/app/services/ProductService/product.service';
 import { AuthService } from 'src/app/services/User/Auth/Auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-details',
@@ -34,15 +35,28 @@ export class DetailsComponent implements OnInit {
 
   AddToCart(item: any) {
     if (this.authService.isLoggedIn()) {
-      this.cart.Product = item
-      this.cart.UserId = this.authService.userId();
-      this.CartService.postProductCart(this.cart).subscribe((data) => {
-        this.eventService.sendClickEventCounter();
-  
-      })
-      // this.eventService.sendNum()
+      if (this.authService.isLoggedIn()) {
+        this.cart.Product = item
+        this.cart.UserId = this.authService.userId();
+        this.CartService.postProductCart(this.cart).subscribe((data) => {
+          this.eventService.sendClickEventCounter();
+          
+          Swal.fire(
+            '',
+            'Item Added Succesfully',
+            'success'
+          )
+        })
+        // this.eventService.sendNum()
+      }
+      else { 
+        Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'You must login to add item',
+    
+      })}
     }
-    else { alert("Pls Login First") }
   }
 
 }

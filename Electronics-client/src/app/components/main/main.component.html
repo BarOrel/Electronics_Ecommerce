@@ -1,96 +1,137 @@
 <div class="main">
   <div class="container">
     <div class="slider-discounts">
-      <img
-        src="https://i.ytimg.com/vi/7QeoZY4tf9I/maxresdefault.jpg"
-      />
+      <img src="https://i.ytimg.com/vi/7QeoZY4tf9I/maxresdefault.jpg" />
 
       <div class="Products">
         <h2>Discount</h2>
         <div class="pal">
-          <div class="card">
-            <div class="imgBx">
-              <img src="image" />
-            </div>
-            <div class="contentBx">
-              <div class="details">
-                <h2>name</h2>
-                <h2>$price</h2>
-              </div>
-              <a>Add To Cart</a>
-            </div>
-          </div>
+          <div class="page-inner" *ngFor="let item of dicounted1">
+            <div class="row">
+              <div class="el-wrapper">
+                <div class="box-up" (click)="NavigateToDetailes(item.id)">
+                  <img class="img" src="{{ item.imgUrl }}" alt="" />
+                  <div class="img-info">
+                    <div class="info-inner">
+                      <span class="p-name">{{ item.name }}</span>
+                    </div>
+                  </div>
+                </div>
 
-          <div class="card">
-            <div class="imgBx">
-              <img src="image" />
-            </div>
-            <div class="contentBx">
-              <div class="details">
-                <h2>name</h2>
-                <h2>$price</h2>
+                <div class="box-down">
+                  <div class="h-bg">
+                    <div class="h-bg-inner"></div>
+                  </div>
+
+                  <a class="cart" (click)="AddToCart(item)">
+                    <span class="price">${{ item.price }}</span>
+                    <span class="add-to-cart">
+                      <span class="txt">Add in cart</span>
+                    </span>
+                  </a>
+                </div>
               </div>
-              <a>Add To Cart</a>
             </div>
           </div>
         </div>
         <div class="space"></div>
         <div class="pal">
-          <div class="card">
-            <div class="imgBx">
-              <img src="image" />
-            </div>
-            <div class="contentBx">
-              <div class="details">
-                <h2>name</h2>
-                <h2>$price</h2>
-              </div>
-              <a>Add To Cart</a>
-            </div>
-          </div>
+          <div class="page-inner" *ngFor="let item of dicounted2">
+            <div class="row">
+              <div class="el-wrapper">
+                <div class="box-up" (click)="NavigateToDetailes(item.id)">
+                  <img class="img" src="{{ item.imgUrl }}" alt="" />
+                  <div class="img-info">
+                    <div class="info-inner">
+                      <span class="p-name">{{ item.name }}</span>
+                    </div>
+                  </div>
+                </div>
 
-          <div class="card">
-            <div class="imgBx">
-              <img src="image" />
-            </div>
-            <div class="contentBx">
-              <div class="details">
-                <h2>name</h2>
-                <h2>$price</h2>
+                <div class="box-down">
+                  <div class="h-bg">
+                    <div class="h-bg-inner"></div>
+                  </div>
+
+                  <a class="cart" (click)="AddToCart(item)">
+                    <span class="price">${{ item.price }}</span>
+                    <span class="add-to-cart">
+                      <span class="txt">Add in cart</span>
+                    </span>
+                  </a>
+                </div>
               </div>
-              <a>Add To Cart</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="line"></div>
-
+  
     <div>
-      <h2>Gaming Consoles</h2>
+      <h2>Mobile Phones</h2>
       <div class="Lineofproducts">
-       
-        
+        <div class="page-inner" *ngFor="let item of mobilePhones">
+          <div class="row">
+            <div class="el-wrapper">
+              <div class="box-up" (click)="NavigateToDetailes(item.id)">
+                <img class="img" src="{{ item.imgUrl }}" alt="" />
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-name">{{ item.name }}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
+
+                <a class="cart" (click)="AddToCart(item)">
+                  <span class="price">${{ item.price }}</span>
+                  <span class="add-to-cart">
+                    <span class="txt">Add in cart</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <h2></h2>
     </div>
     <div class="line"></div>
     <div>
-      <h2>Mobile Phones</h2>
+      <h2>Gaming Consoles</h2>
       <div class="Lineofproducts">
-        <div class="card">
-          <div class="imgBx">
-            <img src="image" />
-          </div>
-          <div class="contentBx">
-            <div class="details">
-              <h2>name</h2>
-              <h2>$price</h2>
+        <div class="page-inner" *ngFor="let item of gamingConsole">
+          <div class="row">
+            <div class="el-wrapper">
+              <div class="box-up">
+                <img class="img" src="{{ item.imgUrl }}" alt="" />
+                <div class="img-info">
+                  <div class="info-inner">
+                    <span class="p-name">{{ item.name }}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="box-down">
+                <div class="h-bg">
+                  <div class="h-bg-inner"></div>
+                </div>
+
+                <a class="cart">
+                  <span class="price">${{ item.price }}</span>
+                  <span class="add-to-cart">
+                    <span class="txt">Add in cart</span>
+                  </span>
+                </a>
+              </div>
             </div>
-            <a>Add To Cart</a>
           </div>
         </div>
+
       </div>
       <h2></h2>
     </div>
