@@ -63,4 +63,15 @@ text-align: center;}
      position: relative;
 }
 
+.head{
+     font-size: 30px;
+     text-decoration: none;
+     color:black;
+     font-weight: 700;
+}
 
+.head :hover{
+ 
+     color:red;
+     
+}
