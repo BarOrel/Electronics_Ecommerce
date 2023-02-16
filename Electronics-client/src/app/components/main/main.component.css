@@ -43,7 +43,8 @@
  img { 
      object-fit: cover;
      padding-right: 30px;
-     max-width: 60vw;
+     max-width: 30vw;
+     
 }
 
 .space{padding-top: 10px;}
