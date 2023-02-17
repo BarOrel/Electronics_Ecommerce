@@ -19,14 +19,29 @@
     </div>
 
     <div *ngIf="Manufacturer">
-      <p><input type="checkbox" /> Intel</p>
-      <p><input type="checkbox" /> Apple</p>
-      <p><input type="checkbox" /> Microsoft</p>
-      <p><input type="checkbox" /> Gigaybyte</p>
+
+      <p><input type="checkbox" value="1"/>Apple</p>
+      <p><input type="checkbox" value="2"/>Samsung</p>
+      <p><input type="checkbox" value="3"/>OnePlus</p>
+      <p><input type="checkbox" value="4"/>Xiaomi</p>
+      <p><input type="checkbox" value="5"/>Sony</p>
+      <p><input type="checkbox" value="6"/>Microsoft</p>
+      <p><input type="checkbox" value="7"/>Lenovo</p>
+      <p><input type="checkbox" value="8"/>HP</p>
+      <p><input type="checkbox" value="9"/>Dell</p>
+      <p><input type="checkbox" value="10"/>Beats</p>
+      <p><input type="checkbox" value="11"/>Jbl</p>
+      <p><input type="checkbox" value="12"/>BnO</p>
+      <p><input type="checkbox" value="13"/>Logitech</p>
+      <p><input type="checkbox" value="14"/>Jabra</p>
+      <p><input type="checkbox" value="15"/>Asus</p>
+      <p><input type="checkbox" value="16"/>Razer</p>
+      <p><input type="checkbox" value="17"/>Intel</p>
+      <p><input type="checkbox" value="18"/>AMD</p>
     </div>
   </div>
-
-  <div class="Filter" *ngIf="Index == 2 || Index == 1">
+  
+  <div class="Filter" *ngIf="Index == 1 || Index == 2 || Index == 4 || Index == 5 || Index == 8 || Index == 9">
     <div>
       Storage
       <button (click)="StorageIndex()" class="Btn">
@@ -44,22 +59,22 @@
     </div>
 
     <div *ngIf="Storage">
-      <p><input type="checkbox" /> 4 GB</p>
-      <p><input type="checkbox" /> 8 GB</p>
-      <p><input type="checkbox" /> 16 GB</p>
-      <p><input type="checkbox" /> 32 GB</p>
-      <p><input type="checkbox" /> 64 GB</p>
-      <p><input type="checkbox" /> 128 GB</p>
-      <p><input type="checkbox" /> 256 GB</p>
-      <p><input type="checkbox" /> 512 GB</p>
-      <p><input type="checkbox" /> 1 TB</p>
-      <p><input type="checkbox" /> 2 TB</p>
-      <p><input type="checkbox" /> 4 TB</p>
-      <p><input type="checkbox" /> 8 TB</p>
+      <p><input type="checkbox" />4 GB</p>
+      <p><input type="checkbox" />8 GB</p>
+      <p><input type="checkbox" />16 GB</p>
+      <p><input type="checkbox" />32 GB</p>
+      <p><input type="checkbox" />64 GB</p>
+      <p><input type="checkbox" />128 GB</p>
+      <p><input type="checkbox" />256 GB</p>
+      <p><input type="checkbox" />512 GB</p>
+      <p><input type="checkbox" />1 TB</p>
+      <p><input type="checkbox" />2 TB</p>
+      <p><input type="checkbox" />4 TB</p>
+      <p><input type="checkbox" />8 TB</p>
     </div>
   </div>
 
-  <div class="Filter" *ngIf="Index == 2 || Index == 1">
+  <div class="Filter" *ngIf="Index == 1 || Index == 2 || Index == 3 || Index == 5 || Index == 8 || Index == 9">
     <div>
       Operation System<button (click)="OpertionSystemIndex()" class="Btn">
         <ng-container *ngIf="!OpertionSystem"
@@ -76,8 +91,15 @@
     </div>
 
     <div *ngIf="OpertionSystem">
-      <p><input type="checkbox" /> IOS</p>
-      <p><input type="checkbox" /> Android</p>
+      <p><input type="checkbox" />Windows7</p>
+      <p><input type="checkbox" />Windows10</p>
+      <p><input type="checkbox" />Windows11</p>
+      <p><input type="checkbox" />Linux</p>
+      <p><input type="checkbox" />IOS</p>
+      <p><input type="checkbox" />MacOS</p>
+      <p><input type="checkbox" />Android</p>
+      <p><input type="checkbox" />Tyzen</p>
+      <p><input type="checkbox" />WatchOS</p>
       <p *ngIf="Index == 1"><input type="checkbox" /> Windows</p>
     </div>
   </div>
@@ -100,14 +122,25 @@
     </div>
 
     <div *ngIf="Procesor">
-      <p><input type="checkbox" /> i3</p>
-      <p><input type="checkbox" /> i5</p>
-      <p><input type="checkbox" /> i7</p>
-      <p><input type="checkbox" /> i9</p>
+      <p><input type="checkbox" />i3</p>
+      <p><input type="checkbox" />i5</p>
+      <p><input type="checkbox" />i7</p>
+      <p><input type="checkbox" />i9</p>
+      <p><input type="checkbox" />M1</p>
+      <p><input type="checkbox" />M1 Pro</p>
+      <p><input type="checkbox" />M1 Ultra</p>
+      <p><input type="checkbox" />M2</p>
+      <p><input type="checkbox" />r3</p>
+      <p><input type="checkbox" />r5</p>
+      <p><input type="checkbox" />r7</p>
+      <p><input type="checkbox" />r9</p>
+      <p><input type="checkbox" />Threadripper</p>
     </div>
   </div>
 
-  <div class="Filter" *ngIf="Index ==2">
+  
+  
+  <div class="Filter" *ngIf="Index == 2 || Index == 5 || Index == 8 ">
     <div>
       Graphic Card
       <button (click)="GraphicCardIndex()" class="Btn">
@@ -125,10 +158,35 @@
     </div>
 
     <div *ngIf="GraphicCard">
-      <p><input type="checkbox" /> GTX 1080</p>
-      <p><input type="checkbox" /> RTX 2080</p>
-      <p><input type="checkbox" /> RTX 3080</p>
-      <p><input type="checkbox" /> RTX 4080</p>
+      <p><input type="checkbox" />RTX2060</p>
+      <p><input type="checkbox" />RTX2070</p>
+      <p><input type="checkbox" />RTX2080</p>
+      <p><input type="checkbox" />RTX2080Ti</p>
+      <p><input type="checkbox" />RTX3060</p>
+      <p><input type="checkbox" />RTX3070</p>
+      <p><input type="checkbox" />RTX3080</p>
+      <p><input type="checkbox" />RTX3090</p>
+      <p><input type="checkbox" />RTX3090Ti</p>
+      <p><input type="checkbox" />RTX4070</p>
+      <p><input type="checkbox" />RTX4080</p>
+      <p><input type="checkbox" />RTX4090</p>
+      <p><input type="checkbox" />RX5600</p>
+      <p><input type="checkbox" />RX5700</p>
+      <p><input type="checkbox" />RX5800</p>
+      <p><input type="checkbox" />RX6600</p>
+      <p><input type="checkbox" />RX6700</p>
+      <p><input type="checkbox" />RX6800</p>
+      <p><input type="checkbox" />RX7600</p>
+      <p><input type="checkbox" />RX7700</p>
+      <p><input type="checkbox" />RX7800</p>
+      <p><input type="checkbox" />RX7900</p>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+

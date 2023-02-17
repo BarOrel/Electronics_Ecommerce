@@ -8,21 +8,25 @@ import { AuthService } from 'src/app/services/User/Auth/Auth.service';
   styleUrls: ['./EditAccount.component.css']
 })
 export class EditAccountComponent implements OnInit {
-  index:number = 0;
-  
-  constructor(private authService:AuthService,private active:ActivatedRoute) { 
-    this.active.params.subscribe((params)=>{
+  index: number = 0;
+
+  constructor(private authService: AuthService, private active: ActivatedRoute) {
+    this.active.params.subscribe((params) => {
       this.index = Number(params["id"]);
-  })
+    })
   }
   ngOnInit() {
-    
+
   }
 
-  UpdateAddress(){}
+  UpdatedAccoundDetails(username: any, email: any, fullname: any, password: any) {
+    console.log(username, email, fullname, password)
+  }
 
-  UpdateCreditCard(cvv:any,year:any,month:any,cardHolder:any,Card1Nums:any,Card2Nums:any,Card3Nums:any,Card4Nums:any){
+  UpdateAddress() { }
 
-    console.log(cvv,year,month,cardHolder)
+  UpdateCreditCard(cvv: any, year: any, month: any, cardHolder: any, Card1Nums: any, Card2Nums: any, Card3Nums: any, Card4Nums: any) {
+
+    console.log(cvv, year, month, cardHolder)
   }
 }

@@ -10,6 +10,48 @@
       <h2 *ngIf="index == 1">Address</h2>
       <h2 *ngIf="index == 2">Credit Card</h2>
       
+
+      <div class="inputs" *ngIf="index == 0">
+        <div class="checkout">
+          <div class="form"  autocomplete="off" novalidate>
+            <fieldset>
+              <label for="card-holder">User Name</label>
+              <input type="text" id="card-holder" #UserName />
+            </fieldset>
+            <fieldset>
+              <label for="card-holder">Email</label>
+              <input type="text" id="card-holder" #Email />
+            </fieldset>
+            <fieldset>
+              <label for="card-holder">Full Name</label>
+              <input type="text" id="card-holder" #FullName />
+            </fieldset>
+            <fieldset>
+              <label for="card-holder">Password</label>
+              <input type="number" id="card-holder" #Password />
+            </fieldset>
+            <fieldset>
+              <label for="card-holder">Confirm Password</label>
+              <input type="number" id="card-holder" #CardHolder />
+            </fieldset>
+      
+            <button
+              class="btn"
+              (click)="
+              UpdatedAccoundDetails(
+                  UserName.value, 
+                  Email.value, 
+                  FullName.value, 
+                  Password.value
+                )
+              "
+            >
+              <i class="fa fa-lock"></i> Add
+            </button>
+          </div>
+          
+        </div>
+      </div>
       
       <div class="inputs" *ngIf="index == 1">
         <div class="checkout">
