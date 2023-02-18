@@ -25,6 +25,7 @@ export class DetailsComponent implements OnInit {
   
       this.productService.GetProduct(this.id).subscribe((data)=>{
         this.Data = data
+        console.log(data)
       })
       
       
@@ -34,7 +35,7 @@ export class DetailsComponent implements OnInit {
   }
 
   AddToCart(item: any) {
-    if (this.authService.isLoggedIn()) {
+  
       if (this.authService.isLoggedIn()) {
         this.cart.Product = item
         this.cart.UserId = this.authService.userId();
@@ -56,7 +57,7 @@ export class DetailsComponent implements OnInit {
         text: 'You must login to add item',
     
       })}
-    }
+    
   }
 
 }

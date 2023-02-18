@@ -23,7 +23,9 @@ export class AuthService {
   };
 
   constructor(private http:HttpClient
-    ,private router:Router,private event:EventService) { }
+    ,private router:Router,private event:EventService) {
+
+     }
 
 
     Login(model:LoginModel){
@@ -68,7 +70,26 @@ export class AuthService {
       this.router.navigate([''])
       
     }
-   
+    
+    UserValidation(){
+      this.http.post(this.BaseUrl+'User/UserValidation',this.userId()).subscribe((data)=>{
+        
+      },(err) => 
+      {   
+        if(err.status == 400){
+          
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Account Not Been Found',
+        
+          })
+          this.Logout()
+        }
+      });
+    }
+
+
     isLoggedIn(){
        return localStorage.getItem('Authorization') != null;
     }
