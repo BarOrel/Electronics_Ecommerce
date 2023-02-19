@@ -22,7 +22,8 @@ export class NavbarComponent implements OnInit {
   AccountMenu: boolean = false;
   itemsDiv:boolean = false
   clickeventsub: Subscription;
-IsAdmin: any;
+  IsAdmin: any;
+  SearchText: any;
   constructor(private service: EventService, private authSerice: AuthService, private productService: ProductService, private cartService: CartService,private route:Router,private activetedroute:ActivatedRoute) {
       this.clickeventsub = this.service.getEventCounter().subscribe(() => {
         this.LoadCounter();
@@ -53,12 +54,9 @@ IsAdmin: any;
   DisplayItemsDiv(value:any){
     if(value.length > 1){
       this.itemsDiv = true
-      this.items = this.items.filter(
-        (        n: { name: any; }) => n.name === value);
-        console.log(this.items)
       
+  
     }
-    
     else {this.itemsDiv = false}
 
   }

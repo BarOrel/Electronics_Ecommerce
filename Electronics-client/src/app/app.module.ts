@@ -29,6 +29,8 @@ import { CartComponent } from './components/Cart/Cart.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { EditAccountComponent } from './pages/EditAccount/EditAccount.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -68,6 +70,8 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    Ng2SearchPipeModule,
+    FormsModule
 
   
   ],

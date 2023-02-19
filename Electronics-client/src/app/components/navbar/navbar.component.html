@@ -1,23 +1,24 @@
 <div class="navbar">
     <div class="Mainbuttons">     
-        <a class="productsbutton" routerLink=""><span class="material-symbols-outlined">
+        <a class="productsbutton" routerLink=""><span class="material-symbols-outlined" >
             home
         </span>Home</a>
         <a (click)="ClickShowMenu()"  class="productsbutton"><span class="material-symbols-outlined"> menu
         </span>Shop By Category</a>
         
-        <input class="Search" type="text" (input)="DisplayItemsDiv(searchBox.value)" #searchBox placeholder="Search on Electronics"/>
-        <button class="srcbtn">Find</button>
+        
+        
+        <input class="Search" type="text" (input)="DisplayItemsDiv(searchBox.value)" [(ngModel)]="SearchText" #searchBox placeholder="Search on Electronics"/>
+        <button class="srcbtn" (click)="itemsDiv = false" (click)="SearchText = ''">X</button>
         <div class="FilterItems" *ngIf="itemsDiv">
-            <div >
-
+            <div class="itemDiv" id="itemDiv" *ngFor="let item of items | filter : SearchText" >
+                
+                <a routerLink="/Details/{{item.id}}" (click)="itemsDiv = false"><img src="{{item.imgUrl}}" />{{item.name}}</a>
             </div>
-
+    
         </div>
         
-       
-            
-       
+        
         
         
         
