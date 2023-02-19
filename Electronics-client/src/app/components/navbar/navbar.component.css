@@ -7,6 +7,23 @@
     position: fixed;
     
 }
+
+.FilterItems{
+    position: fixed;
+    margin-left: 503px;
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 10px;
+    width: 15.4vw;
+    max-height: 500px;
+    min-height: 300px;
+    
+    
+    z-index: 11141; 
+}
+
+
+
 .productsbutton{
     
     color:#fff;
@@ -25,9 +42,10 @@ a{
     -webkit-transition: color 0.4s;
 }
 .Search{
+    width: 15vw;
        margin-left: 60px;
         height: 38px;
-       padding-right: 20vw;
+        
        border-radius: 10px;
         font-size: 20px;
 

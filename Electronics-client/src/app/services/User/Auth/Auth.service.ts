@@ -72,21 +72,24 @@ export class AuthService {
     }
     
     UserValidation(){
-      this.http.post(this.BaseUrl+'User/UserValidation',this.userId()).subscribe((data)=>{
-        
-      },(err) => 
-      {   
-        if(err.status == 400){
+      if(localStorage.getItem('Authorization') != null){
+        this.http.post(this.BaseUrl+'User/UserValidation',this.userId()).subscribe((data)=>{
           
-          Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Account Not Been Found',
-        
-          })
-          this.Logout()
-        }
-      });
+        },(err) => 
+        {   
+          if(err.status == 400){
+            
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Account Not Been Found',
+          
+            })
+            this.Logout()
+          }
+        });
+
+      }
     }
 
 

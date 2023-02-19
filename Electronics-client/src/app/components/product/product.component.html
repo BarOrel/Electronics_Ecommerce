@@ -21,21 +21,22 @@
   <div class="filter">
     <div>
      <label for="">Order By</label>
-     <select>
-       <option value="volvo"></option>
-       <option value="volvo">Price (Low > High)</option>
-       <option value="volvo">Price (High > Low)</option>
-     </select>
+     <select id="sort-by" (change)="sort($event)">
+      <option value="" selected disabled hidden>Sort By</option>
+      <option value="Name"></option>
+      <option value="Low">Show Low to High Price</option>
+      <option value="High">Show High to Low Price</option>
+  </select>
     </div>
 
     <div>
      <label for="">Show</label>
-      <select>
-        <option value="volvo"></option>
-        <option value="volvo">10</option>
-        <option value="volvo">20</option>
-        <option value="volvo">30</option>
-        <option value="volvo">40</option>
+      <select (change)="FilterMax($event)">
+        <option value=""></option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
       </select>
     </div>
 
@@ -44,7 +45,7 @@
 
   </div>
   <div class="Products">
-    <div class="page-inner" *ngFor="let item of item" >
+    <div class="page-inner" *ngFor="let item of items" >
       <div class="row">
         <div class="el-wrapper">
           <div class="box-up" (click)="NavigateToDetailes(item.id)">

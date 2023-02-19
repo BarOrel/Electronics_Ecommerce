@@ -68,7 +68,8 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    
+
+  
   ],
   providers: [{provide:HTTP_INTERCEPTORS,useClass:TokenInterseptorService,multi:true}],
   bootstrap: [AppComponent]

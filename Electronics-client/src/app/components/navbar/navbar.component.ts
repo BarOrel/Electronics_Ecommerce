@@ -1,9 +1,10 @@
 import { outputAst } from '@angular/compiler';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { interval, Subscription } from 'rxjs';
 import { CartService } from 'src/app/services/CartService/Cart.service';
 import { EventService } from 'src/app/services/EventService/event.service';
+import { ProductService } from 'src/app/services/ProductService/product.service';
 import { AuthService } from 'src/app/services/User/Auth/Auth.service';
 import Swal from 'sweetalert2';
 
@@ -13,22 +14,34 @@ import Swal from 'sweetalert2';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  items:any;
   @Input() state?: boolean;
   @Output() ShowMenu: EventEmitter<any> = new EventEmitter<any>();
   counter: any;
   IsLoggedIn: any;
   AccountMenu: boolean = false;
+  itemsDiv:boolean = false
   clickeventsub: Subscription;
 IsAdmin: any;
-  constructor(private service: EventService, private authSerice: AuthService, private cartService: CartService,private route:Router) {
+  constructor(private service: EventService, private authSerice: AuthService, private productService: ProductService, private cartService: CartService,private route:Router,private activetedroute:ActivatedRoute) {
       this.clickeventsub = this.service.getEventCounter().subscribe(() => {
         this.LoadCounter();
       });
      }
+
   ClickShowMenu() {
     this.service.sendClickEvent();
   }
   ngOnInit(): void {
+    this.activetedroute.params.subscribe((params)=>{
+      this.productService.GetAll(0).subscribe((data)=>{
+        this.items = data
+        
+      }
+      )
+    })
+  
+
     this.IsLoggedIn = this.authSerice.isLoggedIn()
    
      this.LoadCounter();
@@ -36,6 +49,33 @@ IsAdmin: any;
 
 
   }
+
+  DisplayItemsDiv(value:any){
+    if(value.length > 1){
+      this.itemsDiv = true
+      this.items = this.items.filter(
+        (        n: { name: any; }) => n.name === value);
+        console.log(this.items)
+      
+    }
+    
+    else {this.itemsDiv = false}
+
+  }
+
+
+
+  
+  
+  
+
+  
+  
+
+
+
+
+
 
   OCAccountMenu() {
     if (this.AccountMenu) { this.AccountMenu = false }
