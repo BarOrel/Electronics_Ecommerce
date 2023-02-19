@@ -13,7 +13,8 @@
         <div class="FilterItems" *ngIf="itemsDiv">
             <div class="itemDiv" id="itemDiv" *ngFor="let item of items | filter : SearchText" >
                 
-                <a routerLink="/Details/{{item.id}}" (click)="itemsDiv = false"><img src="{{item.imgUrl}}" />{{item.name}}</a>
+                <a routerLink="/Details/{{item.id}}" (click)="itemsDiv = false"><img src="{{item.imgUrl}}" />{{item.name}}<br>{{item.price}}$</a>
+                
             </div>
     
         </div>
