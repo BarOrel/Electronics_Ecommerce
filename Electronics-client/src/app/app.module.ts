@@ -31,6 +31,10 @@ import { EditAccountComponent } from './pages/EditAccount/EditAccount.component'
 import { FooterComponent } from './components/footer/footer.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
+import { ClickOutsideModule } from 'ng-click-outside';
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+
+
 
 
 
@@ -67,11 +71,15 @@ import { FormsModule } from '@angular/forms';
 
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     Ng2SearchPipeModule,
-    FormsModule
+    FormsModule,
+    ClickOutsideModule,
+
+   
 
   
   ],

@@ -56,8 +56,33 @@ export class AuthService {
         });
     }
     
-    Register(model:RegisterModel){
-      this.http.post(this.BaseUrl + 'User/Register',model).subscribe(()=>{});
+    Register(model:RegisterModel):any{
+     
+        this.http.post(this.BaseUrl + 'User/Register',model).subscribe((data)=>{
+          var login = new LoginModel();
+          login.Password = model.Password
+          login.Username = model.Username
+          this.Login(login)
+          Swal.fire(
+            '',
+            'Account Created Succesfully',
+            'success'
+          )
+        
+
+        },(err) => 
+        {   
+          if(err.status == 400){
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Failed To Created an Account',
+          
+            })
+          }
+        });
+
+      
     }
     
     
