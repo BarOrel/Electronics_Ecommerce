@@ -190,28 +190,28 @@
             <fieldset>
               <label for="card-number">Card Number</label>
               <input
-                type="num"
+                type="number"
                 #Card1Nums
                 id="card-number"
                 class="input-cart-number"
                 maxlength="4"
               />
               <input
-                type="num"
+                type="number"
                 #Card2Nums
                 id="card-number-1"
                 class="input-cart-number"
                 maxlength="4"
               />
               <input
-                type="num"
+                type="number"
                 #Card3Nums
                 id="card-number-2"
                 class="input-cart-number"
                 maxlength="4"
               />
               <input
-                type="num"
+                type="number"
                 #Card4Nums
                 id="card-number-3"
                 class="input-cart-number"
@@ -220,7 +220,7 @@
             </fieldset>
             <fieldset>
               <label for="card-holder">Card holder</label>
-              <input type="text" id="card-holder" #CardHolder />
+              <input type="text" id="card-holder" #CardHolder/>
             </fieldset>
             <fieldset class="fieldset-expiration">
               <label for="card-expiration-month">Expiration date</label>
@@ -255,16 +255,15 @@
             </fieldset>
             <fieldset class="fieldset-ccv">
               <label for="card-ccv">CCV</label>
-              <input type="text" id="card-ccv" maxlength="3" #CVV />
+              <input type="number" id="card-ccv" maxlength="3" #CVV />
             </fieldset>
             <button
               class="btn"
               (click)="
                 UpdateCreditCard(
-                  CVV.value,
+                  CVV.valueAsNumber,
                   Year.value,
                   Month.value,
-                  CardHolder.value,
                   Card1Nums.value,
                   Card2Nums.value,
                   Card3Nums.value,

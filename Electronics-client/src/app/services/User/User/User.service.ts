@@ -18,16 +18,22 @@ export class UserService {
   }
 
 
-  GetAddress(userId:any) {
+  GetAddress(userId: any) {
     return this.http.get(this.BaseUrl + 'AddressUser?UserId=' + userId)
   }
 
-   UpdateAddress(address:any) {
-     return this.http.post(this.BaseUrl + 'AddAddress', address)
-   }
+  UpdateAddress(address: any) {
+    return this.http.post(this.BaseUrl + 'AddAddress', address)
+  }
+
 
   GetCreditcard() {
-    // return this.http.get(this.BaseUrl + )
+    return this.http.get(this.BaseUrl + '')
   }
+
+  UpdateCreditCard(creditCard: any) {
+    return this.http.post(this.BaseUrl + 'AddCreditCard', creditCard)
+  }
+
 
 }
