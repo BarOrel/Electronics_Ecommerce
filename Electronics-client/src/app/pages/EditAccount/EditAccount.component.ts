@@ -13,7 +13,7 @@ import Swal from 'sweetalert2';
 export class EditAccountComponent implements OnInit {
   index: number = 0;
   EditFields:boolean = false
-
+  hasAddress:boolean = false
   constructor(private authService: AuthService, private active: ActivatedRoute, private userService: UserService) {
     this.active.params.subscribe((params) => {
       this.index = Number(params["id"]);
@@ -31,8 +31,10 @@ export class EditAccountComponent implements OnInit {
       this.city = data.city
       this.street = data.street
       this.number = data.number
+      this.hasAddress = true
     },(error)=>{
       this.EditFields = true
+      this.hasAddress = false
     });
 
   }

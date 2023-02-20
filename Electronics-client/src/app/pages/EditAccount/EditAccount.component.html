@@ -78,6 +78,7 @@
             </fieldset>
             <button  (click)="EditFields = true" >Edit</button>
             <button  (click)="EditFields = false" >Cancel</button>
+            <button  style="background-color: red; color: #fff;" *ngIf="hasAddress">Delete Address</button>
             <button
               class="btn"
               (click)="
