@@ -94,7 +94,7 @@ export class EditAccountComponent implements OnInit {
     // if( cvv != '' && year != '' && month != '' && Card1Nums != '')
     var creditCard = new CreditCardDTO();
     creditCard.userId = this.authService.userId()
-    creditCard.Number = parseInt(Card1Nums + Card2Nums + Card3Nums + Card4Nums)
+    creditCard.Number = Card1Nums + Card2Nums + Card3Nums + Card4Nums
     creditCard.CVV = cvv;
     creditCard.Year_ExpirationDate = parseInt(year);
     creditCard.Month_ExpirationDate = parseInt(month);
