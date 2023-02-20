@@ -4,11 +4,13 @@
       <button (click)="index = 0">Account Details</button>
       <button (click)="index = 1">Address</button>
       <button (click)="index = 2">Credit Cart</button>
+      <button (click)="index = 3">Change Password</button>
     </div>
     <div class="Details">
       <h2 *ngIf="index == 0">Account Details</h2>
       <h2 *ngIf="index == 1">Address</h2>
       <h2 *ngIf="index == 2">Credit Card</h2>
+      <h2 *ngIf="index == 3">Password</h2>
 
 
       <div class="inputs" *ngIf="index == 0">
@@ -23,28 +25,55 @@
               <input type="text" id="card-holder" #Email />
             </fieldset>
             <fieldset>
-              <label for="card-holder">Full Name</label>
-              <input type="text" id="card-holder" #FullName />
+              <label for="card-holder">First Name</label>
+              <input type="text" id="card-holder" #FirstName />
             </fieldset>
             <fieldset>
-              <label for="card-holder">Password</label>
-              <input type="number" id="card-holder" #Password />
+              <label for="card-holder">Last Name</label>
+              <input type="text" id="card-holder" #LastName />
             </fieldset>
-            <fieldset>
-              <label for="card-holder">Confirm Password</label>
-              <input type="number" id="card-holder" #CardHolder />
-            </fieldset>
+            
 
             <button class="btn" (click)="
               UpdatedAccoundDetails(
                   UserName.value, 
                   Email.value, 
-                  FullName.value, 
-                  Password.value
+                  FirstName.value,
+                  LastName.value
                 )
               ">
               <i class="fa fa-lock"></i> Add
             </button>
+          </div>
+
+        </div>
+      </div>
+      <div class="inputs" *ngIf="index == 3">
+        <div class="checkout">
+          <div class="form" autocomplete="off" novalidate>
+            <fieldset>
+              <label for="card-holder">Current Password</label>
+              <input type="text" id="card-holder" #Password />
+            </fieldset>
+            <fieldset>
+              <label for="card-holder">Password</label>
+              <input type="text" id="card-holder" #Password />
+            </fieldset>
+            <fieldset>
+              <label for="card-holder">Confirm Password</label>
+              <input type="text" id="card-holder" #ConfirmPassword />
+            </fieldset>
+           
+            
+
+            <!-- <button class="btn" (click)="
+              UpdatedAccoundPasswowrd(
+                Password.value, 
+                ConfirmPassword.value
+                )
+              ">
+              <i class="fa fa-lock"></i> Change Password
+            </button> -->
           </div>
 
         </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AccountDetailsDTO } from 'src/app/Models/DTO/User.Model/AccountDetailsDTO';
 import { AddressDTO } from 'src/app/Models/DTO/User.Model/AddressDTO';
 import { CreditCardDTO } from 'src/app/Models/DTO/User.Model/CreditCardDTO';
 import { AuthService } from 'src/app/services/User/Auth/Auth.service';
@@ -47,8 +48,14 @@ export class EditAccountComponent implements OnInit {
 
   }
 
-  UpdatedAccoundDetails(username: any, email: any, fullname: any, password: any) {
-    console.log(username, email, fullname, password)
+  UpdatedAccoundDetails(username: any, email: any, firstName: any, lastName: any) {
+    var details = new AccountDetailsDTO()
+    details.UserId = this.authService.userId()
+    details.username = username
+    details.email = email
+    details.firstName = firstName
+    details.lastName = lastName
+    console.log(username, email, firstName, lastName)
   }
 
   UpdateAddress(region: any, city: any, street: any, number: any) {

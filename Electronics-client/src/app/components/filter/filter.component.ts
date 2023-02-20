@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FilterService } from 'src/app/services/filterService/filter.service';
 
 @Component({
   selector: 'app-filter',
@@ -12,7 +13,7 @@ export class FilterComponent implements OnInit {
   OpertionSystem:boolean = false;
   GraphicCard:boolean = false;
   Manufacturer:boolean = false;
-  constructor() { }
+  constructor(private filterService:FilterService) { }
 
   ngOnInit(): void {
     
@@ -45,4 +46,10 @@ export class FilterComponent implements OnInit {
   }
  
 Test(){console.log(this.Index)}
+
+sendManufaturerFilter(index:number){
+this.filterService.manufaturerIndex = index
+
+
+}
 }

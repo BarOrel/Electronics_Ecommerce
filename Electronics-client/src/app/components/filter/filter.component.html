@@ -18,10 +18,10 @@
       </button>
     </div>
 
-    <div *ngIf="Manufacturer">
-      <p><input type="radio" name="ManufacturerFilter" value="1"/>Apple</p>
-      <p><input type="radio" name="ManufacturerFilter" value="2"/>Samsung</p>
-      <p><input type="radio" name="ManufacturerFilter" value="3"/>OnePlus</p>
+    <div *ngIf="Manufacturer" >
+      <p><input type="radio" name="ManufacturerFilter" (change)="sendManufaturerFilter(1)" value="1"/>Apple</p>
+      <p><input type="radio" name="ManufacturerFilter" (change)="sendManufaturerFilter(2)" value="2"/>Samsung</p>
+      <p><input type="radio" name="ManufacturerFilter" (change)="sendManufaturerFilter(3)" value="3"/>OnePlus</p>
       <p><input type="radio" name="ManufacturerFilter" value="4"/>Xiaomi</p>
       <p><input type="radio" name="ManufacturerFilter" value="5"/>Sony</p>
       <p><input type="radio" name="ManufacturerFilter" value="6"/>Microsoft</p>

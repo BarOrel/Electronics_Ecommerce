@@ -4,6 +4,7 @@ import { interval, max } from 'rxjs';
 import { CartDTO } from 'src/app/Models/DTO/CartDTO';
 import { CartService } from 'src/app/services/CartService/Cart.service';
 import { EventService } from 'src/app/services/EventService/event.service';
+import { FilterService } from 'src/app/services/filterService/filter.service';
 import { ProductService } from 'src/app/services/ProductService/product.service';
 import { AuthService } from 'src/app/services/User/Auth/Auth.service';
 import Swal from 'sweetalert2';
@@ -25,12 +26,16 @@ export class ProductComponent implements OnInit {
     private authService: AuthService,
     private route: Router,
     private eventService: EventService,
-    private activetedroute:ActivatedRoute
+    private activetedroute:ActivatedRoute,
+    private filterService:FilterService
+
     
 
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+   this.filterManufacturer()
+  }
 
   AddToCart(item: any) {
     if (this.authService.isLoggedIn()) {
@@ -140,14 +145,14 @@ export class ProductComponent implements OnInit {
   }
   
   
+   }
+
+   filterManufacturer(){
+   
+
+      this.items.filter((n: { category: number; }) => n.category == this.filterService.manufaturerIndex );
+      console.log(this.filterService.manufaturerIndex)
   
-  
-  
-  
-  
-  
-  
-  
-  
+
    }
 }
