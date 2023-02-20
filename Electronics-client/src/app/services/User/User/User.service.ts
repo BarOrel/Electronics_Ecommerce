@@ -22,9 +22,9 @@ export class UserService {
     return this.http.get(this.BaseUrl + 'AddressUser?UserId=' + userId)
   }
 
-  // UpdateAddress() {
-  //   return this.http.post(this.BaseUrl + '', )
-  // }
+   UpdateAddress(address:any) {
+     return this.http.post(this.BaseUrl + 'AddAddress', address)
+   }
 
   GetCreditcard() {
     // return this.http.get(this.BaseUrl + )

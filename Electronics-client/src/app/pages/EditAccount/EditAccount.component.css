@@ -161,7 +161,7 @@ h2{
      color: transparent;
      text-shadow: 0 0 0 #000;
    }
-   .form button {
+   .form .btn {
      width: 100%;
      outline: none !important;
      background: linear-gradient(180deg, #49a09b, #3d8291);
