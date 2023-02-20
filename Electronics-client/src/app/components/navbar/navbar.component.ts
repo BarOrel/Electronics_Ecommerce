@@ -14,6 +14,8 @@ import Swal from 'sweetalert2';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
+
   items:any;
   @Input() state?: boolean;
   @Output() ShowMenu: EventEmitter<any> = new EventEmitter<any>();
@@ -24,6 +26,7 @@ export class NavbarComponent implements OnInit {
   clickeventsub: Subscription;
   IsAdmin: any;
   SearchText: any;
+  userName: any;
   constructor(private service: EventService, private authSerice: AuthService, private productService: ProductService, private cartService: CartService,private route:Router,private activetedroute:ActivatedRoute) {
       this.clickeventsub = this.service.getEventCounter().subscribe(() => {
         this.LoadCounter();
@@ -33,6 +36,7 @@ export class NavbarComponent implements OnInit {
   ClickShowMenu() {
     this.service.sendClickEvent();
   }
+
   ngOnInit(): void {
     this.activetedroute.params.subscribe((params)=>{
       this.productService.GetAll(0).subscribe((data)=>{
@@ -47,7 +51,7 @@ export class NavbarComponent implements OnInit {
    
      this.LoadCounter();
  
-
+   this.userName =this.authSerice.Username()
 
   }
 

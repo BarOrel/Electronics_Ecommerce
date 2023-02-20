@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/services/User/Auth/Auth.service';
 export class HomeComponent implements OnInit {
 
   constructor(private authService:AuthService) {
-    authService.UserValidation()
+    // authService.UserValidation()
    }
 
   ngOnInit(): void {

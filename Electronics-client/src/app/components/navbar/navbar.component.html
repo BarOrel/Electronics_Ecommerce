@@ -35,6 +35,7 @@
 
 <div class="accountmenu" *ngIf="AccountMenu">
     <img src="https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/account-icon.png" >
+    <p *ngIf="IsLoggedIn">{{userName}}</p>
     <button class="button-81"  routerLink="/EditAccount/0" *ngIf="IsLoggedIn">Account</button>
     <button class="button-81"  (click)="Login()" *ngIf="!IsLoggedIn" >Login</button>
     <button class="button-81" routerLink="/register" *ngIf="!IsLoggedIn" >Register</button>

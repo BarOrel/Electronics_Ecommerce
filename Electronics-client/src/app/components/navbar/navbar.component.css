@@ -141,7 +141,7 @@
 
 .accountmenu{
     position: fixed;
-    height: 200px;
+    height: 250px;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     border: 1px solid #b7bcc3;
@@ -160,7 +160,11 @@
     width: 40%;
 }
 
-
+.accountmenu p{
+text-align: center;
+font-weight: 600;
+font-size: 20px;
+}
 
 
 

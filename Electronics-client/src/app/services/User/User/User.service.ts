@@ -7,14 +7,27 @@ import { AuthService } from '../Auth/Auth.service';
   providedIn: 'root'
 })
 export class UserService {
-BaseUrl:string = "https://localhost:7157/api/User/";
-constructor(private http:HttpClient,private authService:AuthService) { }
-get Id(){
-  return this.authService.userId();
-}
-GetAll(){
-  console.log(this.Id)
-  return this.http.get(this.BaseUrl+ this.Id );
-}
+  BaseUrl: string = "https://localhost:7157/api/User/";
+  constructor(private http: HttpClient, private authService: AuthService) { }
+  get Id() {
+    return this.authService.userId();
+  }
+  GetAll() {
+    console.log(this.Id)
+    return this.http.get(this.BaseUrl + this.Id);
+  }
+
+
+  GetAddress(userId:any) {
+    return this.http.get(this.BaseUrl + 'AddressUser?UserId=' + userId)
+  }
+
+  // UpdateAddress() {
+  //   return this.http.post(this.BaseUrl + '', )
+  // }
+
+  GetCreditcard() {
+    // return this.http.get(this.BaseUrl + )
+  }
 
 }
