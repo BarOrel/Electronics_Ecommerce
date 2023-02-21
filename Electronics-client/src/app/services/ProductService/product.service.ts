@@ -14,7 +14,7 @@ GetHome(){
 }
 
 GetAll(index:any){
-  return this.http.get(this.BaseUrl + index);
+  return this.http.get(this.BaseUrl+'GetProduct?category=' + index);
 }
 
 Add(product:any){

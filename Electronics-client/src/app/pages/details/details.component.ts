@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Type } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CartDTO } from 'src/app/Models/DTO/CartDTO';
 import { CartService } from 'src/app/services/CartService/Cart.service';
@@ -13,8 +13,11 @@ import Swal from 'sweetalert2';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
+
   id: number = 0;
   Data:any;
+  list:any;
+
   constructor(private route:ActivatedRoute,private productService:ProductService,private authService:AuthService,private CartService:CartService,private eventService:EventService) { }
   cart: CartDTO = new CartDTO;
 
@@ -25,6 +28,10 @@ export class DetailsComponent implements OnInit {
   
       this.productService.GetProduct(this.id).subscribe((data)=>{
         this.Data = data
+        this.productService.GetAll(this.Data.category).subscribe((data)=>{
+          this.list = data
+          console.log(data)
+        })
         console.log(data)
       })
       

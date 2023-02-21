@@ -1,7 +1,7 @@
 .Main{
 
     
-    overflow: hidden;
+    overflow: auto;
     width: 100vw;
     min-height:calc(100vh - 80px);
     position: absolute;
@@ -42,4 +42,21 @@ button{
     display: flex;
     justify-content: space-between;
     padding-right: 21%;
+}
+
+.Lineofproducts{ 
+    
+      overflow-x: auto;
+     display: flex;
+}
+
+.Head{
+    text-align: center;
+}
+
+.pack{
+
+    width:100%;
+  display: flex;
+  justify-content: center;
 }

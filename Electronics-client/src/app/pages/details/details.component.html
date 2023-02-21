@@ -75,6 +75,39 @@
     </div>
   </div>
   
-  
+  <h2 class="Head">Products Like:</h2>
+  <div class="pack">
+
+    <div class="Lineofproducts">
+      <div class="page-inner" *ngFor="let item of list ; let i = index ;"   >
+        <div class="row" *ngIf="i < 6" >
+          <div class="el-wrapper">
+            <div class="box-up">
+              <img class="img" src="{{ item.imgUrl }}" alt="" />
+              <div class="img-info">
+                <div class="info-inner">
+                  <span class="p-name">{{ item.name }}</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="box-down">
+              <div class="h-bg">
+                <div class="h-bg-inner"></div>
+              </div>
+              
+              <a class="cart" (click)="AddToCart(item)">
+                <span class="price">${{ item.price }}</span>
+                <span class="add-to-cart">
+                  <span class="txt">Add in cart</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
   
 </div>
