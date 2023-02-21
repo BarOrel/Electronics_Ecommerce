@@ -33,6 +33,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
 import { ClickOutsideModule } from 'ng-click-outside';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { AuthGuardService } from './services/User/Auth/AuthGuard.service';
+import { IsLoggedInServiceService } from './services/User/Auth/is-logged-in-service.service';
 
 
 
@@ -83,7 +85,7 @@ import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 
   
   ],
-  providers: [{provide:HTTP_INTERCEPTORS,useClass:TokenInterseptorService,multi:true}],
+  providers: [{provide:HTTP_INTERCEPTORS,useClass:TokenInterseptorService,multi:true},AuthGuardService,IsLoggedInServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -12,6 +12,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { AuthGuardService } from './services/User/Auth/AuthGuard.service';
+import { IsLoggedInServiceService } from './services/User/Auth/is-logged-in-service.service';
 
 
 const routes: Routes = [
@@ -19,8 +20,8 @@ const routes: Routes = [
     path: "", component: HomeComponent, children: [
       
       { path: "Details/:id", component: DetailsComponent },
-      { path: "Add", component: AddProductComponent },
-      { path: "EditAccount/:id", component: EditAccountComponent },
+      { path: "Add", component: AddProductComponent ,canActivate:[AuthGuardService] },
+      { path: "EditAccount/:id", component: EditAccountComponent  ,canActivate:[IsLoggedInServiceService]  },
       { path: "Cart", component: CartComponent },
       { path: "", component: MainComponent },
       { path: "Category/:id", component: CategoryComponent ,children:[

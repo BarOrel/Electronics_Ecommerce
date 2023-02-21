@@ -31,9 +31,11 @@ export class AuthService {
     Login(model:LoginModel){
       this.http.post(this.BaseUrl+'User/Login',model).subscribe((data:any)=>
         {
+          console.log(data)
           localStorage.setItem('Authorization', data.token)
           localStorage.setItem('UserId', data.userid)
           localStorage.setItem('Username', data.username)
+          localStorage.setItem('IsAdmin', data.isadmin)
           Swal.fire(
             '',
             'Logged in Successfully',
@@ -90,6 +92,7 @@ export class AuthService {
       localStorage.removeItem('Authorization')
       localStorage.removeItem('UserId')
       localStorage.removeItem('Username')
+      localStorage.removeItem('IsAdmin')
       this.event.sendClickEventCounter();
       this.IsLoggedIn = false;
       this.router.navigate([''])
@@ -126,6 +129,9 @@ export class AuthService {
     }
     Username(){
       return localStorage.getItem('Username')!;
+    }
+    isAdmin(){
+      return localStorage.getItem('IsAdmin')!;
     }
 
 }

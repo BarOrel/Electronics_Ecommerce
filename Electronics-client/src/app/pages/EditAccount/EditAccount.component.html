@@ -18,29 +18,24 @@
           <div class="form" autocomplete="off" novalidate>
             <fieldset>
               <label for="card-holder">User Name</label>
-              <input type="text" id="card-holder" #UserName />
+              <input type="text" id="card-holder" #UserName [(ngModel)]="username" [disabled]="!EditDetails" />
             </fieldset>
             <fieldset>
               <label for="card-holder">Email</label>
-              <input type="text" id="card-holder" #Email />
+              <input type="text" id="card-holder" #Email [(ngModel)]="email" [disabled]="!EditDetails" />
             </fieldset>
             <fieldset>
-              <label for="card-holder">First Name</label>
-              <input type="text" id="card-holder" #FirstName />
+              <label for="card-holder">Full Name</label>
+              <input type="text" id="card-holder" #FullName [(ngModel)]="fullname" [disabled]="!EditDetails" />
             </fieldset>
-            <fieldset>
-              <label for="card-holder">Last Name</label>
-              <input type="text" id="card-holder" #LastName />
-            </fieldset>
+            <button (click)="EditDetails = true" >Edit</button>
+            <button (click)="EditDetails = false" (click)="GetDetails()">Cancel</button>
             
-
             <button class="btn" (click)="
               UpdatedAccoundDetails(
                   UserName.value, 
                   Email.value, 
-                  FirstName.value,
-                  LastName.value
-                )
+                  FullName.value)
               ">
               <i class="fa fa-lock"></i> Add
             </button>
@@ -48,43 +43,40 @@
 
         </div>
       </div>
-      <div class="inputs" *ngIf="index == 3">
+      <form class="inputs" *ngIf="index == 3" name="PasswordForm" (ngSubmit)="UpdatedAccoundPasswowrd(
+        CurrentPassword.value,
+        Password.value,
+        ConfirmPassword.value
+        )" #passForm="ngForm">
         <div class="checkout">
-          <div class="form" autocomplete="off" novalidate>
+          <div class="form" autocomplete="off" novalidate >
             <fieldset>
               <label for="card-holder">Current Password</label>
-              <input type="text" id="card-holder" #Password />
+              <input type="text" id="card-holder" #CurrentPassword name="pass" required [minLength]="4" [maxLength]="12" />
             </fieldset>
             <fieldset>
               <label for="card-holder">Password</label>
-              <input type="text" id="card-holder" #Password />
+              <input type="text" id="card-holder" #Password name="pass" />
             </fieldset>
             <fieldset>
               <label for="card-holder">Confirm Password</label>
-              <input type="text" id="card-holder" #ConfirmPassword />
+              <input type="text" id="card-holder" #ConfirmPassword name="pass" />
             </fieldset>
            
-            
-
-            <!-- <button class="btn" (click)="
-              UpdatedAccoundPasswowrd(
-                Password.value, 
-                ConfirmPassword.value
-                )
-              ">
+            <button [disabled]="!passForm.form.valid" class="btn" name="PasswordForm" type="submit" >
               <i class="fa fa-lock"></i> Change Password
-            </button> -->
+            </button>
           </div>
 
         </div>
-      </div>
+      </form>
 
       <div class="inputs" *ngIf="index == 1">
         <div class="checkout">
           <div class="form" autocomplete="off" novalidate>
             <fieldset>
               <label for="card-holder">Region</label>
-              <input type="text" id="card-holder" #Region [(ngModel)]="region" [disabled]="!EditFields" />
+              <input type="text" id="card-holder" #Region [(ngModel)]="region" [disabled]="!EditFieldsAddress" />
 
 
 
@@ -92,18 +84,18 @@
 
             <fieldset>
               <label for="card-holder">City</label>
-              <input type="text" id="card-holder" #City [(ngModel)]="city" [disabled]="!EditFields" />
+              <input type="text" id="card-holder" #City [(ngModel)]="city" [disabled]="!EditFieldsAddress" />
             </fieldset>
             <fieldset>
               <label for="card-holder">Street</label>
-              <input type="text" id="card-holder" #Street [(ngModel)]="street" [disabled]="!EditFields" />
+              <input type="text" id="card-holder" #Street [(ngModel)]="street" [disabled]="!EditFieldsAddress" />
             </fieldset>
             <fieldset>
               <label for="card-holder">Number</label>
-              <input type="number" id="card-holder" #Number [(ngModel)]="number" [disabled]="!EditFields" />
+              <input type="number" id="card-holder" #Number [(ngModel)]="number" [disabled]="!EditFieldsAddress" />
             </fieldset>
-            <button (click)="EditFields = true">Edit</button>
-            <button (click)="EditFields = false">Cancel</button>
+            <button (click)="EditFieldsAddress = true">Edit</button>
+            <button (click)="EditFieldsAddress = false">Cancel</button>
             <button style="background-color: red; color: #fff;" *ngIf="hasAddress">Delete Address</button>
             <button class="btn" (click)="
                 UpdateAddress(

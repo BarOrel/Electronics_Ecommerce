@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ChangePasswordDTO } from 'src/app/Models/DTO/User.Model/ChangePasswordDTO';
 import { AuthService } from '../Auth/Auth.service';
 
 
@@ -22,18 +23,27 @@ export class UserService {
     return this.http.get(this.BaseUrl + 'AddressUser?UserId=' + userId)
   }
 
-  UpdateAddress(address: any) {
-    return this.http.post(this.BaseUrl + 'AddAddress', address)
-  }
-
-
   GetCreditcard() {
     return this.http.get(this.BaseUrl + '')
+  }
+
+  GetAccountDetails(UserId:any) {
+    return this.http.get(this.BaseUrl + 'GetAccountDetails?UserId=' + UserId)
+  }
+
+  UpdateAddress(address: any) {
+    return this.http.post(this.BaseUrl + 'AddAddress', address)
   }
 
   UpdateCreditCard(creditCard: any) {
     return this.http.post(this.BaseUrl + 'AddCreditCard', creditCard)
   }
 
+  UpdateAccountDetails(accountDetails:any){
+    return this.http.post(this.BaseUrl + 'AddAccountDetails', accountDetails)
+  }
 
+  UpdatePassword(NewPassword:any){
+return this.http.post(this.BaseUrl + 'ChangePassword', NewPassword)
+  }
 }

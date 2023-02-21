@@ -48,7 +48,7 @@ export class NavbarComponent implements OnInit {
   
 
     this.IsLoggedIn = this.authSerice.isLoggedIn()
-   
+    this.IsAdmin = this.authSerice.isAdmin()
      this.LoadCounter();
  
    this.userName =this.authSerice.Username()
@@ -113,9 +113,10 @@ Logout(){
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
       this.OCAccountMenu();
-      
+      this.IsAdmin = this.authSerice.isAdmin()
       this.authSerice.Logout()
       this.IsLoggedIn = this.authSerice.isLoggedIn()
+      this.IsAdmin = this.authSerice.isAdmin()
     } else if (result.isDenied) {
       
     }

@@ -25,7 +25,7 @@
         
         <a class="rightbutton" routerLink="/Cart"><span class="material-symbols-outlined">shopping_cart</span>{{counter}}</a>
         <a class="rightbutton" (click)="OCAccountMenu()"><span class="material-symbols-outlined">person</span></a>
-        <a class="rightbutton" routerLink="/Add" >Admin</a>
+        <a class="rightbutton" routerLink="/Add" *ngIf="IsAdmin == 'true' " >Admin</a>
     </div>
     
     

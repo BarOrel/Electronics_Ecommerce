@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from 'src/app/Models/DTO/Product';
 import { ProductService } from 'src/app/services/ProductService/product.service';
+import { AuthService } from 'src/app/services/User/Auth/Auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-Add-Product',
@@ -29,12 +32,22 @@ export class AddProductComponent implements OnInit {
   index: number = 99;
   sizemm:any;
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService,private authService:AuthService,private route:Router) { }
 
   SelectedIndex(value: any) {
     this.index = value;
   }
-  ngOnInit() { }
+  ngOnInit() {
+    if(this.authService.isAdmin() == 'false'){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Account Does Not Have Access Here',
+    
+      })
+      this.route.navigate([''])
+    }
+   }
 
   AddProduct(
     Name: any,

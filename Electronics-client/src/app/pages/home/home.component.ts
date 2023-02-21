@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private authService:AuthService) {
     // authService.UserValidation()
+    console.log(authService.isAdmin())
    }
 
   ngOnInit(): void {

@@ -9,14 +9,14 @@ export class AuthGuardService implements CanActivate {
   constructor(private authService:AuthService,private router:Router ) { }
 
   canActivate(){
-  if(this.authService.isLoggedIn())
+  if(this.authService.isAdmin() =='true')
   { 
     return true;
   }
 
   else
   { 
-    this.router.navigate(['Login']);
+    this.router.navigate(['']);
     return false 
   }   
 

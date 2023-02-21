@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AccountDetailsDTO } from 'src/app/Models/DTO/User.Model/AccountDetailsDTO';
 import { AddressDTO } from 'src/app/Models/DTO/User.Model/AddressDTO';
+import { ChangePasswordDTO } from 'src/app/Models/DTO/User.Model/ChangePasswordDTO';
 import { CreditCardDTO } from 'src/app/Models/DTO/User.Model/CreditCardDTO';
 import { AuthService } from 'src/app/services/User/Auth/Auth.service';
 import { UserService } from 'src/app/services/User/User/User.service';
@@ -14,8 +15,10 @@ import Swal from 'sweetalert2';
 })
 export class EditAccountComponent implements OnInit {
   index: number = 0;
-  EditFields: boolean = false
+  EditFieldsAddress: boolean = false
   hasAddress: boolean = false
+
+
   constructor(private authService: AuthService, private active: ActivatedRoute, private userService: UserService) {
     this.active.params.subscribe((params) => {
       this.index = Number(params["id"]);
@@ -35,27 +38,48 @@ export class EditAccountComponent implements OnInit {
       this.number = data.number
       this.hasAddress = true
     }, (error) => {
-      this.EditFields = true
+      this.EditFieldsAddress = true
       this.hasAddress = false
     });
 
   }
 
+  username: any;
+  fullname: any;
+  email: any;
+  EditDetails: boolean = false
+  hasDetails: boolean = false
+
+  GetDetails() {
+    this.userService.GetAccountDetails(this.authService.userId()).subscribe((data: any) => {
+      console.log(data);
+      this.username = data.username
+      this.fullname = data.fullName
+      this.email = data.email
+      this.hasDetails = true
+    }, (error) => {
+      this.EditDetails = true
+      this.hasDetails = false
+    });
+  }
 
 
   ngOnInit() {
     this.GetAddress();
-
+    this.GetDetails();
   }
-
-  UpdatedAccoundDetails(username: any, email: any, firstName: any, lastName: any) {
+  //Update the user name in navbar 
+  UpdatedAccoundDetails(username: any, email: any, fullName: any) {
     var details = new AccountDetailsDTO()
     details.UserId = this.authService.userId()
     details.username = username
     details.email = email
-    details.firstName = firstName
-    details.lastName = lastName
-    console.log(username, email, firstName, lastName)
+    details.fullName = fullName
+    console.log(details)
+    this.userService.UpdateAccountDetails(details).subscribe(data => {
+      console.log(data)
+    })
+
   }
 
   UpdateAddress(region: any, city: any, street: any, number: any) {
@@ -105,13 +129,49 @@ export class EditAccountComponent implements OnInit {
     creditCard.CVV = cvv;
     creditCard.Year_ExpirationDate = parseInt(year);
     creditCard.Month_ExpirationDate = parseInt(month);
-     console.log(creditCard)
-    this.userService.UpdateCreditCard(creditCard).subscribe((data)=>{
+    console.log(creditCard)
+    this.userService.UpdateCreditCard(creditCard).subscribe((data) => {
       console.log(data);
     })
 
-   
-    console.log(parseInt(Card1Nums + Card2Nums + Card3Nums + Card4Nums))
+  }
 
+  UpdatedAccoundPasswowrd(currentPassword: any, newPassword: any,ConfirmPassword:any) {
+    if(currentPassword !=''&&newPassword !=''&&ConfirmPassword!=''){
+      
+      if(newPassword == ConfirmPassword){
+        var UpdatedPassword = new ChangePasswordDTO();
+        UpdatedPassword.UserId = this.authService.userId();
+        UpdatedPassword.CurrentPassword = currentPassword;
+        UpdatedPassword.NewPassword = newPassword
+        console.log(UpdatedPassword)
+        this.userService.UpdatePassword(UpdatedPassword).subscribe((data:any)=>{
+         console.log(data)
+         if(data == null){
+          Swal.fire('', 'Password change sucssefully', 'success');
+        }
+        },(err)=>{
+          if(err.status == 400){
+            Swal.fire('', 'Fail', 'error');
+          }
+  
+        })
+  
+      }
+      else{ Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Password does not match',
+      })}
+      
+    }
+    else{
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Fields Cannot Be Empty',
+      })
+
+    }
   }
 }
