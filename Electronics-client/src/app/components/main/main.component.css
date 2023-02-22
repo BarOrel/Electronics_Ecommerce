@@ -1,82 +1,97 @@
-
-.main{
+.main {
      display: flex;
      overflow: hidden;
-     width:100%;
+     width: 100%;
      display: flex;
      justify-content: center;
-     min-height:calc(100vh - 80px);
+     min-height: calc(100vh - 80px);
      position: absolute;
      margin: 80px 0px 0px 0px;
      background-color: #ffff;
+     font-family: 'Source Sans Pro',sans-serif;
 }
 
-.container{
-     
-     
+.container {
+
+
      width: 80vw;
-   
-   
+
+
 }
 
-.line{
-     width:100%;
-  display: flex;
-  justify-content: center;
+.line {
+     width: 100%;
+     display: flex;
+     justify-content: center;
 }
-.slider-discounts{
+
+.slider-discounts {
      padding-top: 6vh;
-     width:100%;
+     width: 100%;
      display: flex;
      justify-content: center;
      padding-bottom: 6vh;
-     
-     
-}
-.card{margin-left: 15px;
-     
+
+
 }
 
-.pal { display: flex;}
-.Products{}
- 
- img { 
+.card {
+     margin-left: 15px;
+
+}
+
+.pal {
+     display: flex;
+}
+
+.Products {}
+
+img {
      object-fit: cover;
      padding-right: 30px;
      max-width: 50vw;
-     
+
 }
 
-.space{padding-top: 10px;}
+.space {
+     padding-top: 10px;
+}
 
-h2{font-size: 30px;
-text-align: center;}
+h2 {
+     font-size: 30px;
+
+     font-family: 'Source Sans Pro', sans-serif;
+     text-transform: uppercase;
+     font-weight: 800;
+     color: #111;
+     text-align: center;
+}
 
 
-.Lineofproducts{
+.Lineofproducts {
      overflow-x: auto;
      display: flex;
-     
+
 }
 
-.footer{
+.footer {
      position: relative;
 }
 
-.head{
+.head {
      font-size: 30px;
      text-decoration: none;
-     color:black;
+     color: black;
      font-weight: 700;
 }
 
-.head :hover{
- 
-     color:red;
-     
+.head :hover {
+
+     color: red;
+
 }
 
 swiper {
      height: 400px;
      width: 600px;
-   }
+}
