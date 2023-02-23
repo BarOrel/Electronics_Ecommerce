@@ -13,8 +13,7 @@
           </div>
         </div>
 
-        <div *ngIf="Data.Category == 'VideoGame_Console' &&  'ComputerAccessories_Keyboard' && 'ComputerAccessories_Keyboard' && 'ComputerAccessories_Mouse'
-        && 'ComputerAccessories_Monitor' &&  'ComputerAccessories_Speakers' && 'ComputerAccessories_Headphones' && 'Accessories_Console' ">
+        <div *ngIf="Data.operationSystem != 'None' ">
           <div class="line"></div>
           <div class="specrow"> 
             <p class="leftside">Operation System</p>
@@ -22,8 +21,7 @@
           </div>
         </div>
 
-        <div *ngIf="Data.Category == 'VideoGame_Console' &&  'ComputerAccessories_Keyboard' && 'ComputerAccessories_Keyboard' && 'ComputerAccessories_Mouse'
-        && 'ComputerAccessories_Monitor' &&  'ComputerAccessories_Speakers' && 'ComputerAccessories_Headphones' && 'Accessories_Console' ">
+       <div *ngIf="Data.Storage != 'None' ">
           <div class="line"></div>
           <div class="specrow"> 
             <p class="leftside">Storage</p>
@@ -31,13 +29,14 @@
           </div>
         </div>
 
-        <div *ngIf="Data.Category ==  'Procesor_PC' && 'GraphicsCard_PC' &&'ComputerAccessories_Keyboard' && 'ComputerAccessories_Keyboard' && 'ComputerAccessories_Mouse'
-                && 'ComputerAccessories_Monitor' &&  'ComputerAccessories_Speakers' && 'ComputerAccessories_Headphones'&& 'Accessories_Console' ">          <div class="line"></div>
+        <div *ngIf="Data.Cores != 0 ">
+        <div class="line"></div>
           <div class="specrow"> 
             <p class="leftside">Cores</p>
             <p class="rightside">{{Data.cores}}</p>
           </div>
         </div>
+        
         <div *ngIf="Data.Category == 'VideoGame_Console' && 'Procesor_PC' && 'GraphicsCard_PC' &&'ComputerAccessories_Keyboard' && 'ComputerAccessories_Keyboard' && 'ComputerAccessories_Mouse'
               && 'ComputerAccessories_Monitor' &&  'ComputerAccessories_Speakers' && 'ComputerAccessories_Headphones'&& 'Accessories_Console' ">
           <div class="line"></div>
@@ -101,8 +100,8 @@
 
 
 
-        <div *ngIf="Data.Category == 'VideoGame_Console' &&  'Procesor_PC' && 'GraphicsCard_PC' && 'ComputerAccessories_Keyboard' && 'ComputerAccessories_Keyboard' && 'ComputerAccessories_Mouse'
-            && 'ComputerAccessories_Monitor' &&  'ComputerAccessories_Speakers' && 'ComputerAccessories_Headphones'&& 'Accessories_Console' ">
+        <div *ngIf="Data.Category == 'VideoGame_Console' ||  'Procesor_PC' || 'GraphicsCard_PC' || 'ComputerAccessories_Keyboard' || 'ComputerAccessories_Keyboard' || 'ComputerAccessories_Mouse'
+        || 'ComputerAccessories_Monitor' ||  'ComputerAccessories_Speakers' || 'ComputerAccessories_Headphones' || 'Accessories_Console' ">
           <div class="line"></div>
           <div class="specrow"> 
             <p class="leftside">Panel</p>
@@ -138,8 +137,8 @@
 
 
 
-        <div *ngIf="Data.Category == 'VideoGame_Console' && 'Procesor_PC' && 'GraphicsCard_PC' &&'ComputerAccessories_Keyboard' && 'ComputerAccessories_Keyboard' && 'ComputerAccessories_Mouse'
-        && 'ComputerAccessories_Monitor' &&  'ComputerAccessories_Speakers' && 'ComputerAccessories_Headphones'&& 'Accessories_Console' ">
+        <div *ngIf="Data.Category == 'VideoGame_Console' || 'Procesor_PC' || 'GraphicsCard_PC' || 'ComputerAccessories_Keyboard' || 'ComputerAccessories_Keyboard' || 'ComputerAccessories_Mouse'
+        || 'ComputerAccessories_Monitor' ||  'ComputerAccessories_Speakers' || 'ComputerAccessories_Headphones' || 'Accessories_Console' ">
           <div class="line"></div>
           <div class="specrow"> 
             <p class="leftside">Size</p>

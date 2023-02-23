@@ -107,7 +107,7 @@
         <div class="page-inner" *ngFor="let item of gamingConsole">
           <div class="row">
             <div class="el-wrapper">
-              <div class="box-up">
+              <div class="box-up" (click)="NavigateToDetailes(item.id)">
                 <img class="img" src="{{ item.imgUrl }}" alt="" />
                 <div class="img-info">
                   <div class="info-inner">
