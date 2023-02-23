@@ -68,14 +68,14 @@ html, body { height: 100vh; width: 100%; margin: 0;
     }
     
     @media (max-width: 991px) {
-      .el-wrapper {
+      /* .el-wrapper {
         width: 345px;
-      }
+      } */
     }
     
     @media (max-width: 767px) {
       .el-wrapper {
-        width: 290px;
+        /* width: 290px; */
         margin: 30px auto;
       }
     }

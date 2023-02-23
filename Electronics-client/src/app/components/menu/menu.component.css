@@ -114,3 +114,33 @@ a, a:hover {
  
   z-index: 100;
 }
+
+@media(max-width:700px){
+  .Menu{
+    margin: 90px 0px 0px 20px;
+  }
+
+
+  .MobilesMenu{
+    left: 20px;
+    top: 452px;
+  }
+  .Accecsories{
+    left: 20px;
+    top: 452px;
+  }
+  .ElectronicsMenu{
+    left: 20px;
+    top: 452px;
+  }
+  .GamingConsolesMenu{
+    left: 20px;
+    top: 452px;
+  }
+  .ComputersMenu{
+    left: 20px;
+    top: 452px;
+  }
+ 
+
+}

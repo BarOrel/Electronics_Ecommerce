@@ -39,7 +39,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.activetedroute.params.subscribe((params)=>{
-      this.productService.GetAll(0).subscribe((data)=>{
+      this.productService.GetAll(16).subscribe((data)=>{
         this.items = data
         
       }

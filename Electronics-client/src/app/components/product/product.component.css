@@ -18,43 +18,64 @@ label{font-size: 20px;
 select{font-size: 20px;}
 
 .Products{
-  max-width: 1200px;
+  
   margin: 0 auto;
   display: grid;
   gap: 1rem;
   padding: 30px;
-
+  grid-template-columns: repeat(7, 1fr);
 
 }
 
-@media (min-width: 1090px) {
+/* @media (min-width: 1090px) {
   .Products { 
     grid-template-columns: repeat(2, 1fr); 
     
     }
   
-}
+} */
 
-@media (min-width: 1400px) {
-  .Products { grid-template-columns: repeat(3, 1fr); 
-    
+@media (max-width: 2150px) {
+  .Products { grid-template-columns: repeat(6, 1fr); 
   }
 
-  
 }
-@media (min-width: 1750px) {
+@media (max-width: 1900px) {
+  .Products { grid-template-columns: repeat(5, 1fr); 
+  }
+
+}
+@media (max-width: 1550px) {
   .Products { grid-template-columns: repeat(4, 1fr); 
-  
   }
 
-  
+}
+@media (max-width: 1260px) {
+  .Products { grid-template-columns: repeat(3, 1fr); 
+  }
+
 }
 
-@media (max-width: 450px) {
+
+@media (max-width: 950px) {
+  .Products { grid-template-columns: repeat(2, 1fr); 
+  }
+
+
+}
+@media (max-width: 650px) {
   .Products { grid-template-columns: repeat(1, 1fr); 
   }
+  .MainFilter{
+    display: block;
+    width: 100%;
+  }
 
-
+  .filter{
+    
+    display: block;
+    
+  }
 }
 
 
@@ -66,7 +87,7 @@ select{font-size: 20px;}
     padding: 10px;
     border-radius: 10px;
     width: 50%;
-    height: 30px;
+    
 }
 
 *{

@@ -10,7 +10,7 @@
 
 .FilterItems{
     position: fixed;
-    margin-left: 503px;
+    margin-left: 490px;
     background-color: #fff;
     border: 1px solid;
     border-radius: 10px;
@@ -205,7 +205,24 @@ margin-left: 4px;
   }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1230px) {
     .Search{display: none;}
     .srcbtn{display: none;}
+    .FilterItems{display: none;}
+  }
+
+@media (max-width: 650px) {
+        .rightbutton{
+            display: none;
+        }
+        .productsbutton{
+            margin: 0px 0px 0px 20px;
+        }
+  }
+
+  @media(max-width:500px){
+    .productsbutton{
+        font-size: 6vw;
+    }
+  
   }

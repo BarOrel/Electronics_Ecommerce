@@ -80,3 +80,27 @@ swiper {
      height: 400px;
      width: 600px;
    }
+
+   @media (max-width:1200px){
+     .slider-discounts{
+          display: block;
+     }
+     .pal{
+          
+          justify-content: space-between;
+     }
+
+     img { 
+         
+          max-width: 80vw;
+          
+     }
+     
+   }
+   @media (max-width:750px){
+   .pal{
+     display: block;
+   }
+   .space{padding-top: 0px;}
+   
+   }
