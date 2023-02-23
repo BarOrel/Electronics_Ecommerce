@@ -53,6 +53,7 @@ export class AddProductComponent implements OnInit {
     Name: any,
     Description: any,
     Price: any,
+    color:any,
     Manufacturer: any,
     Category: any,
     ImgUrl: any,
@@ -64,6 +65,7 @@ export class AddProductComponent implements OnInit {
     this.product.Price = Price;
     this.product.Category = Category;
     this.product.ReleaseDate = Date;
+    // this.product.Color = color;
     this.product.Manufacturer = Manufacturer;
     this.product.ImgUrl = ImgUrl;
     this.product.Color = this.Color;
@@ -109,7 +111,7 @@ export class AddProductComponent implements OnInit {
   //for laptop
   PanelFunc(value: any) { this.Panel = value; }
 
-  SelectedColor(Color:any){}
+  SelectedColor(Color:any){this.Color = Color}
 //
 
 SizemmFunc(value: any) {this.sizemm = value }

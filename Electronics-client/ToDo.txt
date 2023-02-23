@@ -1,12 +1,5 @@
-Bar - {
+make the filter happeing in the frontend 
+make aa 2 lists 
 
-Graphic Card - Add Component
-Procesor - Add Component
-
-}
-
-Oshri - {
-
-TV - Add Component
-
-}
+1 is the main list where list 2 can take inform
+list 2 = list 1 .(filter => filter.blah == blah)

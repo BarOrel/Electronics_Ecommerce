@@ -4,7 +4,7 @@
       <img src="https://www.sie.com/tachyon/sites/15/2020/10/SIE-Blog_Featured-Image_PS5Launch_2020_1028.jpg?resize=1088%2C612&crop_strategy=smart" />
 
       <div class="Products">
-        <h2>Discount</h2>
+        <h2 >Discount</h2>
         <div class="pal">
           <div class="page-inner" *ngFor="let item of dicounted1">
             <div class="row">
@@ -107,7 +107,7 @@
         <div class="page-inner" *ngFor="let item of gamingConsole">
           <div class="row">
             <div class="el-wrapper">
-              <div class="box-up">
+              <div class="box-up" (click)="NavigateToDetailes(item.id)">
                 <img class="img" src="{{ item.imgUrl }}" alt="" />
                 <div class="img-info">
                   <div class="info-inner">
