@@ -80,14 +80,19 @@ h2 {
 
 .head {
      font-size: 30px;
+
+     font-family: 'Source Sans Pro', sans-serif;
+     text-transform: uppercase;
+     font-weight: 800;
      text-decoration: none;
-     color: black;
-     font-weight: 700;
+     color: #111;
+     text-align: center;
+     transition: 0.5s;
 }
 
-.head :hover {
+.head:hover {
 
-     color: red;
+     color: rgb(0, 49, 185);
 
 }
 
